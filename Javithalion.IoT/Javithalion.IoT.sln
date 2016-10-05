@@ -17,6 +17,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{E205A8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notifications", "Notifications", "{21DE23A1-12C3-4E9B-BA12-40A70BA00C8B}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Javithalion.IoT.Infraestructure", "Javithalion.IoT.Infraestructure\Javithalion.IoT.Infraestructure.xproj", "{E521966D-5C9A-4AE0-B2F2-D7D12FC0CA8C}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Javithalion.IoT.DeviceEvents.Business", "Javithalion.IoT.DeviceEvents.Business\Javithalion.IoT.DeviceEvents.Business.xproj", "{A2434839-F1FA-4638-99D7-97C5F2A94CCA}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Javithalion.IoT.DeviceEvents.DataAccess", "Javithalion.IoT.DeviceEvents.DataAccess\Javithalion.IoT.DeviceEvents.DataAccess.xproj", "{D298CC85-4646-466E-8BF7-16AD965C98F0}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Javithalion.IoT.DeviceEvents.Domain", "Javithalion.IoT.DeviceEvents.Domain\Javithalion.IoT.DeviceEvents.Domain.xproj", "{376D9085-B0C4-47D9-9EC0-EA7BF314BFFE}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Javithalion.IoT.DeviceEvents.Service", "Javithalion.IoT.DeviceEvents.Service\Javithalion.IoT.DeviceEvents.Service.xproj", "{BE23CE9A-25ED-4A81-9038-B12CEF62F15F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +37,26 @@ Global
 		{41AC1769-1099-4814-B9CA-C40FD140C2D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41AC1769-1099-4814-B9CA-C40FD140C2D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41AC1769-1099-4814-B9CA-C40FD140C2D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E521966D-5C9A-4AE0-B2F2-D7D12FC0CA8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E521966D-5C9A-4AE0-B2F2-D7D12FC0CA8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E521966D-5C9A-4AE0-B2F2-D7D12FC0CA8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E521966D-5C9A-4AE0-B2F2-D7D12FC0CA8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2434839-F1FA-4638-99D7-97C5F2A94CCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2434839-F1FA-4638-99D7-97C5F2A94CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2434839-F1FA-4638-99D7-97C5F2A94CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2434839-F1FA-4638-99D7-97C5F2A94CCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D298CC85-4646-466E-8BF7-16AD965C98F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D298CC85-4646-466E-8BF7-16AD965C98F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D298CC85-4646-466E-8BF7-16AD965C98F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D298CC85-4646-466E-8BF7-16AD965C98F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{376D9085-B0C4-47D9-9EC0-EA7BF314BFFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{376D9085-B0C4-47D9-9EC0-EA7BF314BFFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{376D9085-B0C4-47D9-9EC0-EA7BF314BFFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{376D9085-B0C4-47D9-9EC0-EA7BF314BFFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE23CE9A-25ED-4A81-9038-B12CEF62F15F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE23CE9A-25ED-4A81-9038-B12CEF62F15F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE23CE9A-25ED-4A81-9038-B12CEF62F15F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE23CE9A-25ED-4A81-9038-B12CEF62F15F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,5 +66,10 @@ Global
 		{23CE9A23-E2D6-472A-A12B-5B92441A2CB2} = {F8ACFB72-A854-4F4E-9BCC-2F7BFE5A3794}
 		{E205A817-153F-45AA-9568-2B2BAAF67356} = {F8ACFB72-A854-4F4E-9BCC-2F7BFE5A3794}
 		{21DE23A1-12C3-4E9B-BA12-40A70BA00C8B} = {F8ACFB72-A854-4F4E-9BCC-2F7BFE5A3794}
+		{E521966D-5C9A-4AE0-B2F2-D7D12FC0CA8C} = {E205A817-153F-45AA-9568-2B2BAAF67356}
+		{A2434839-F1FA-4638-99D7-97C5F2A94CCA} = {23CE9A23-E2D6-472A-A12B-5B92441A2CB2}
+		{D298CC85-4646-466E-8BF7-16AD965C98F0} = {23CE9A23-E2D6-472A-A12B-5B92441A2CB2}
+		{376D9085-B0C4-47D9-9EC0-EA7BF314BFFE} = {23CE9A23-E2D6-472A-A12B-5B92441A2CB2}
+		{BE23CE9A-25ED-4A81-9038-B12CEF62F15F} = {23CE9A23-E2D6-472A-A12B-5B92441A2CB2}
 	EndGlobalSection
 EndGlobal
