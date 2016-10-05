@@ -3,17 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Javithalion.IoT.DeviceEvents.Business.ReadModel;
+using Javithalion.IoT.DeviceEvents.Domain.Entities;
 
 namespace Javithalion.IoT.DeviceEvents.Service.Controllers
 {
     [Route("api/[controller]")]
     public class DeviceEventController : Controller
     {
+        private IDeviceEventReadService _deviceEventReadService;
+
+        public DeviceEventController(IDeviceEventReadService deviceEventReadService)
+        {
+            _deviceEventReadService = deviceEventReadService;
+        }
+
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IEnumerable<DeviceEvent>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return await _deviceEventReadService.FindAllAsync();
         }
 
         // GET api/values/5

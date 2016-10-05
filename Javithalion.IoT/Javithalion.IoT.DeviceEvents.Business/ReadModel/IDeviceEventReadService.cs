@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Javithalion.IoT.DeviceEvents.Business.ReadModel
 {
-    interface IDeviceEventReadService
+    public interface IDeviceEventReadService
     {
         Task<IList<DeviceEvent>> FindAllAsync();
     }
