@@ -19,17 +19,17 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
         }
 
         // GET api/values
-        [HttpGet]
-        public async Task<IEnumerable<DeviceEvent>> Get()
+        [HttpGet("{deviceId}")]
+        public async Task<IEnumerable<DeviceEvent>> Get(string deviceId)
         {
-            return await _deviceEventReadService.FindAllAsync();
+            return await _deviceEventReadService.FindAllForDeviceAsync(deviceId);
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{deviceId}/{eventId}")]
+        public async Task<DeviceEvent> Get(string deviceId, string eventId)
         {
-            return "value";
+            return await _deviceEventReadService.GetAsync(deviceId, eventId);
         }
 
         // POST api/values
