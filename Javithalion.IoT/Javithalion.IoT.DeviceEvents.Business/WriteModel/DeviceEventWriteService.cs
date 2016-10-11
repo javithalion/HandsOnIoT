@@ -3,24 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Javithalion.IoT.DeviceEvents.Domain.Entities;
+using Javithalion.IoT.DeviceEvents.Business.WriteModel.Commands;
+using Javithalion.IoT.DeviceEvents.Business.ReadModel.DTOs;
+using Javithalion.IoT.DeviceEvents.DataAccess.DAOs;
+using AutoMapper;
+using MongoDB.Driver;
 
 namespace Javithalion.IoT.DeviceEvents.Business.WriteModel
 {
     public class DeviceEventWriteService : IDeviceEventWriteService
     {
-        public async Task AddDeviceEventToDeviceAsync(string deviceId, DeviceEvent theEvent)
+        private readonly IDeviceEventDao _deviceEventServiceDao;
+        private readonly IMapper _mapper;
+
+        public DeviceEventWriteService(IDeviceEventDao deviceEventDao, IMapper mapper)
         {
-            if (string.IsNullOrEmpty(deviceId))
-                throw new ArgumentException("Null or empty device id was provided", nameof(deviceId));
+            _deviceEventServiceDao = deviceEventDao;
+            _mapper = mapper;
+        }
 
-            Guid parsedDeviceGuid;
-            if (!Guid.TryParse(deviceId, out parsedDeviceGuid))
-                throw new ArgumentException("Provided device id has incorrect format", nameof(deviceId));
+        public async Task<DeviceEventDto> AddDeviceEventAsync(CreateDeviceEventCommand createCommand)
+        {
+            var deviceEvent = DeviceEvent.CreateNewForDevice(createCommand.DeviceId)
+                                         .OfType(createCommand.EventType.ToString());
 
-            if (theEvent.DeviceId != parsedDeviceGuid)
-                throw new ArgumentException("Provided device id is different than the device id the event has", nameof(theEvent));
-
-
+            _deviceEventServiceDao.AllDeviceEvents().
 
         }
 

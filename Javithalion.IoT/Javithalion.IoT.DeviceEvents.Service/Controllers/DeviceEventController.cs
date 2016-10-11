@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Javithalion.IoT.DeviceEvents.Business.ReadModel;
 using Javithalion.IoT.DeviceEvents.Domain.Entities;
+using Javithalion.IoT.DeviceEvents.Business.WriteModel.Commands;
+using Javithalion.IoT.DeviceEvents.Business.ReadModel.DTOs;
+using System.Net.Http;
+using System.Net;
 
 namespace Javithalion.IoT.DeviceEvents.Service.Controllers
 {
@@ -18,35 +22,40 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
             _deviceEventReadService = deviceEventReadService;
         }
 
-        // GET api/values
-        [HttpGet("{deviceId}")]
-        public async Task<IEnumerable<DeviceEvent>> Get(string deviceId)
+        [HttpGet()]
+        //Unfortunately OData is not available at the moment on dot net core, dirty filtering
+        public async Task<IActionResult> Get(string deviceId = "", int page = 1, int pageSize = 50)
         {
-            return await _deviceEventReadService.FindAllForDeviceAsync(deviceId);
+            var result = await _deviceEventReadService.FindAllForDeviceAsync(deviceId);
+            return Ok(result);
         }
 
-        // GET api/values/5
-        [HttpGet("{deviceId}/{eventId}")]
-        public async Task<DeviceEvent> Get(string deviceId, string eventId)
+        [HttpGet("{eventId:string}")]
+        public async Task<IActionResult> Get(string eventId)
         {
-            return await _deviceEventReadService.GetAsync(deviceId, eventId);
+            var theEvent = await _deviceEventReadService.GetAsync(eventId);
+
+            if (theEvent == null)                            
+                return NotFound($"Device event with id = {eventId} not found");            
+            else            
+                return  Ok(theEvent);            
         }
 
-        // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post(CreateDeviceEventCommand createCommand)
         {
+
+            DeviceEventDto temp = new DeviceEventDto();
+            return Created($"/api/DeviceEvent/{temp.Id}",temp);
         }
 
-        // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public void Put(UpdateDeviceEventCommand updateCommand)
         {
         }
 
-        // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(DeleteDeviceEventCommand deleteCommand)
         {
         }
     }

@@ -7,6 +7,6 @@ namespace Javithalion.IoT.Infraestructure.Bus.BusEntities
 {
     public interface ICanHandle<T> where T : Message
     {
-        void Handle(T message);
+        Task Handle(T message);
     }
 }

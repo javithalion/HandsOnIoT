@@ -2,6 +2,7 @@
   "version": "1.0.0-*",
 
     "dependencies": {
+        "AutoMapper": "5.1.1",
         "Javithalion.IoT.DeviceEvents.DataAccess": "1.0.0-*",
         "Javithalion.IoT.DeviceEvents.Domain": "1.0.0-*",
         "Javithalion.IoT.Infraestructure": "1.0.0-*",

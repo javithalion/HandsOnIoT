@@ -8,8 +8,10 @@ namespace Javithalion.IoT.Infraestructure.ModelBus
 {
     public interface IServiceBus
     {
-        Task SendAsync<T>(T command) where T : Command;
-        Task RaiseEventAsync<T>(T theEvent) where T : Event;
-        void RegisterHandler<HandlerType, MessageType>() where MessageType : Message where HandlerType : Message;
+        Task Send<T>(T command) where T : Command;
+
+        Task Publish<T>(T @event) where T : Event;
+
+        void RegisterHandler<T>(ICanHandle<T> handler) where T : Message;
     }
 }

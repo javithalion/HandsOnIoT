@@ -13,11 +13,17 @@ using MongoDB.Driver;
 using System.Security.Authentication;
 using Javithalion.IoT.Infraestructure.ModelBus;
 using Javithalion.IoT.DeviceEvents.Business.WriteModel;
+using AutoMapper;
+using Javithalion.IoT.DeviceEvents.Business.ReadModel.Maps;
+using Javithalion.IoT.DeviceEvents.Service.Infraestructure;
 
 namespace Javithalion.IoT.DeviceEvents.Service
 {
     public class Startup
     {
+        public IConfigurationRoot Configuration { get; }
+        private MapperConfiguration _mapperConfiguration;
+
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -25,48 +31,48 @@ namespace Javithalion.IoT.DeviceEvents.Service
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
-            Configuration = builder.Build();
-        }
 
-        public IConfigurationRoot Configuration { get; }
+            Configuration = builder.Build();
+
+            _mapperConfiguration = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new AutoMapperProfileConfiguration());
+            });
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             DependencyInjectionConfiguration(services);
 
+            //ConfigureWriteModelBus(services);
+
             // Add framework services.
-            services.AddMvc();
+            services.AddMvc(conf => conf.Filters.Add(typeof(UnhandledExceptionFilter)));
         }
-       
+
         private void DependencyInjectionConfiguration(IServiceCollection services)
         {
-            services.AddTransient<IDeviceEventReadService, DeviceEventReadService>();
-            services.AddSingleton<IServiceBus, ServiceBus>();
-
+            services.AddTransient<IDeviceEventReadService, DeviceEventReadService>();            
             services.AddTransient<IDeviceEventDao, DeviceEventDao>();
-            services.AddTransient<IMongoDatabase>(MongoDatabaseFactory);            
-        }
 
-        private IMongoDatabase MongoDatabaseFactory(IServiceProvider arg)
+            services.AddSingleton(MongoDatabaseFactory);
+            services.AddSingleton<IMapper>(factory => _mapperConfiguration.CreateMapper());
+            //services.AddSingleton<IServiceBus, ServiceBus>(ServiceBusInstaller);
+        }       
+
+        private IMongoDatabase MongoDatabaseFactory(IServiceProvider serviceProvider)
         {
-            MongoClientSettings settings = new MongoClientSettings();
-            settings.Server = new MongoServerAddress("javithalion-iot-deviceevent.documents.azure.com", 10250);
-            settings.UseSsl = true;
-            settings.SslSettings = new SslSettings();
-            settings.SslSettings.EnabledSslProtocols = SslProtocols.Tls12;
-
-            MongoIdentity identity = new MongoInternalIdentity("DeviceEvents", "javithalion-iot-deviceevent");
-            MongoIdentityEvidence evidence = new PasswordEvidence("LLzU3NDePowdrVopNKcHruc3EKwWm9WQ3e87yXDqMM5MWEK6jwKQyzxqtSH0m2hrwmvVfkydtF4aOzrVcKMf4A");
-
-            settings.Credentials = new List<MongoCredential>() { new MongoCredential("SCRAM-SHA-1", identity, evidence) };
-
-            MongoClient client = new MongoClient(settings);
-            return client.GetDatabase("DeviceEvents");
-
-            //MongoClient client = new MongoClient(Configuration.GetConnectionString("DefaultConnection"));
-            //return client.GetDatabase(Configuration["DeviceEventDatabase:Name"]);
+            MongoClient client = new MongoClient(Configuration.GetConnectionString("DefaultConnection"));
+            return client.GetDatabase(Configuration["DeviceEventDatabase:Name"]);
         }
+
+        //private IServiceBus ServiceBusInstaller(IServiceProvider serviceProvider)
+        //{
+        //    var serviceBus = serviceProvider.GetService<IServiceBus>();
+        //    //serviceBus.RegisterHandler<>
+        //    return serviceBus;
+        //}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

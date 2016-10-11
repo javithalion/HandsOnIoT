@@ -18,7 +18,9 @@
     "Javithalion.IoT.DeviceEvents.Business": "1.0.0-*",
     "Javithalion.IoT.DeviceEvents.DataAccess": "1.0.0-*",
     "Javithalion.IoT.DeviceEvents.Domain": "1.0.0-*",
-    "Javithalion.IoT.Infraestructure": "1.0.0-*"
+    "Javithalion.IoT.Infraestructure": "1.0.0-*",
+    "AutoMapper": "5.1.1",
+    "Microsoft.AspNetCore.Mvc.WebApiCompatShim": "1.0.1"
   },
 
   "tools": {
