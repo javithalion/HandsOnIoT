@@ -16,6 +16,10 @@ using Javithalion.IoT.DeviceEvents.Business.WriteModel;
 using AutoMapper;
 using Javithalion.IoT.DeviceEvents.Business.ReadModel.Maps;
 using Javithalion.IoT.DeviceEvents.Service.Infraestructure;
+using NSwag.AspNetCore;
+using System.Reflection;
+using NJsonSchema;
+using Javithalion.IoT.DeviceEvents.Business.WriteModel.Commands;
 
 namespace Javithalion.IoT.DeviceEvents.Service
 {
@@ -44,22 +48,19 @@ namespace Javithalion.IoT.DeviceEvents.Service
         public void ConfigureServices(IServiceCollection services)
         {
             DependencyInjectionConfiguration(services);
-
-            //ConfigureWriteModelBus(services);
-
             // Add framework services.
             services.AddMvc(conf => conf.Filters.Add(typeof(UnhandledExceptionFilter)));
         }
 
         private void DependencyInjectionConfiguration(IServiceCollection services)
         {
-            services.AddTransient<IDeviceEventReadService, DeviceEventReadService>();            
+            services.AddTransient<IDeviceEventReadService, DeviceEventReadService>();
             services.AddTransient<IDeviceEventDao, DeviceEventDao>();
 
             services.AddSingleton(MongoDatabaseFactory);
             services.AddSingleton<IMapper>(factory => _mapperConfiguration.CreateMapper());
-            //services.AddSingleton<IServiceBus, ServiceBus>(ServiceBusInstaller);
-        }       
+            //services.AddSingleton<IServiceBus>(ServiceBusInstaller);
+        }
 
         private IMongoDatabase MongoDatabaseFactory(IServiceProvider serviceProvider)
         {
@@ -67,12 +68,11 @@ namespace Javithalion.IoT.DeviceEvents.Service
             return client.GetDatabase(Configuration["DeviceEventDatabase:Name"]);
         }
 
-        //private IServiceBus ServiceBusInstaller(IServiceProvider serviceProvider)
-        //{
-        //    var serviceBus = serviceProvider.GetService<IServiceBus>();
-        //    //serviceBus.RegisterHandler<>
-        //    return serviceBus;
-        //}
+        private IServiceBus ServiceBusInstaller(IServiceProvider serviceProvider)
+        {
+            //TODO
+            return new ServiceBus();
+        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -81,6 +81,11 @@ namespace Javithalion.IoT.DeviceEvents.Service
             loggerFactory.AddDebug();
 
             app.UseMvc();
+
+            //app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, new SwaggerUiOwinSettings
+            //{
+            //    DefaultPropertyNameHandling = PropertyNameHandling.CamelCase
+            //});
         }
     }
 }

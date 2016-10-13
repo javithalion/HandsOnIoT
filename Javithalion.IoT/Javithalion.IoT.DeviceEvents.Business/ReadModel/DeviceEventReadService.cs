@@ -22,7 +22,7 @@ namespace Javithalion.IoT.DeviceEvents.Business.ReadModel
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<DeviceEventDto>> FindAllForDeviceAsync(string deviceId)
+        public async Task<IEnumerable<DeviceEventDto>> FindAllForDeviceAsync(string deviceId, int page, int pageSize)
         {
             if (string.IsNullOrEmpty(deviceId))
                 throw new ArgumentException("Null or empty device id was provided", nameof(deviceId));
@@ -34,6 +34,7 @@ namespace Javithalion.IoT.DeviceEvents.Business.ReadModel
             var events = await _deviceEventServiceDao.AllDeviceEvents()
                                                      .OfDevice(parsedDeviceGuid)
                                                      .CurrentlyActive()
+                                                     .Paged(page, pageSize)
                                                      .ToListAsync();
 
             return events.Select(@event => _mapper.Map<DeviceEventDto>(@event));

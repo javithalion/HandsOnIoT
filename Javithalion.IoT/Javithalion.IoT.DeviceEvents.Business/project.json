@@ -6,7 +6,8 @@
         "Javithalion.IoT.DeviceEvents.DataAccess": "1.0.0-*",
         "Javithalion.IoT.DeviceEvents.Domain": "1.0.0-*",
         "Javithalion.IoT.Infraestructure": "1.0.0-*",
-        "NETStandard.Library": "1.6.0"
+        "NETStandard.Library": "1.6.0",
+        "System.ComponentModel.Annotations": "4.1.0"
     },
 
   "frameworks": {

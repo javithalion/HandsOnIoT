@@ -23,5 +23,10 @@ namespace Javithalion.IoT.DeviceEvents.DataAccess.DAOs
         {
             return _documentStore.GetCollection<DeviceEvent>(CollectionName).AsQueryable<DeviceEvent>();
         }
+
+        public Task Insert(DeviceEvent deviceEvent)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

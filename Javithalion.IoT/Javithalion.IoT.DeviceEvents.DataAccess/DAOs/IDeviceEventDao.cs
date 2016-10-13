@@ -10,6 +10,7 @@ namespace Javithalion.IoT.DeviceEvents.DataAccess.DAOs
 {
     public interface IDeviceEventDao
     {
-        IMongoQueryable<DeviceEvent> AllDeviceEvents();       
+        IMongoQueryable<DeviceEvent> AllDeviceEvents();
+        Task Insert(DeviceEvent deviceEvent);
     }
 }
