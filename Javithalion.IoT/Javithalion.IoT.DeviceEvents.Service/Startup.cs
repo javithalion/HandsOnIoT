@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -10,16 +7,13 @@ using Microsoft.Extensions.Logging;
 using Javithalion.IoT.DeviceEvents.DataAccess.DAOs;
 using Javithalion.IoT.DeviceEvents.Business.ReadModel;
 using MongoDB.Driver;
-using System.Security.Authentication;
 using Javithalion.IoT.Infraestructure.ModelBus;
-using Javithalion.IoT.DeviceEvents.Business.WriteModel;
 using AutoMapper;
 using Javithalion.IoT.DeviceEvents.Business.ReadModel.Maps;
 using Javithalion.IoT.DeviceEvents.Service.Infraestructure;
 using NSwag.AspNetCore;
 using System.Reflection;
 using NJsonSchema;
-using Javithalion.IoT.DeviceEvents.Business.WriteModel.Commands;
 
 namespace Javithalion.IoT.DeviceEvents.Service
 {
@@ -80,12 +74,14 @@ namespace Javithalion.IoT.DeviceEvents.Service
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseMvc();
+            app.UseDeveloperExceptionPage();
 
-            //app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, new SwaggerUiOwinSettings
-            //{
-            //    DefaultPropertyNameHandling = PropertyNameHandling.CamelCase
-            //});
+            app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, new SwaggerUiOwinSettings
+            {
+                DefaultPropertyNameHandling = PropertyNameHandling.CamelCase
+            });       
+
+            app.UseMvc();
         }
     }
 }

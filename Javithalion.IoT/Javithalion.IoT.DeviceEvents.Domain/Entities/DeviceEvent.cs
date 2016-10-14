@@ -49,7 +49,7 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Entities
             return this;
         }
 
-        public DeviceEvent Delete()
+        public DeviceEvent Disable()
         {
             Deleted = true;
             return this;

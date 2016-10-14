@@ -24,9 +24,21 @@ namespace Javithalion.IoT.DeviceEvents.DataAccess.DAOs
             return _documentStore.GetCollection<DeviceEvent>(CollectionName).AsQueryable<DeviceEvent>();
         }
 
-        public Task Insert(DeviceEvent deviceEvent)
+        public async Task InsertAsync(DeviceEvent deviceEvent)
         {
-            throw new NotImplementedException();
+            await _documentStore.GetCollection<DeviceEvent>(CollectionName).InsertOneAsync(deviceEvent);
+        }
+
+        public async Task UpdateAsync(DeviceEvent theEvent)
+        {
+            var filter = Builders<DeviceEvent>.Filter.Where(x => x.Id == theEvent.Id);
+
+            var update = Builders<DeviceEvent>.Update.Set(x => x.Deleted, theEvent.Deleted)
+                                                     .Set(x => x.Type, theEvent.Type)
+                                                     .Set(x => x.Date, theEvent.Date)
+                                                     .Set(x => x.DeviceId, theEvent.DeviceId);                                                     
+
+            var result = await _documentStore.GetCollection<DeviceEvent>(CollectionName).UpdateOneAsync(filter, update);
         }
     }
 }

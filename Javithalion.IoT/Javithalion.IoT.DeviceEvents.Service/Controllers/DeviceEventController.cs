@@ -10,18 +10,20 @@ using Javithalion.IoT.DeviceEvents.Business.ReadModel.DTOs;
 using System.Net.Http;
 using System.Net;
 using Javithalion.IoT.Infraestructure.ModelBus;
+using Javithalion.IoT.DeviceEvents.Business;
 
 namespace Javithalion.IoT.DeviceEvents.Service.Controllers
 {
     [Route("api/[controller]")]
     public class DeviceEventController : Controller
     {
+        private readonly IDeviceEventWriteService _deviceEventWriteService;
         private readonly IDeviceEventReadService _deviceEventReadService;
-        private readonly IServiceBus _serviceBus;
 
-        public DeviceEventController(IDeviceEventReadService deviceEventReadService)
+
+        public DeviceEventController(IDeviceEventWriteService deviceEventWriteService, IDeviceEventReadService deviceEventReadService)
         {
-            //_serviceBus = serviceBus;
+            _deviceEventWriteService = deviceEventWriteService;
             _deviceEventReadService = deviceEventReadService;
         }
 
@@ -36,9 +38,9 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{eventId:string}")]
+        [HttpGet("{eventId}")]
         public async Task<IActionResult> Get(string eventId)
-        {           
+        {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -56,10 +58,9 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            await _serviceBus.Send(createCommand);
+            var newEvent = await _deviceEventWriteService.CreateAsync(createCommand);
 
-            DeviceEventDto temp = new DeviceEventDto();
-            return Created($"/api/DeviceEvent/{temp.Id}", temp);
+            return Created($"/api/DeviceEvent/{newEvent.Id}", newEvent);
         }
 
         [HttpPut("{id}")]
@@ -68,8 +69,15 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            await _serviceBus.Send(updateCommand);
-            return Ok();
+            try
+            {
+                await _deviceEventWriteService.UpdateAsync(updateCommand);
+                return Ok();
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound($"Device event with id = {updateCommand.EventId} not found");
+            }
         }
 
         [HttpDelete("{id}")]
@@ -77,9 +85,15 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-
-            await _serviceBus.Send(deleteCommand);
-            return Ok();
+            try
+            {
+                await _deviceEventWriteService.DeleteAsync(deleteCommand);
+                return Ok();
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound($"Device event with id = {deleteCommand.EventId} not found");
+            }
         }
     }
 }
