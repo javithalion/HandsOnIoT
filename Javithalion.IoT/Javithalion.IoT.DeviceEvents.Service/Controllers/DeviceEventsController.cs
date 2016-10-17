@@ -15,13 +15,13 @@ using Javithalion.IoT.DeviceEvents.Business;
 namespace Javithalion.IoT.DeviceEvents.Service.Controllers
 {
     [Route("api/[controller]")]
-    public class DeviceEventController : Controller
+    public class DeviceEventsController : Controller
     {
         private readonly IDeviceEventWriteService _deviceEventWriteService;
         private readonly IDeviceEventReadService _deviceEventReadService;
 
 
-        public DeviceEventController(IDeviceEventWriteService deviceEventWriteService, IDeviceEventReadService deviceEventReadService)
+        public DeviceEventsController(IDeviceEventWriteService deviceEventWriteService, IDeviceEventReadService deviceEventReadService)
         {
             _deviceEventWriteService = deviceEventWriteService;
             _deviceEventReadService = deviceEventReadService;
@@ -60,10 +60,10 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
 
             var newEvent = await _deviceEventWriteService.CreateAsync(createCommand);
 
-            return Created($"/api/DeviceEvent/{newEvent.Id}", newEvent);
+            return Created($"/api/DeviceEvents/{newEvent.Id}", newEvent);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         public async Task<IActionResult> Put(UpdateDeviceEventCommand updateCommand)
         {
             if (!ModelState.IsValid)
@@ -80,7 +80,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public async Task<IActionResult> Delete(DeleteDeviceEventCommand deleteCommand)
         {
             if (!ModelState.IsValid)

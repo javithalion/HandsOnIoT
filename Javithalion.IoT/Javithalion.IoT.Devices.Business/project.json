@@ -1,9 +1,13 @@
-﻿{
+{
   "version": "1.0.0-*",
 
-  "dependencies": {
-    "NETStandard.Library": "1.6.0"
-  },
+    "dependencies": {
+        "AutoMapper": "5.1.1",
+        "Javithalion.IoT.Devices.DataAccess": "1.0.0-*",
+        "Javithalion.IoT.Devices.Domain": "1.0.0-*",
+        "Javithalion.IoT.Infraestructure": "1.0.0-*",
+        "NETStandard.Library": "1.6.0"
+    },
 
   "frameworks": {
     "netstandard1.6": {

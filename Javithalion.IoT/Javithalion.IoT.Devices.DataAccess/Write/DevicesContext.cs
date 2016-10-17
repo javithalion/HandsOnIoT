@@ -14,5 +14,12 @@ namespace Javithalion.IoT.Devices.DataAccess.Write
         public DevicesContext(DbContextOptions<DevicesContext> options)
             : base(options)
         { }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Device>().ToTable("Devices");
+            modelBuilder.Entity<Device>().HasKey(d => d.Id);
+            modelBuilder.Entity<Device>().Property(x => x.Name).HasMaxLength(30);
+        }
     }
 }

@@ -10,12 +10,12 @@ using MongoDB.Driver;
 using Javithalion.IoT.Infraestructure.ModelBus;
 using AutoMapper;
 using Javithalion.IoT.DeviceEvents.Business.ReadModel.Maps;
-using Javithalion.IoT.DeviceEvents.Service.Infraestructure;
 using NSwag.AspNetCore;
 using System.Reflection;
 using NJsonSchema;
 using Javithalion.IoT.DeviceEvents.Business;
 using Javithalion.IoT.DeviceEvents.Business.WriteModel;
+using Javithalion.IoT.DeviceEvents.Service.Infraestructure;
 
 namespace Javithalion.IoT.DeviceEvents.Service
 {

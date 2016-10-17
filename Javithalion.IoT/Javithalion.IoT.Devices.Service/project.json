@@ -1,4 +1,4 @@
-﻿{
+{
   "dependencies": {
     "Microsoft.NETCore.App": {
       "version": "1.0.1",
@@ -14,7 +14,12 @@
     "Microsoft.Extensions.Logging": "1.0.0",
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
-    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0"
+    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
+    "AutoMapper": "5.1.1",
+    "Javithalion.IoT.Devices.Business": "1.0.0-*",
+    "Javithalion.IoT.Devices.DataAccess": "1.0.0-*",
+    "NSwag.AspNetCore": "6.12.0",
+    "Microsoft.AspNetCore.Diagnostics": "1.0.0"
   },
 
   "tools": {

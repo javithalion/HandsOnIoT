@@ -13,12 +13,12 @@ namespace Javithalion.IoT.DeviceEvents.Business.ReadModel
 {
     public class DeviceEventReadService : IDeviceEventReadService
     {
-        private readonly IDeviceEventDao _deviceEventServiceDao;
+        private readonly IDeviceEventDao _deviceEventDao;
         private readonly IMapper _mapper;
 
         public DeviceEventReadService(IDeviceEventDao deviceEventDao, IMapper mapper)
         {
-            _deviceEventServiceDao = deviceEventDao;
+            _deviceEventDao = deviceEventDao;
             _mapper = mapper;
         }
 
@@ -31,7 +31,7 @@ namespace Javithalion.IoT.DeviceEvents.Business.ReadModel
             if (!Guid.TryParse(deviceId, out parsedDeviceGuid))
                 throw new ArgumentException("Provided device id has incorrect format", nameof(deviceId));
 
-            var events = await _deviceEventServiceDao.AllDeviceEvents()
+            var events = await _deviceEventDao.AllDeviceEvents()
                                                      .OfDevice(parsedDeviceGuid)
                                                      .CurrentlyActive()
                                                      .Paged(page, pageSize)
@@ -50,7 +50,7 @@ namespace Javithalion.IoT.DeviceEvents.Business.ReadModel
                 throw new ArgumentException("Provided event id has incorrect format", nameof(eventId));
 
 
-            var queryResult = await _deviceEventServiceDao.AllDeviceEvents()
+            var queryResult = await _deviceEventDao.AllDeviceEvents()
                                                           .WithEventId(parsedEventGuid)
                                                           .FirstOrDefaultAsync();
 

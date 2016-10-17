@@ -2,6 +2,7 @@
   "version": "1.0.0-*",
 
     "dependencies": {
+        "Dapper": "1.50.2",
         "Javithalion.IoT.Devices.Domain": "1.0.0-*",
         "Microsoft.EntityFrameworkCore.SqlServer": "1.0.1",
         "NETStandard.Library": "1.6.0"

@@ -7,6 +7,5 @@ namespace Javithalion.IoT.Infraestructure.Bus.BusEntities
 {
     public class Command : Message
     {
-        public string Name { get; protected set; }
     }
 }
