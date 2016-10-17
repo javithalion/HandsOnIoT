@@ -24,11 +24,11 @@ namespace Javithalion.IoT.Devices.DataAccess.Read
             using (IDbConnection db = new SqlConnection(_connectionString))
             {
                 return await db.QueryAsync<Device>(@"Select * From Devices 
-                                                     where Name Like '%@search%' 
-                                                     and Disabled = false
+                                                     where Name Like '%@searchExpression%' 
+                                                     and Disabled = 0
                                                      order by id 
                                                      OFFSET @offset ROWS 
-                                                     FETCH NEXT @fetch ROWS ONLY", 
+                                                     FETCH NEXT @pageSize ROWS ONLY", 
                                                      new { searchExpression, offset, pageSize });
             }
         }
@@ -37,7 +37,7 @@ namespace Javithalion.IoT.Devices.DataAccess.Read
         {
             using (IDbConnection db = new SqlConnection(_connectionString))
             {
-                return await db.QueryFirstOrDefaultAsync<Device>("Select * From Devices where Id = @Id and Disabled = false", new { id });
+                return await db.QueryFirstOrDefaultAsync<Device>("Select * From Devices where Id = @Id and Disabled = 0", new { id });
             }
         }
     }
