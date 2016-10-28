@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Javithalion.IoT.WebSite.Data;
 using Javithalion.IoT.WebSite.Models;
 using Javithalion.IoT.WebSite.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Javithalion.IoT.WebSite
 {
@@ -40,14 +42,18 @@ namespace Javithalion.IoT.WebSite
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddEntityFramework()
+                .AddDbContext<ApplicationDbContext>(options =>
+                        options.UseInMemoryDatabase());
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddMvc();
+            services.AddMvc(options =>
+            {
+                options.Filters.Add(new RequireHttpsAttribute());
+            });
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
@@ -72,10 +78,17 @@ namespace Javithalion.IoT.WebSite
             }
 
             app.UseStaticFiles();
+            app.UseCookieAuthentication();
 
             app.UseIdentity();
 
             // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
+            app.UseGoogleAuthentication(new GoogleOptions()
+            {
+                ClientId = Configuration["Authentication:Google:ClientId"],
+                ClientSecret = Configuration["Authentication:Google:ClientSecret"]
+            });
+
 
             app.UseMvc(routes =>
             {

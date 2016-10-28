@@ -1,0 +1,13 @@
+﻿<md-sidenav class="md-sidenav-left" md-is-locked-open=true md-whiteframe="4" md-disable-backdrop>
+    <md-toolbar class="md-toolbar-tools">
+        <h2> Sidenav</h2>
+    </md-toolbar>
+    <md-divider></md-divider>
+    <md-list flex>
+        <md-list-item ng-repeat="item in $ctrl.menuEntries" layout="row" layout-padding>
+            <md-icon flex="initial"> {{item.materialIcon}} </md-icon>
+            <md-button href="{{item.link}}" flex>{{item.text}}</md-button>                   
+        </md-list-item>
+    </md-list>
+    <md-divider></md-divider>
+</md-sidenav>

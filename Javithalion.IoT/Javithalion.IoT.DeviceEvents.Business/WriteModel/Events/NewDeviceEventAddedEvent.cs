@@ -16,8 +16,7 @@ namespace Javithalion.IoT.DeviceEvents.Business.WriteModel.Events
         public static NewDeviceEventAddedEvent CreateFor(DeviceEvent newEvent)
         {
             return new NewDeviceEventAddedEvent()
-            {
-                TimeStamp = DateTime.Now,
+            {               
                 TheEvent = newEvent
             };
         }
