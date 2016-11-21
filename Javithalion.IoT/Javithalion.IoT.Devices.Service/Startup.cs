@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -18,6 +15,8 @@ using NSwag.AspNetCore;
 using NJsonSchema;
 using System.Reflection;
 using Javithalion.IoT.Devices.DataAccess.Read;
+using Javithalion.IoT.Devices.DataAccess.Write.Extensions;
+using System.Threading.Tasks;
 
 namespace Javithalion.IoT.Devices.Service
 {
@@ -34,6 +33,9 @@ namespace Javithalion.IoT.Devices.Service
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
 
+            if (env.IsDevelopment())                            
+                builder.AddUserSecrets();            
+
             Configuration = builder.Build();
 
             _mapperConfiguration = new MapperConfiguration(cfg =>
@@ -42,13 +44,17 @@ namespace Javithalion.IoT.Devices.Service
             });
         }
 
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             DependencyInjectionConfiguration(services);
+
             // Add framework services.
-            services.AddMvc(conf => conf.Filters.Add(typeof(UnhandledExceptionFilter)));          
+            services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+                                                                            .AllowAnyMethod()
+                                                                            .AllowAnyHeader()));
+
+            services.AddMvc(conf => conf.Filters.Add(typeof(UnhandledExceptionFilter)));     
         }
 
         private void DependencyInjectionConfiguration(IServiceCollection services)
@@ -58,6 +64,7 @@ namespace Javithalion.IoT.Devices.Service
 
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<DevicesContext>(options => options.UseSqlServer(connectionString));
+            //services.AddDbContext<DevicesContext>(options => options.UseInMemoryDatabase());
             services.AddTransient<IDeviceDao>(DeviceDaoFactory);
 
             services.AddSingleton<IMapper>(factory => _mapperConfiguration.CreateMapper());
@@ -75,6 +82,8 @@ namespace Javithalion.IoT.Devices.Service
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            SeedDatabase(app);            
+
             app.UseDeveloperExceptionPage();
 
             app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, new SwaggerUiOwinSettings
@@ -82,7 +91,17 @@ namespace Javithalion.IoT.Devices.Service
                 DefaultPropertyNameHandling = PropertyNameHandling.CamelCase
             });
 
+            app.UseCors("AllowAll");
+
             app.UseMvc();
+        }
+
+        private void SeedDatabase(IApplicationBuilder app)
+        {
+            using (var context = app.ApplicationServices.GetRequiredService<DevicesContext>())
+            {
+               context.EnsureSeeding();
+            }
         }
     }
 }

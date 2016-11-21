@@ -18,25 +18,20 @@ namespace Javithalion.IoT.Devices.DataAccess.Read
             _connectionString = connectionString;
         }
 
-        public async Task<IEnumerable<Device>> FindAllAsync(string searchExpression, int page, int pageSize)
-        {
-            var offset = (page - 1) * pageSize;
-            using (IDbConnection db = new SqlConnection(_connectionString))
+        public async Task<IEnumerable<Device>> FindAllAsync()
+        {            
+            using (SqlConnection db = new SqlConnection(_connectionString))
             {
-                return await db.QueryAsync<Device>(@"Select * From Devices 
-                                                     where Name Like '%@searchExpression%' 
-                                                     and Disabled = 0
-                                                     order by id 
-                                                     OFFSET @offset ROWS 
-                                                     FETCH NEXT @pageSize ROWS ONLY", 
-                                                     new { searchExpression, offset, pageSize });
+                await db.OpenAsync();
+                return await db.QueryAsync<Device>(@"Select * From Devices where Disabled = 0");
             }
         }
 
         public async Task<Device> GetAsync(Guid id)
         {
-            using (IDbConnection db = new SqlConnection(_connectionString))
+            using (SqlConnection db = new SqlConnection(_connectionString))
             {
+                await db.OpenAsync();
                 return await db.QueryFirstOrDefaultAsync<Device>("Select * From Devices where Id = @Id and Disabled = 0", new { id });
             }
         }

@@ -8,7 +8,7 @@ namespace Javithalion.IoT.Devices.DataAccess.Read
 {
     public interface IDeviceDao
     {
-        Task<IEnumerable<Device>> FindAllAsync(string searchExpression, int page, int pageSize);
+        Task<IEnumerable<Device>> FindAllAsync();
 
         Task<Device> GetAsync(Guid id);
     }

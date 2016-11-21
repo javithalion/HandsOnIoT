@@ -1,0 +1,18 @@
+﻿<md-sidenav flex="15" md-is-locked-open="true" class="md-whiteframe-z1">
+    <md-toolbar layout="row" layout-align="center center">
+        <span>XXXXXXXXXXX</span>
+    </md-toolbar>
+    <md-divider></md-divider>
+    <md-content>
+       
+        <md-list flex>
+            <md-list-item ng-repeat="item in $ctrl.menuEntries" layout="row" layout-padding>
+                <md-icon flex="initial"> {{item.materialIcon}} </md-icon>
+                <md-button href="{{item.link}}" flex>{{item.text}}</md-button>
+            </md-list-item>
+        </md-list>
+
+
+
+    </md-content>
+</md-sidenav>

@@ -9,7 +9,7 @@ namespace Javithalion.IoT.DeviceEvents.Business.ReadModel
 {
     public interface IDeviceEventReadService
     {
-        Task<IEnumerable<DeviceEventDto>> FindAllForDeviceAsync(string deviceId, int page, int pageSize);
+        Task<IEnumerable<DeviceEventDto>> FindAllForDeviceAsync(string deviceId);
 
         Task<DeviceEventDto> GetAsync(string eventId);      
     }

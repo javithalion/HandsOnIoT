@@ -19,7 +19,9 @@
     "Javithalion.IoT.Devices.Business": "1.0.0-*",
     "Javithalion.IoT.Devices.DataAccess": "1.0.0-*",
     "NSwag.AspNetCore": "6.12.0",
-    "Microsoft.AspNetCore.Diagnostics": "1.0.0"
+    "Microsoft.AspNetCore.Diagnostics": "1.0.0",
+    "Microsoft.EntityFrameworkCore.InMemory": "1.0.1",
+    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0"
   },
 
     "tools": {

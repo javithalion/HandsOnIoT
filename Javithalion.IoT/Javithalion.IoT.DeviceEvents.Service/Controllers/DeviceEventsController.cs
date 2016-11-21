@@ -29,12 +29,12 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
 
         [HttpGet()]
         //Unfortunately OData is not available at the moment on dot net core, dirty filtering
-        public async Task<IActionResult> Get(string deviceId = "", int page = 1, int pageSize = 50)
+        public async Task<IActionResult> GetAllForDevice(string deviceId)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var result = await _deviceEventReadService.FindAllForDeviceAsync(deviceId, page, pageSize);
+            var result = await _deviceEventReadService.FindAllForDeviceAsync(deviceId);
             return Ok(result);
         }
 

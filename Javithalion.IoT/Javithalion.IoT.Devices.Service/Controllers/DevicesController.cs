@@ -24,12 +24,12 @@ namespace Javithalion.IoT.Devices.Service.Controllers
 
         [HttpGet()]
         //Unfortunately OData is not available at the moment on dot net core, dirty filtering
-        public async Task<IActionResult> Get(string searchText = "", int page = 1, int pageSize = 50)
+        public async Task<IActionResult> Get()
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var result = await _deviceReadService.FindAllAsync(searchText, page, pageSize);
+            var result = await _deviceReadService.FindAllAsync();
             return Ok(result);
         }
        
@@ -48,7 +48,7 @@ namespace Javithalion.IoT.Devices.Service.Controllers
         }
         
         [HttpPost]
-        public async Task<IActionResult> Post(CreateDeviceCommand createCommand)
+        public async Task<IActionResult> Post([FromBody]CreateDeviceCommand createCommand)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -59,7 +59,7 @@ namespace Javithalion.IoT.Devices.Service.Controllers
         }
         
         [HttpPut]
-        public async Task<IActionResult> Put(UpdateDeviceCommand updateCommand)
+        public async Task<IActionResult> Put([FromBody]UpdateDeviceCommand updateCommand)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -76,7 +76,7 @@ namespace Javithalion.IoT.Devices.Service.Controllers
         }
       
         [HttpDelete]
-        public async Task<IActionResult> Delete(DeleteDeviceCommand deleteCommand)
+        public async Task<IActionResult> Delete([FromBody]DeleteDeviceCommand deleteCommand)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
