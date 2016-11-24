@@ -19,11 +19,19 @@ namespace Javithalion.IoT.Devices.DataAccess.Read
         }
 
         public async Task<IEnumerable<Device>> FindAllAsync()
-        {            
+        {
             using (SqlConnection db = new SqlConnection(_connectionString))
             {
                 await db.OpenAsync();
-                return await db.QueryAsync<Device>(@"Select * From Devices where Disabled = 0");
+                return await db.QueryAsync<Device, OperativeSystem, Device>(@"Select * From Devices dvc
+                                                        left join OperativeSystems os on dvc.OperativeSystemId = os.Id    
+                                                        where dvc.Disabled = 0",
+                                                        (device, operativeSystem) =>
+                                                        {
+                                                            device.Running(operativeSystem);
+                                                            return device;
+                                                        },
+                                                        splitOn: "OperativeSystemId");
             }
         }
 

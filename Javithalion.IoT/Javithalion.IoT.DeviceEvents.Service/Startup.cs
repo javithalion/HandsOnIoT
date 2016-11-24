@@ -66,7 +66,7 @@ namespace Javithalion.IoT.DeviceEvents.Service
 
         private IMongoDatabase MongoDatabaseFactory(IServiceProvider serviceProvider)
         {
-            return null;
+            return null; //TODO :: REMOVE
             MongoClient client = new MongoClient(Configuration.GetConnectionString("DefaultConnection"));
             return client.GetDatabase(Configuration["DeviceEventDatabase:Name"]);
         }        

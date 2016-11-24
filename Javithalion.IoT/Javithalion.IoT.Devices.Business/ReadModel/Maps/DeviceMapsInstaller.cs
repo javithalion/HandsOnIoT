@@ -9,10 +9,12 @@ using System.Threading.Tasks;
 namespace Javithalion.IoT.Devices.Business.ReadModel.Maps
 {
     public class DeviceMapsInstaller : Profile
-    {
+    {        
         protected override void Configure()
         {
-            CreateMap<Device, DeviceDto>();
+            CreateMap<Device, DeviceDto>()
+                .ForMember(dest => dest.IpAddress, opt => opt.MapFrom(src => src.IpAddress.ToString()))
+                .ForMember(dest => dest.OperativeSystemCode, opt => opt.MapFrom(src => src.OperativeSystem.Id));
         }
     }
 }

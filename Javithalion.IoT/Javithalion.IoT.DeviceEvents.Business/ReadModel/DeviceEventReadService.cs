@@ -29,7 +29,7 @@ namespace Javithalion.IoT.DeviceEvents.Business.ReadModel
             //                                         .CurrentlyActive()
             //                                         .ToListAsync();
 
-            var events = GetDummyEvents(deviceId);
+            var events = GetDummyEvents(deviceId); //TODO :: REMOVE
 
             return events.Select(@event => _mapper.Map<DeviceEventDto>(@event));
         }

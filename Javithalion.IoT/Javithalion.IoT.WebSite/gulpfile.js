@@ -1,4 +1,4 @@
-/// <binding AfterBuild='serve' Clean='clean' />
+/// <binding />
 /**
  *  Welcome to your gulpfile!
  *  The gulp tasks are splitted in several files in the gulp directory
