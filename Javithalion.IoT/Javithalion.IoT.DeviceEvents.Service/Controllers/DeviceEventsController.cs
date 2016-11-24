@@ -29,7 +29,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
 
         [HttpGet()]
         //Unfortunately OData is not available at the moment on dot net core, dirty filtering
-        public async Task<IActionResult> GetAllForDevice(string deviceId)
+        public async Task<IActionResult> GetAllForDevice(Guid deviceId)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -39,7 +39,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
         }
 
         [HttpGet("{eventId}")]
-        public async Task<IActionResult> Get(string eventId)
+        public async Task<IActionResult> Get(Guid eventId)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

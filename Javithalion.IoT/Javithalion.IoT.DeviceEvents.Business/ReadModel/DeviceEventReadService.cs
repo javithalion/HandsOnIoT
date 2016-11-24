@@ -22,35 +22,34 @@ namespace Javithalion.IoT.DeviceEvents.Business.ReadModel
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<DeviceEventDto>> FindAllForDeviceAsync(string deviceId)
+        public async Task<IEnumerable<DeviceEventDto>> FindAllForDeviceAsync(Guid deviceId)
         {
-            if (string.IsNullOrEmpty(deviceId))
-                throw new ArgumentException("Null or empty device id was provided", nameof(deviceId));
+            //var events = await _deviceEventDao.AllDeviceEvents()
+            //                                         .OfDevice(parsedDeviceGuid)
+            //                                         .CurrentlyActive()
+            //                                         .ToListAsync();
 
-            Guid parsedDeviceGuid;
-            if (!Guid.TryParse(deviceId, out parsedDeviceGuid))
-                throw new ArgumentException("Provided device id has incorrect format", nameof(deviceId));
-
-            var events = await _deviceEventDao.AllDeviceEvents()
-                                                     .OfDevice(parsedDeviceGuid)
-                                                     .CurrentlyActive()
-                                                     .ToListAsync();
+            var events = GetDummyEvents(deviceId);
 
             return events.Select(@event => _mapper.Map<DeviceEventDto>(@event));
         }
 
-        public async Task<DeviceEventDto> GetAsync(string eventId)
+        private IEnumerable<DeviceEvent> GetDummyEvents(Guid deviceId)
         {
-            if (string.IsNullOrEmpty(eventId))
-                throw new ArgumentException("Null or empty event id was provided", nameof(eventId));
+            var result = new List<DeviceEvent>();
+            int numberOfDummyEvents = 300;
 
-            Guid parsedEventGuid;
-            if (!Guid.TryParse(eventId, out parsedEventGuid))
-                throw new ArgumentException("Provided event id has incorrect format", nameof(eventId));
+            for(int i = 0;i< numberOfDummyEvents; i++)
+            {
+                result.Add(DeviceEvent.CreateNewForDevice(deviceId).OfType("Dummy"));
+            }
+            return result;
+        }
 
-
+        public async Task<DeviceEventDto> GetAsync(Guid eventId)
+        {
             var queryResult = await _deviceEventDao.AllDeviceEvents()
-                                                          .WithEventId(parsedEventGuid)
+                                                          .WithEventId(eventId)
                                                           .FirstOrDefaultAsync();
 
             return _mapper.Map<DeviceEventDto>(queryResult);

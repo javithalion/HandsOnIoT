@@ -1,18 +1,18 @@
 ﻿<div class="simple-table-container md-whiteframe-4dp">
     <md-tabs md-dynamic-height md-border-bottom>
 
-        <md-tab label="Basic Info">
+        <md-tab label="Basic info">
             <md-content class="md-padding">
-                <h1 class="md-display-2">Basic information</h1>
+                <h1 class="md-display-2" translate="DEVICES.DETAILS.FORM.TITLE">Information</h1>
                 <form name="deviceForm" ng-submit="vm.submit()" class="md-inline-form ng-pristine ng-invalid ng-invalid-required ng-valid-pattern">                   
                     <div layout="column" flex ="40">
                         <md-input-container flex ng-hide="vm.create">
-                            <label>Id</label>
+                            <label translate="DEVICES.DETAILS.FORM.ID">Id</label>
                             <input ng-model="vm.device.id" disabled>
                         </md-input-container>
 
                         <md-input-container flex>
-                            <label>First name</label>
+                            <label translate="DEVICES.DETAILS.FORM.NAME">Name</label>
                             <input ng-model="vm.device.name" name="name" md-maxlength="30" required>
                             <div ng-messages="deviceForm.name.$error">
                                 <div ng-message="required">This field is required.</div>
@@ -21,14 +21,14 @@
                         </md-input-container>
 
                         <md-input-container flex>
-                            <label>IP address</label>
+                            <label translate="DEVICES.DETAILS.FORM.IP">IP address</label>
                             <input ng-model="vm.device.ip" name="ipAddress" md-maxlength="30">
                             <div ng-messages="deviceForm.ipAddress.$error">                                                               
                             </div>
                         </md-input-container>
 
                         <md-input-container flex>
-                            <label>Device's OS</label>
+                            <label translate="DEVICES.DETAILS.FORM.OS">Operative system</label>
                             <md-select name="deviceOs" ng-model="vm.device.operativeSystem.id" required md-no-asterisk="false">
                                 <md-option ng-repeat="os in vm.operativeSystems" value="{{os.id}}">{{os.name}}</md-option>
                             </md-select>
@@ -38,24 +38,24 @@
                         </md-input-container>
 
                     </div>
-                    <md-button type="submit" class="md-raised md-accent md-button md-default-theme md-ink-ripple" ng-disabled="deviceForm.$invalid || deviceForm.$pristine">Save</md-button>
+                    <md-button type="submit" class="md-raised md-accent md-button md-default-theme md-ink-ripple" ng-disabled="deviceForm.$invalid || deviceForm.$pristine" translate="DEVICES.DETAILS.FORM.SAVE">XXXX</md-button>
                 </form>
 
             </md-content>
         </md-tab>
 
-        <md-tab label="Events" ng-disabled="vm.create">
+        <md-tab label="Events" ng-disabled="vm.create" ng-click="vm.loadDeviceEvents();">
             <md-content class="md-padding">
-                <h1 class="md-display-2">Events</h1>
+                <h1 class="md-display-2" translate="DEVICES.DETAILS.EVENTS.TITLE">Events</h1>
 
+                <div class="ms-responsive-table-wrapper">
+                    <table datatable="" class="row-border hover" dt-options="vm.dtOptions" dt-columns="vm.dtColumns" dt-instance="vm.dtInstance"></table>
+                </div>
 
             </md-content>
         </md-tab>
 
-
-
-
     </md-tabs>
 
-    <md-button ui-sref="app.devices">Back to list</md-button>
+    <md-button ui-sref="app.devices" translate="DEVICES.DETAILS.GENERAL.BACK">Back to list</md-button>
 </div>

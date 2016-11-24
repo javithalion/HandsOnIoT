@@ -52,9 +52,10 @@
             title: 'Manage',
             icon: 'icon-monitor',
             state: 'app.devices',
-            translate: 'DEVICES.MENU_LABEL',
+            translate: 'DEVICES.MENU.LABEL',
             weight: 1
         });
+       
 
     }
 })();

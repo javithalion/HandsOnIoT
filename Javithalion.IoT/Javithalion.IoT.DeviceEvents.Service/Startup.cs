@@ -45,6 +45,11 @@ namespace Javithalion.IoT.DeviceEvents.Service
         {
             DependencyInjectionConfiguration(services);
             // Add framework services.
+            services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+                                                                            .AllowAnyMethod()
+                                                                            .AllowAnyHeader()));
+
+
             services.AddMvc(conf => conf.Filters.Add(typeof(UnhandledExceptionFilter)));
         }
 
@@ -61,6 +66,7 @@ namespace Javithalion.IoT.DeviceEvents.Service
 
         private IMongoDatabase MongoDatabaseFactory(IServiceProvider serviceProvider)
         {
+            return null;
             MongoClient client = new MongoClient(Configuration.GetConnectionString("DefaultConnection"));
             return client.GetDatabase(Configuration["DeviceEventDatabase:Name"]);
         }        
@@ -76,7 +82,9 @@ namespace Javithalion.IoT.DeviceEvents.Service
             app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, new SwaggerUiOwinSettings
             {
                 DefaultPropertyNameHandling = PropertyNameHandling.CamelCase
-            });       
+            });
+
+            app.UseCors("AllowAll");
 
             app.UseMvc();
         }

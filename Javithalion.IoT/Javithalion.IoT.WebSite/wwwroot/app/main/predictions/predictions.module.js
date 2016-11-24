@@ -13,7 +13,7 @@
                 url: '/predictions',
                 views: {
                     'content@app': {
-                        templateUrl: 'app/main/predictions/wizard.step1.html',
+                        templateUrl: 'app/main/predictions/wizard.stepper.html',
                         controller: 'PredictionsController as vm' 
                     }                    
                 }
@@ -27,7 +27,7 @@
             title: 'Predictions',
             icon: 'icon-chart-areaspline',
             state: 'app.predictions',
-            translate: 'PREDICTIONS.MENU_LABEL',
+            translate: 'PREDICTIONS.MENU.LABEL',
             weight: 2
         });
         

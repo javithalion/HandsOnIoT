@@ -1,5 +1,11 @@
 ﻿{
     "DEVICES": {
-        "MENU_LABEL": "Manage"
+        "MENU": {
+            "LABEL": "Manage"
+        },
+        "LIST": {
+            "TITLE": "List of devices",
+            "CREATE": "Add device"
+        }
     }
 }

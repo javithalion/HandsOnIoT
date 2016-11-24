@@ -1,5 +1,22 @@
 ﻿{
-    "DEVICES": {
-        
+    "DEVICES.DETAILS": {
+        "GENERAL": {
+            "BACK": "Back to list"
+        },
+        "TABS": {
+            "INFO": "Basic info",
+            "EVENTS": "Events"
+        },
+        "FORM": {
+            "TITLE": "Basic information",
+            "ID": "Id",
+            "NAME": "Device name",
+            "IP": "Device's IP address",
+            "OS": "Device's Operative System",
+            "SAVE": "Save"
+        },
+        "EVENTS": {
+            "TITLE": "Events' list"
+        }
     }
 }

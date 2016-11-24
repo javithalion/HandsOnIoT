@@ -12,7 +12,7 @@
 
         //Data
         svc.devicesApiUrl = 'http://localhost:4311/api/devices';
-        svc.deviceEventsApiUrl = '';
+        svc.deviceEventsApiUrl = 'http://localhost:21597/api/DeviceEvents';
 
         // Methods
         svc.getAllDevices = function () {
@@ -39,7 +39,7 @@
         };
 
         svc.getAllDeviceEvents = function (device) {
-            return $http.get(svc.devicesApiUrl, { deviceId: device.id });
+            return $http.get(svc.deviceEventsApiUrl, { deviceId: device.id });
         }
     }
 })();

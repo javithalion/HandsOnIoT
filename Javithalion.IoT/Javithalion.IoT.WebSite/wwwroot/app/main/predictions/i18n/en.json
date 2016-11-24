@@ -1,5 +1,20 @@
 ﻿{
     "PREDICTIONS": {
-        "MENU_LABEL": "Predictions"
+        "MENU": {
+            "LABEL": "Predictions"
+        },
+        "WIZARD": {
+            "STEP1": {
+                "STEP_TITLE": "Device information",
+                "TITLE": "Select device and event information"
+            },
+            "STEP2": {
+                "STEP_TITLE": "Select precition",
+                "TITLE": "Select which kind of predition you want to do."
+            }
+        },
+        "RESULT": {
+            "TITLE": "Prediction results:"
+        }        
     }
 }
