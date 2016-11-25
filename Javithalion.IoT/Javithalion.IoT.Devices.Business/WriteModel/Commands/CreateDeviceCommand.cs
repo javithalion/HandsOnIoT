@@ -13,8 +13,9 @@ namespace Javithalion.IoT.Devices.Business.WriteModel.Commands
         public string Name { get; set; }
 
         [Required]
-        public int SelectedOperativeSystemId { get; set; }
-                
+        [Range(0, double.MaxValue)]
+        public int OperativeSystemCode { get; set; }
+
         public string IpAddress { get; set; }
     }
 }

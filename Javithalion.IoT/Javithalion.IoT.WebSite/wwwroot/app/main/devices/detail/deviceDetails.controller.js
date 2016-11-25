@@ -13,10 +13,9 @@
         vm.dtInstance = {};
         vm.contentPlaceHolder = angular.element('#content');
 
-        vm.operativeSystems = [{ id: 1, name: 'Winows' }, { id: 2, name: 'Windows IoT' }, { id: 3, name: 'Android' }, { id: 4, name: 'iOS' }]
+        vm.operativeSystems = [{ id: 1, name: 'Windows' }, { id: 2, name: 'Windows IoT' }, { id: 3, name: 'Android' }, { id: 4, name: 'iOS' }]
 
-        vm.deviceEventsLoaded = false;
-        vm.deviceEvents = [];
+        vm.deviceEventsLoaded = false;      
 
         vm.deviceId = $stateParams.id;
         vm.create = true;

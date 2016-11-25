@@ -22,14 +22,14 @@
 
                         <md-input-container flex>
                             <label translate="DEVICES.DETAILS.FORM.IP">IP address</label>
-                            <input ng-model="vm.device.ip" name="ipAddress" md-maxlength="30">
+                            <input ng-model="vm.device.ipAddress" name="ipAddress" md-maxlength="30">
                             <div ng-messages="deviceForm.ipAddress.$error">                                                               
                             </div>
                         </md-input-container>
 
                         <md-input-container flex>
                             <label translate="DEVICES.DETAILS.FORM.OS">Operative system</label>
-                            <md-select name="deviceOs" ng-model="vm.device.operativeSystem.id" required md-no-asterisk="false">
+                            <md-select name="deviceOs" ng-model="vm.device.operativeSystemCode" required md-no-asterisk="false">
                                 <md-option ng-repeat="os in vm.operativeSystems" value="{{os.id}}">{{os.name}}</md-option>
                             </md-select>
                             <div ng-messages="deviceForm.deviceOs.$error">

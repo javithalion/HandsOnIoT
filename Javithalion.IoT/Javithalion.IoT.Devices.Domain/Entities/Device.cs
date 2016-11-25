@@ -18,7 +18,8 @@ namespace Javithalion.IoT.Devices.Domain.Entities
 
         public OperativeSystem OperativeSystem { get; private set; }
 
-        public IPAddress IpAddress { get; private set; }       
+        //public IPAddress IpAddress { get; private set; }
+        public string IpAddress { get; private set; }
 
         protected Device() { }
 
@@ -32,7 +33,8 @@ namespace Javithalion.IoT.Devices.Domain.Entities
                 Name = name,
                 Disabled = false,
                 OperativeSystem = operativeSystem,
-                IpAddress = UndefinedIPAddress.Value
+                //IpAddress = UndefinedIPAddress.Value
+                IpAddress = UndefinedIPAddress.Value.ToString()
             };
         }
 
@@ -53,16 +55,18 @@ namespace Javithalion.IoT.Devices.Domain.Entities
 
         public Device WithIpAddress(string ipAddress)
         {
-            IpAddress = ParseStringToIpAddress(ipAddress);
+            //IpAddress = ParseStringToIpAddress(ipAddress);
+
+            if (string.IsNullOrWhiteSpace(ipAddress))
+                IpAddress = UndefinedIPAddress.Value.ToString();
+            else
+                IpAddress = ParseStringToIpAddress(ipAddress).ToString();
 
             return this;
         }
 
         public IPAddress ParseStringToIpAddress(string ipString)
         {
-            if (string.IsNullOrWhiteSpace(ipString))
-                throw new ArgumentException("Provided IP address was null or empty");
-
             string[] splitValues = ipString.Split('.');
             if (splitValues.Length != 4)
                 throw new ArgumentException($"Provided IP address {ipString} didn't has the expected format ###.###.###.###");
@@ -78,19 +82,18 @@ namespace Javithalion.IoT.Devices.Domain.Entities
         {
             Disabled = true;
             return this;
+        }       
+    }
+
+    public class UndefinedIPAddress
+    {
+        private UndefinedIPAddress()
+        {
         }
 
-
-        private class UndefinedIPAddress
+        public static IPAddress Value
         {
-            private UndefinedIPAddress()
-            {
-            }
-
-            public static IPAddress Value
-            {
-                get { return new IPAddress(0x0); }
-            }
+            get { return new IPAddress(0x0); }
         }
     }
 }

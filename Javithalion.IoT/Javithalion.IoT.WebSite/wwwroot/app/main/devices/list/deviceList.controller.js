@@ -19,8 +19,10 @@
         .withOption('createdRow', drawComplete);
 
         vm.dtColumns = [
-            DTColumnBuilder.newColumn('id').withTitle('Id'),
+            DTColumnBuilder.newColumn('id').withTitle('Id').notVisible(),
             DTColumnBuilder.newColumn('name').withTitle('Name'),
+            DTColumnBuilder.newColumn('ipAddress').withTitle('IP Address'),
+            DTColumnBuilder.newColumn('operativeSystemName').withTitle('Operative System'),
             DTColumnBuilder.newColumn(null)
                 .withTitle('Actions')
                 .notSortable()

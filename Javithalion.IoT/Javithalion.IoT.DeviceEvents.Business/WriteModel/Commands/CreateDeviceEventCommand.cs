@@ -13,7 +13,7 @@ namespace Javithalion.IoT.DeviceEvents.Business.WriteModel.Commands
         public Guid DeviceId { get; set; }
 
         [Required]
-        public EventType EventType { get; set; }
+        public EventType EventType { get; set; }       
     }
 
     public enum EventType

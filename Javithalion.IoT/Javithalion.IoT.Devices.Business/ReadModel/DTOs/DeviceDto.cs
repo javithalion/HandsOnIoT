@@ -14,5 +14,7 @@ namespace Javithalion.IoT.Devices.Business.ReadModel.DTOs
         public string IpAddress { get; set; }
 
         public int OperativeSystemCode { get; set; }
+
+        public string OperativeSystemName { get; set; }
     }
 }

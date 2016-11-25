@@ -23,8 +23,7 @@ namespace Javithalion.IoT.Devices.DataAccess.Write
 
             modelBuilder.Entity<Device>().ToTable("Devices");
             modelBuilder.Entity<Device>().HasKey(d => d.Id);
-            modelBuilder.Entity<Device>().Property(x => x.Name).HasMaxLength(30);
-            modelBuilder.Entity<Device>().Ignore(x => x.IpAddress); //TODO :: Include again
+            modelBuilder.Entity<Device>().Property(x => x.Name).HasMaxLength(30);            
             modelBuilder.Entity<Device>().HasOne(x => x.OperativeSystem);
         }
     }

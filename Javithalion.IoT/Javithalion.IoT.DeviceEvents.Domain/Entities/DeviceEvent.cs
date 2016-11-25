@@ -19,7 +19,13 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Entities
         public DateTime Date { get; private set; }
 
         [BsonElement("Type")]
-        public string Type { get; private set; }
+        public EventType Type { get; private set; }
+
+        [BsonElement("TypeName")]
+        public string TypeName { get; private set; }
+
+        [BsonElement("EventDetails")]
+        public dynamic Details { get; private set; }
 
         [BsonElement("Deleted")]
         public bool Deleted { get; private set; }
@@ -35,7 +41,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Entities
                 DeviceId = deviceId,
                 Date = DateTime.Now,
                 Deleted = false,
-                Type = "Default"
+                Type = EventType.Others,
+                TypeName = EventType.Others.ToString()
             };
         }
 
@@ -45,7 +52,6 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Entities
                 throw new ArgumentException("Event type was null or empty. Please provide a value here", nameof(eventType));
 
             Type = Type;
-
             return this;
         }
 
@@ -55,5 +61,12 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Entities
             return this;
         }
 
+        public DeviceEvent WithDetails(dynamic details)
+        {
+            if (details != null)
+                Details = details;
+
+            return this;
+        }
     }
 }

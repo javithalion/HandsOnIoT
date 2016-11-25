@@ -27,22 +27,14 @@ namespace Javithalion.IoT.Devices.Business
 
         public async Task<DeviceDto> CreateAsync(CreateDeviceCommand createCommand)
         {
-            var operativeSystem = await GetOperativeSystemFromCreateCommand(createCommand);
-            var device = Device.CreateNew(createCommand.Name, operativeSystem).WithIpAddress(createCommand.IpAddress);
+            var operativeSystem = await GetOperativeSystemFromCode(createCommand.OperativeSystemCode);
+            var device = Device.CreateNew(createCommand.Name, operativeSystem)
+                               .WithIpAddress(createCommand.IpAddress);
 
             _context.Devices.Add(device);
             await _context.SaveChangesAsync();
 
             return _mapper.Map<Device, DeviceDto>(device);
-        }
-
-        private async Task<OperativeSystem> GetOperativeSystemFromCreateCommand(CreateDeviceCommand createCommand)
-        {
-            var operativeSystem = await _context.OperativeSystems.WithIdAsync(createCommand.SelectedOperativeSystemId);
-            if (operativeSystem == null)
-                throw new KeyNotFoundException($"There is no Operative System identified with the provided value '{createCommand.SelectedOperativeSystemId}'");
-
-            return operativeSystem;
         }
 
         public async Task<DeviceDto> DeleteAsync(DeleteDeviceCommand deleteCommand)
@@ -66,11 +58,24 @@ namespace Javithalion.IoT.Devices.Business
                 throw new KeyNotFoundException();
             else
             {
-                device.WithName(updateCommand.Name);
+                var operativeSystem = await GetOperativeSystemFromCode(updateCommand.OperativeSystemCode);
+
+                device.WithName(updateCommand.Name)
+                      .Running(operativeSystem)
+                      .WithIpAddress(updateCommand.IpAddress);              
 
                 await _context.SaveChangesAsync();
                 return _mapper.Map<Device, DeviceDto>(device);
             }
+        }
+
+        private async Task<OperativeSystem> GetOperativeSystemFromCode(int operativeSystemCode)
+        {
+            var operativeSystem = await _context.OperativeSystems.WithIdAsync(operativeSystemCode);
+            if (operativeSystem == null)
+                throw new KeyNotFoundException($"There is no Operative System identified with the provided value '{operativeSystemCode}'");
+
+            return operativeSystem;
         }
     }
 }
