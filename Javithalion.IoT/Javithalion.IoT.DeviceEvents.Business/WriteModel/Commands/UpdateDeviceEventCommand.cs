@@ -11,5 +11,7 @@ namespace Javithalion.IoT.DeviceEvents.Business.WriteModel.Commands
     {
         [Required]
         public Guid EventId { get; set; }
+
+        public dynamic Details { get; set; }
     }
 }

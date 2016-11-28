@@ -7,7 +7,6 @@ using Microsoft.Extensions.Logging;
 using Javithalion.IoT.DeviceEvents.DataAccess.DAOs;
 using Javithalion.IoT.DeviceEvents.Business.ReadModel;
 using MongoDB.Driver;
-using Javithalion.IoT.Infraestructure.ModelBus;
 using AutoMapper;
 using Javithalion.IoT.DeviceEvents.Business.ReadModel.Maps;
 using NSwag.AspNetCore;
@@ -15,7 +14,9 @@ using System.Reflection;
 using NJsonSchema;
 using Javithalion.IoT.DeviceEvents.Business;
 using Javithalion.IoT.DeviceEvents.Business.WriteModel;
-using Javithalion.IoT.DeviceEvents.Service.Infraestructure;
+using Javithalion.IoT.DeviceEvents.Service.Middlewares;
+using Serilog;
+using System.IO;
 
 namespace Javithalion.IoT.DeviceEvents.Service
 {
@@ -38,30 +39,37 @@ namespace Javithalion.IoT.DeviceEvents.Service
             {
                 cfg.AddProfile(new AutoMapperProfileConfiguration());
             });
+
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .Enrich.FromLogContext()
+                .WriteTo.Async(m => 
+                                    m.RollingFile(Path.Combine(env.ContentRootPath, "log-{Date}.txt"),
+                                    outputTemplate: "{Timestamp} {RequestId} [{Level}] {Message}{NewLine}{Exception}"))
+                .CreateLogger();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             DependencyInjectionConfiguration(services);
+
             // Add framework services.
             services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
-                                                                            .AllowAnyMethod()
-                                                                            .AllowAnyHeader()));
-
-
-            services.AddMvc(conf => conf.Filters.Add(typeof(UnhandledExceptionFilter)));
+                                                                                        .AllowAnyMethod()
+                                                                                        .AllowAnyHeader()));
+            services.AddMvc();
         }
 
         private void DependencyInjectionConfiguration(IServiceCollection services)
         {
             services.AddTransient<IDeviceEventWriteService, DeviceEventWriteService>();
             services.AddTransient<IDeviceEventReadService, DeviceEventReadService>();
-                        
+
             services.AddTransient<IDeviceEventDao, DeviceEventDao>();
 
             services.AddSingleton(MongoDatabaseFactory);
-            services.AddSingleton<IMapper>(factory => _mapperConfiguration.CreateMapper());           
+            services.AddSingleton<IMapper>(factory => _mapperConfiguration.CreateMapper());
         }
 
         private IMongoDatabase MongoDatabaseFactory(IServiceProvider serviceProvider)
@@ -69,7 +77,7 @@ namespace Javithalion.IoT.DeviceEvents.Service
             return null; //TODO :: REMOVE
             MongoClient client = new MongoClient(Configuration.GetConnectionString("DefaultConnection"));
             return client.GetDatabase(Configuration["DeviceEventDatabase:Name"]);
-        }        
+        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -77,15 +85,19 @@ namespace Javithalion.IoT.DeviceEvents.Service
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseDeveloperExceptionPage();
+            loggerFactory.AddSerilog();
 
-            app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, new SwaggerUiOwinSettings
+            if (env.IsDevelopment())
             {
-                DefaultPropertyNameHandling = PropertyNameHandling.CamelCase
-            });
+                app.UseDeveloperExceptionPage();
+                app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, new SwaggerUiOwinSettings
+                {
+                    DefaultPropertyNameHandling = PropertyNameHandling.CamelCase
+                });
+                app.UseCors("AllowAll");
+            }
 
-            app.UseCors("AllowAll");
-
+            app.UseMiddleware(typeof(ErrorHandlingMiddleware));
             app.UseMvc();
         }
     }

@@ -25,11 +25,27 @@ namespace Javithalion.IoT.DeviceEvents.Business.WriteModel
 
         public async Task<DeviceEventDto> CreateAsync(CreateDeviceEventCommand createCommand)
         {
-            var newEvent = DeviceEvent.CreateNewForDevice(createCommand.DeviceId)
-                                     .OfType(createCommand.EventType.ToString());
+            var newEvent = CreateDeviceEventFromCommand(createCommand);
 
             await _deviceEventServiceDao.InsertAsync(newEvent);
             return _mapper.Map<DeviceEvent, DeviceEventDto>(newEvent);
+        }
+
+        private DeviceEvent CreateDeviceEventFromCommand(CreateDeviceEventCommand createCommand)
+        {
+            switch(createCommand.EventType)
+            {
+                case Commands.EventType.StartUp:
+                    return DeviceEvent.NewStartUpEvent(createCommand.DeviceId);
+                case Commands.EventType.Shutdown:
+                    return DeviceEvent.NewTearDownEvent(createCommand.DeviceId);
+                case Commands.EventType.PerformanceOverview:
+                    return DeviceEvent.NewResourcesOverviewEvent(createCommand.DeviceId, createCommand.Details);
+                case Commands.EventType.PerformanceDetails:
+                    return DeviceEvent.NewResourcesDetailedEvent(createCommand.DeviceId, createCommand.Details);
+                default:
+                    return DeviceEvent.NewCustomEvent(createCommand.DeviceId, createCommand.TypeName, createCommand.Details);
+            }
         }
 
         public async Task<DeviceEventDto> DeleteAsync(DeleteDeviceEventCommand deleteCommand)
@@ -55,7 +71,9 @@ namespace Javithalion.IoT.DeviceEvents.Business.WriteModel
             if (theEvent == null)
                 throw new KeyNotFoundException();
             else
-            {                
+            {
+                theEvent.WithDetails(updateCommand.Details);                     
+                        
                 await _deviceEventServiceDao.UpdateAsync(theEvent);
                 return _mapper.Map<DeviceEvent, DeviceEventDto>(theEvent);
             }

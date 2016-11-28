@@ -14,12 +14,19 @@ namespace Javithalion.IoT.DeviceEvents.Business.WriteModel.Commands
 
         [Required]
         public EventType EventType { get; set; }       
+
+        [Required(AllowEmptyStrings = true)]
+        public string TypeName { get; set; }
+
+        public dynamic Details { get; set; }
     }
 
     public enum EventType
     {
         StartUp,
         Shutdown,
-        Performance
+        PerformanceOverview,
+        PerformanceDetails,
+        Others
     }
 }

@@ -34,24 +34,78 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Entities
         {
         }
 
-        public static DeviceEvent CreateNewForDevice(Guid deviceId)
+        public static DeviceEvent NewStartUpEvent(Guid deviceId)
         {
             return new DeviceEvent()
             {
                 DeviceId = deviceId,
                 Date = DateTime.Now,
                 Deleted = false,
-                Type = EventType.Others,
-                TypeName = EventType.Others.ToString()
+                Type = EventType.StartUp,
+                TypeName = EventType.StartUp.ToString(),
+                Details = string.Empty
             };
         }
 
-        public DeviceEvent OfType(string eventType)
+        public static DeviceEvent NewTearDownEvent(Guid deviceId)
         {
-            if (string.IsNullOrEmpty(eventType))
-                throw new ArgumentException("Event type was null or empty. Please provide a value here", nameof(eventType));
+            return new DeviceEvent()
+            {
+                DeviceId = deviceId,
+                Date = DateTime.Now,
+                Deleted = false,
+                Type = EventType.TearDown,
+                TypeName = EventType.TearDown.ToString(),
+                Details = string.Empty
+            };
+        }
 
-            Type = Type;
+        public static DeviceEvent NewResourcesOverviewEvent(Guid deviceId, dynamic details)
+        {
+            return new DeviceEvent()
+            {
+                DeviceId = deviceId,
+                Date = DateTime.Now,
+                Deleted = false,
+                Type = EventType.ResourcesOverview,
+                TypeName = EventType.ResourcesOverview.ToString(),
+                Details = details
+            };
+        }
+
+        public static DeviceEvent NewResourcesDetailedEvent(Guid deviceId, dynamic details)
+        {
+            return new DeviceEvent()
+            {
+                DeviceId = deviceId,
+                Date = DateTime.Now,
+                Deleted = false,
+                Type = EventType.ResourcesDetailed,
+                TypeName = EventType.ResourcesDetailed.ToString(),
+                Details = details
+            };
+        }
+
+        public static DeviceEvent NewCustomEvent(Guid deviceId, string type, dynamic details = null)
+        {
+            if (string.IsNullOrEmpty(type))
+                throw new ArgumentException("Provided type cannot be null or empty on a custom event", nameof(type));
+
+            return new DeviceEvent()
+            {
+                DeviceId = deviceId,
+                Date = DateTime.Now,
+                Deleted = false,
+                Type = EventType.ResourcesDetailed,
+                TypeName = EventType.ResourcesDetailed.ToString(),
+                Details = details ?? string.Empty
+            };
+        }
+
+        public DeviceEvent WithDetails(dynamic details)
+        {
+            Details = details ?? string.Empty;
+
             return this;
         }
 
@@ -61,12 +115,5 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Entities
             return this;
         }
 
-        public DeviceEvent WithDetails(dynamic details)
-        {
-            if (details != null)
-                Details = details;
-
-            return this;
-        }
     }
 }

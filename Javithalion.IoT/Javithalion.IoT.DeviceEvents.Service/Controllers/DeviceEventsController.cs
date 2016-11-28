@@ -1,15 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Javithalion.IoT.DeviceEvents.Business.ReadModel;
-using Javithalion.IoT.DeviceEvents.Domain.Entities;
 using Javithalion.IoT.DeviceEvents.Business.WriteModel.Commands;
-using Javithalion.IoT.DeviceEvents.Business.ReadModel.DTOs;
-using System.Net.Http;
-using System.Net;
-using Javithalion.IoT.Infraestructure.ModelBus;
 using Javithalion.IoT.DeviceEvents.Business;
 
 namespace Javithalion.IoT.DeviceEvents.Service.Controllers
@@ -27,10 +21,10 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
             _deviceEventReadService = deviceEventReadService;
         }
 
-        [HttpGet()]
-        //Unfortunately OData is not available at the moment on dot net core, dirty filtering
+        [HttpGet()]        
         public async Task<IActionResult> GetAllForDevice(Guid deviceId)
         {
+            throw new Exception("ABCDE");
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -53,7 +47,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(CreateDeviceEventCommand createCommand)
+        public async Task<IActionResult> Post([FromBody]CreateDeviceEventCommand createCommand)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -64,7 +58,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Put(UpdateDeviceEventCommand updateCommand)
+        public async Task<IActionResult> Put([FromBody]UpdateDeviceEventCommand updateCommand)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -81,7 +75,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Delete(DeleteDeviceEventCommand deleteCommand)
+        public async Task<IActionResult> Delete([FromBody]DeleteDeviceEventCommand deleteCommand)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

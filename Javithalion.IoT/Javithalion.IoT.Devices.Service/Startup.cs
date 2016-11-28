@@ -6,7 +6,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using AutoMapper;
 using Javithalion.IoT.Devices.Business.ReadModel.Maps;
-using Javithalion.IoT.DeviceEvents.Service.Infraestructure;
 using Javithalion.IoT.Devices.Business;
 using Javithalion.IoT.Devices.Business.ReadModel;
 using Javithalion.IoT.Devices.DataAccess.Write;
@@ -16,7 +15,8 @@ using NJsonSchema;
 using System.Reflection;
 using Javithalion.IoT.Devices.DataAccess.Read;
 using Javithalion.IoT.Devices.DataAccess.Write.Extensions;
-using System.Threading.Tasks;
+using Serilog;
+using System.IO;
 
 namespace Javithalion.IoT.Devices.Service
 {
@@ -42,6 +42,11 @@ namespace Javithalion.IoT.Devices.Service
             {
                 cfg.AddProfile(new DeviceMapsInstaller());
             });
+
+            Log.Logger = new LoggerConfiguration()
+               .MinimumLevel.Debug()
+               .WriteTo.Async(m => m.RollingFile(Path.Combine(env.ContentRootPath, "log-{Date}.txt")))
+               .CreateLogger();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -52,9 +57,9 @@ namespace Javithalion.IoT.Devices.Service
             // Add framework services.
             services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
                                                                             .AllowAnyMethod()
-                                                                            .AllowAnyHeader()));
+                                                                            .AllowAnyHeader()));            
 
-            services.AddMvc(conf => conf.Filters.Add(typeof(UnhandledExceptionFilter)));     
+            services.AddMvc();     
         }
 
         private void DependencyInjectionConfiguration(IServiceCollection services)
@@ -82,17 +87,18 @@ namespace Javithalion.IoT.Devices.Service
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            SeedDatabase(app);            
-
-            app.UseDeveloperExceptionPage();
-
-            app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, new SwaggerUiOwinSettings
+            if (env.IsDevelopment())
             {
-                DefaultPropertyNameHandling = PropertyNameHandling.CamelCase
-            });
+                SeedDatabase(app);
+                app.UseDeveloperExceptionPage();
+                app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, new SwaggerUiOwinSettings
+                {
+                    DefaultPropertyNameHandling = PropertyNameHandling.CamelCase
+                });
+                app.UseCors("AllowAll");
+            }
 
-            app.UseCors("AllowAll");
-
+            loggerFactory.AddSerilog();
             app.UseMvc();
         }
 

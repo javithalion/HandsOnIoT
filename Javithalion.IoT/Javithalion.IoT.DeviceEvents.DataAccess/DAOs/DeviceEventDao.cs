@@ -12,7 +12,7 @@ namespace Javithalion.IoT.DeviceEvents.DataAccess.DAOs
     public class DeviceEventDao : IDeviceEventDao
     {
         private const string CollectionName = "DeviceEventCollection";
-        private readonly IMongoDatabase _documentStore;              
+        private readonly IMongoDatabase _documentStore;
 
         public DeviceEventDao(IMongoDatabase mongoDatabase)
         {
@@ -21,7 +21,7 @@ namespace Javithalion.IoT.DeviceEvents.DataAccess.DAOs
 
         public IMongoQueryable<DeviceEvent> AllDeviceEvents()
         {
-            return _documentStore.GetCollection<DeviceEvent>(CollectionName).AsQueryable<DeviceEvent>();
+            return _documentStore.GetCollection<DeviceEvent>(CollectionName).AsQueryable();
         }
 
         public async Task InsertAsync(DeviceEvent deviceEvent)
@@ -36,7 +36,9 @@ namespace Javithalion.IoT.DeviceEvents.DataAccess.DAOs
             var update = Builders<DeviceEvent>.Update.Set(x => x.Deleted, theEvent.Deleted)
                                                      .Set(x => x.Type, theEvent.Type)
                                                      .Set(x => x.Date, theEvent.Date)
-                                                     .Set(x => x.DeviceId, theEvent.DeviceId);                                                     
+                                                     .Set(x => x.TypeName, theEvent.TypeName)
+                                                     .Set(x => x.Details, (BsonDocument)theEvent.Details.ToBsonDocument())
+                                                     .Set(x => x.DeviceId, theEvent.DeviceId);
 
             var result = await _documentStore.GetCollection<DeviceEvent>(CollectionName).UpdateOneAsync(filter, update);
         }

@@ -41,7 +41,7 @@ namespace Javithalion.IoT.DeviceEvents.Business.ReadModel
 
             for(int i = 0;i< numberOfDummyEvents; i++)
             {
-                result.Add(DeviceEvent.CreateNewForDevice(deviceId).OfType("Dummy"));
+                result.Add(DeviceEvent.NewStartUpEvent(deviceId));
             }
             return result;
         }

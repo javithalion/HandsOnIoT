@@ -62,7 +62,7 @@ namespace Javithalion.IoT.Devices.Business
 
                 device.WithName(updateCommand.Name)
                       .Running(operativeSystem)
-                      .WithIpAddress(updateCommand.IpAddress);              
+                      .WithIpAddress(updateCommand.IpAddress);
 
                 await _context.SaveChangesAsync();
                 return _mapper.Map<Device, DeviceDto>(device);

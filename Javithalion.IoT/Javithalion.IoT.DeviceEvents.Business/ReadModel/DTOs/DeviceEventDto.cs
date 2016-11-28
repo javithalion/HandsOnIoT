@@ -11,7 +11,11 @@ namespace Javithalion.IoT.DeviceEvents.Business.ReadModel.DTOs
 
         public Guid DeviceId { get; set; }
 
-        public DateTime Date { get; private set; }
+        public DateTime Date { get; set; }
+
+        public string Type { get; set; }
+
+        public dynamic Details { get; set; }
 
     }
 }
