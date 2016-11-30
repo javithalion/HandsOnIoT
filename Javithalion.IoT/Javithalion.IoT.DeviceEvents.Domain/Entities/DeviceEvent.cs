@@ -96,8 +96,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Entities
                 DeviceId = deviceId,
                 Date = DateTime.Now,
                 Deleted = false,
-                Type = EventType.ResourcesDetailed,
-                TypeName = EventType.ResourcesDetailed.ToString(),
+                Type = EventType.Others,
+                TypeName = type,
                 Details = details ?? string.Empty
             };
         }

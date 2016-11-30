@@ -1,6 +1,0 @@
-{
-	"directory": "wwwroot/assets/lib",
-	"registry": "http://bower.herokuapp.com",
-	"https-proxy" : "http://19.12.1.40:83/",
-	"proxy" : "http://19.12.1.40:83/"
-}

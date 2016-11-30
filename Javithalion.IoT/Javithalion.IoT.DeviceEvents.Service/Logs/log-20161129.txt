@@ -1,0 +1,68 @@
+﻿11/29/2016 09:52:06 +01:00 ::  :: [Debug] - Hosting starting
+11/29/2016 09:52:06 +01:00 ::  :: [Debug] - Hosting started
+11/29/2016 09:52:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI61"" started.
+11/29/2016 09:52:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI62"" started.
+11/29/2016 09:52:07 +01:00 :: 0HL0O6JVRE1E2 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/api/DeviceEvents  
+11/29/2016 09:52:07 +01:00 :: 0HL0O6JVRE1E1 :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:21597/  0
+11/29/2016 09:52:07 +01:00 :: 0HL0O6JVRE1E1 :: [Information] - Request finished in 190.6636ms 200 
+11/29/2016 09:52:07 +01:00 :: 0HL0O6JVRE1E2 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 09:52:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI62"" completed keep alive response.
+11/29/2016 09:52:08 +01:00 :: 0HL0O6JVRE1E2 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/DeviceEvents"'.
+11/29/2016 09:52:08 +01:00 :: 0HL0O6JVRE1E2 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Post (Javithalion.IoT.DeviceEvents.Service)"' with id '"c634fe66-aafa-4b91-9cf1-e6d3de812e07"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 09:52:08 +01:00 :: 0HL0O6JVRE1E2 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Put (Javithalion.IoT.DeviceEvents.Service)"' with id '"4341c5bb-54f4-4923-a3f9-38736727ea38"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 09:52:08 +01:00 :: 0HL0O6JVRE1E2 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Delete (Javithalion.IoT.DeviceEvents.Service)"' with id '"249a7f7e-b032-48f9-bb66-9629b61ffa0a"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 09:52:08 +01:00 :: 0HL0O6JVRE1E2 :: [Debug] - Executing action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)"
+11/29/2016 09:52:08 +01:00 :: 0HL0O6JVRE1E2 :: [Information] - Executing action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" with arguments (["00000000-0000-0000-0000-000000000000"]) - ModelState is Valid
+11/29/2016 09:52:08 +01:00 :: 0HL0O6JVRE1E2 :: [Error] - Error when processing request from ::1 with id 0HL0O6JVRE1E2
+System.Exception: ABCDE
+   at Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.<GetAllForDevice>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionFilterAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Javithalion.IoT.DeviceEvents.Service.Middlewares.ErrorHandlingMiddleware.<Invoke>d__3.MoveNext()
+11/29/2016 09:52:08 +01:00 :: 0HL0O6JVRE1E2 :: [Information] - Request finished in 1388.7184ms 500 application/json
+11/29/2016 09:52:08 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI61"" completed keep alive response.
+11/29/2016 09:52:08 +01:00 :: 0HL0O6JVRE1E3 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/favicon.ico  
+11/29/2016 09:52:08 +01:00 :: 0HL0O6JVRE1E3 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 09:52:08 +01:00 :: 0HL0O6JVRE1E3 :: [Debug] - Request did not match any routes.
+11/29/2016 09:52:08 +01:00 :: 0HL0O6JVRE1E3 :: [Information] - Request finished in 6.1923ms 404 
+11/29/2016 09:52:08 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI62"" completed keep alive response.
+11/29/2016 09:54:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI61"" received FIN.
+11/29/2016 09:54:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI62"" received FIN.
+11/29/2016 09:54:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI62"" disconnecting.
+11/29/2016 09:54:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI61"" disconnecting.
+11/29/2016 09:54:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI61"" sending FIN.
+11/29/2016 09:54:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI62"" sending FIN.
+11/29/2016 09:54:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI61"" sent FIN with status "0".
+11/29/2016 09:54:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI62"" sent FIN with status "0".
+11/29/2016 09:54:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI62"" stopped.
+11/29/2016 09:54:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI61"" stopped.
+11/29/2016 09:55:15 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI63"" started.
+11/29/2016 09:55:15 +01:00 :: 0HL0O6JVRE1E4 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/api/DeviceEvents/X  
+11/29/2016 09:55:15 +01:00 :: 0HL0O6JVRE1E4 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 09:55:15 +01:00 :: 0HL0O6JVRE1E4 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/DeviceEvents/{eventId}"'.
+11/29/2016 09:55:15 +01:00 :: 0HL0O6JVRE1E4 :: [Debug] - Executing action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Get (Javithalion.IoT.DeviceEvents.Service)"
+11/29/2016 09:55:15 +01:00 :: 0HL0O6JVRE1E4 :: [Information] - Executing action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Get (Javithalion.IoT.DeviceEvents.Service)" with arguments (["00000000-0000-0000-0000-000000000000"]) - ModelState is Invalid
+11/29/2016 09:55:15 +01:00 :: 0HL0O6JVRE1E4 :: [Debug] - Executed action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Get (Javithalion.IoT.DeviceEvents.Service)", returned result "Microsoft.AspNetCore.Mvc.BadRequestObjectResult".
+11/29/2016 09:55:15 +01:00 :: 0HL0O6JVRE1E4 :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 09:55:15 +01:00 :: 0HL0O6JVRE1E4 :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 09:55:15 +01:00 :: 0HL0O6JVRE1E4 :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 09:55:16 +01:00 :: 0HL0O6JVRE1E4 :: [Information] - Executed action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Get (Javithalion.IoT.DeviceEvents.Service)" in 204.1884ms
+11/29/2016 09:55:16 +01:00 :: 0HL0O6JVRE1E4 :: [Information] - Request finished in 225.4526ms 400 application/json; charset=utf-8
+11/29/2016 09:55:16 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI63"" completed keep alive response.
+11/29/2016 09:58:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI63"" received FIN.
+11/29/2016 09:58:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI63"" disconnecting.
+11/29/2016 09:58:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI63"" sending FIN.
+11/29/2016 09:58:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI63"" sent FIN with status "0".
+11/29/2016 09:58:07 +01:00 ::  :: [Debug] - Connection id ""0HL0O6JVPEI63"" stopped.

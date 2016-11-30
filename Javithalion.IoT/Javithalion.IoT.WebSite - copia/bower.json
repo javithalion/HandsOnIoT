@@ -1,8 +1,0 @@
-{
-  "name": "asp.net",
-  "private": true,
-  "dependencies": {},
-  "resolutions": {
-    "angular": "1.5.8"
-  }
-}

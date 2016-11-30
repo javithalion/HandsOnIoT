@@ -1,0 +1,403 @@
+﻿11/29/2016 11:16:44 +01:00 ::  :: [Debug] - Hosting starting
+11/29/2016 11:16:44 +01:00 ::  :: [Debug] - Hosting started
+11/29/2016 11:16:44 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" started.
+11/29/2016 11:16:44 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" started.
+11/29/2016 11:16:44 +01:00 :: 0HL0O8392CQN2 :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 11:16:44 +01:00 :: 0HL0O8392CQN1 :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:4311/  0
+11/29/2016 11:16:44 +01:00 :: 0HL0O8392CQN1 :: [Information] - Request finished in 71.7418ms 200 
+11/29/2016 11:16:44 +01:00 :: 0HL0O8392CQN2 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:16:44 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" completed keep alive response.
+11/29/2016 11:16:45 +01:00 :: 0HL0O8392CQN2 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 11:16:45 +01:00 :: 0HL0O8392CQN2 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"2a27ed96-80b5-4015-8a22-47de1bab82cf"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:16:45 +01:00 :: 0HL0O8392CQN2 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"e962ba50-5a91-4c4c-b573-2a9154c64302"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:16:45 +01:00 :: 0HL0O8392CQN2 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"455f6b72-4f8f-43e6-a2d1-691d36b5fe28"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:16:45 +01:00 :: 0HL0O8392CQN2 :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 11:16:45 +01:00 :: 0HL0O8392CQN2 :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 11:16:46 +01:00 :: 0HL0O8392CQN2 :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 11:16:46 +01:00 :: 0HL0O8392CQN2 :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 11:16:46 +01:00 :: 0HL0O8392CQN2 :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 11:16:46 +01:00 :: 0HL0O8392CQN2 :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 11:16:46 +01:00 :: 0HL0O8392CQN2 :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 1008.589ms
+11/29/2016 11:16:46 +01:00 :: 0HL0O8392CQN2 :: [Information] - Request finished in 1477.9968ms 200 application/json; charset=utf-8
+11/29/2016 11:16:46 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" completed keep alive response.
+11/29/2016 11:16:46 +01:00 :: 0HL0O8392CQN3 :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/favicon.ico  
+11/29/2016 11:16:46 +01:00 :: 0HL0O8392CQN3 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:16:46 +01:00 :: 0HL0O8392CQN3 :: [Debug] - Request did not match any routes.
+11/29/2016 11:16:46 +01:00 :: 0HL0O8392CQN3 :: [Information] - Request finished in 3.9922ms 404 
+11/29/2016 11:16:46 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" completed keep alive response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN4 :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN4 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN4 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN4 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"2a27ed96-80b5-4015-8a22-47de1bab82cf"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN4 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"e962ba50-5a91-4c4c-b573-2a9154c64302"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN4 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"455f6b72-4f8f-43e6-a2d1-691d36b5fe28"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN4 :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN4 :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN4 :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN4 :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN4 :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN4 :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN4 :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 31.4038ms
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN4 :: [Information] - Request finished in 41.243ms 200 application/json; charset=utf-8
+11/29/2016 11:17:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" completed keep alive response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN5 :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/favicon.ico  
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN5 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN5 :: [Debug] - Request did not match any routes.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN5 :: [Information] - Request finished in 3.2321ms 404 
+11/29/2016 11:17:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" completed keep alive response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN6 :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN6 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN6 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN6 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"2a27ed96-80b5-4015-8a22-47de1bab82cf"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN6 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"e962ba50-5a91-4c4c-b573-2a9154c64302"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN6 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"455f6b72-4f8f-43e6-a2d1-691d36b5fe28"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN6 :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN6 :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN6 :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN6 :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN6 :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN6 :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN6 :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 9.5716ms
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN6 :: [Information] - Request finished in 21.7552ms 200 application/json; charset=utf-8
+11/29/2016 11:17:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" completed keep alive response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN7 :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/favicon.ico  
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN7 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN7 :: [Debug] - Request did not match any routes.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN7 :: [Information] - Request finished in 4.1551ms 404 
+11/29/2016 11:17:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" completed keep alive response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN8 :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN8 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN8 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN8 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"2a27ed96-80b5-4015-8a22-47de1bab82cf"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN8 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"e962ba50-5a91-4c4c-b573-2a9154c64302"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN8 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"455f6b72-4f8f-43e6-a2d1-691d36b5fe28"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN8 :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN8 :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN8 :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN8 :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN8 :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN8 :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN8 :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 9.5588ms
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN8 :: [Information] - Request finished in 15.5933ms 200 application/json; charset=utf-8
+11/29/2016 11:17:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" completed keep alive response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN9 :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/favicon.ico  
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN9 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN9 :: [Debug] - Request did not match any routes.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQN9 :: [Information] - Request finished in 3.481ms 404 
+11/29/2016 11:17:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" completed keep alive response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNA :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNA :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNA :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNA :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"2a27ed96-80b5-4015-8a22-47de1bab82cf"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNA :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"e962ba50-5a91-4c4c-b573-2a9154c64302"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNA :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"455f6b72-4f8f-43e6-a2d1-691d36b5fe28"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNA :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNA :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNA :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNA :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNA :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNA :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNA :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 6.8462ms
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNA :: [Information] - Request finished in 11.5084ms 200 application/json; charset=utf-8
+11/29/2016 11:17:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" completed keep alive response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNB :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/favicon.ico  
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNB :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNB :: [Debug] - Request did not match any routes.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNB :: [Information] - Request finished in 1.9409ms 404 
+11/29/2016 11:17:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" completed keep alive response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNC :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNC :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNC :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNC :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"2a27ed96-80b5-4015-8a22-47de1bab82cf"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNC :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"e962ba50-5a91-4c4c-b573-2a9154c64302"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNC :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"455f6b72-4f8f-43e6-a2d1-691d36b5fe28"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNC :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNC :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNC :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNC :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNC :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNC :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNC :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 5.6105ms
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQNC :: [Information] - Request finished in 9.9901ms 200 application/json; charset=utf-8
+11/29/2016 11:17:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" completed keep alive response.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQND :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/favicon.ico  
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQND :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQND :: [Debug] - Request did not match any routes.
+11/29/2016 11:17:40 +01:00 :: 0HL0O8392CQND :: [Information] - Request finished in 1.871ms 404 
+11/29/2016 11:17:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" completed keep alive response.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNE :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNE :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNE :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNE :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"2a27ed96-80b5-4015-8a22-47de1bab82cf"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNE :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"e962ba50-5a91-4c4c-b573-2a9154c64302"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNE :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"455f6b72-4f8f-43e6-a2d1-691d36b5fe28"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNE :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNE :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNE :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNE :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNE :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNE :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNE :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 8.9222ms
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNE :: [Information] - Request finished in 16.4923ms 200 application/json; charset=utf-8
+11/29/2016 11:17:41 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" completed keep alive response.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNF :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/favicon.ico  
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNF :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNF :: [Debug] - Request did not match any routes.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNF :: [Information] - Request finished in 4.7728ms 404 
+11/29/2016 11:17:41 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" completed keep alive response.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNG :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNG :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNG :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNG :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"2a27ed96-80b5-4015-8a22-47de1bab82cf"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNG :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"e962ba50-5a91-4c4c-b573-2a9154c64302"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNG :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"455f6b72-4f8f-43e6-a2d1-691d36b5fe28"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNG :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNG :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNG :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNG :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNG :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNG :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNG :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 8.8763ms
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNG :: [Information] - Request finished in 15.2184ms 200 application/json; charset=utf-8
+11/29/2016 11:17:41 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" completed keep alive response.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNH :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/favicon.ico  
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNH :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNH :: [Debug] - Request did not match any routes.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNH :: [Information] - Request finished in 2.5814ms 404 
+11/29/2016 11:17:41 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" completed keep alive response.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNI :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNI :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNI :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNI :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"2a27ed96-80b5-4015-8a22-47de1bab82cf"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNI :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"e962ba50-5a91-4c4c-b573-2a9154c64302"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNI :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"455f6b72-4f8f-43e6-a2d1-691d36b5fe28"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNI :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNI :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNI :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNI :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNI :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNI :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNI :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 9.2448ms
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNI :: [Information] - Request finished in 17.0006ms 200 application/json; charset=utf-8
+11/29/2016 11:17:41 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" completed keep alive response.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNJ :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/favicon.ico  
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNJ :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNJ :: [Debug] - Request did not match any routes.
+11/29/2016 11:17:41 +01:00 :: 0HL0O8392CQNJ :: [Information] - Request finished in 1.8277ms 404 
+11/29/2016 11:17:41 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" completed keep alive response.
+11/29/2016 11:18:44 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" received FIN.
+11/29/2016 11:18:44 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" received FIN.
+11/29/2016 11:18:44 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" disconnecting.
+11/29/2016 11:18:44 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" disconnecting.
+11/29/2016 11:18:44 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" sending FIN.
+11/29/2016 11:18:44 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" sending FIN.
+11/29/2016 11:18:44 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" sent FIN with status "0".
+11/29/2016 11:18:44 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" sent FIN with status "0".
+11/29/2016 11:18:44 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E2"" stopped.
+11/29/2016 11:18:44 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E1"" stopped.
+11/29/2016 11:27:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E3"" started.
+11/29/2016 11:27:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E3"" received FIN.
+11/29/2016 11:27:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E3"" disconnecting.
+11/29/2016 11:27:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E3"" sending FIN.
+11/29/2016 11:27:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E3"" sent FIN with status "0".
+11/29/2016 11:27:40 +01:00 ::  :: [Debug] - Connection id ""0HL0O8391A1E3"" stopped.
+﻿11/29/2016 11:54:02 +01:00 ::  :: [Debug] - Hosting starting
+11/29/2016 11:54:02 +01:00 ::  :: [Debug] - Hosting started
+11/29/2016 11:54:02 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47E"" started.
+11/29/2016 11:54:02 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47F"" started.
+11/29/2016 11:54:02 +01:00 :: 0HL0O8O3VGEEM :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 11:54:02 +01:00 :: 0HL0O8O3VGEEL :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:4311/  0
+11/29/2016 11:54:02 +01:00 :: 0HL0O8O3VGEEL :: [Information] - Request finished in 71.0978ms 200 
+11/29/2016 11:54:02 +01:00 :: 0HL0O8O3VGEEM :: [Debug] - The request path "" does not match the path filter
+11/29/2016 11:54:02 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47F"" completed keep alive response.
+11/29/2016 11:54:02 +01:00 :: 0HL0O8O3VGEEM :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 11:54:02 +01:00 :: 0HL0O8O3VGEEM :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"e24c7563-55f7-4d48-a761-a89ec5312a71"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:54:02 +01:00 :: 0HL0O8O3VGEEM :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"6a4ac3d8-3b51-4426-88e8-4c2ef2125904"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:54:02 +01:00 :: 0HL0O8O3VGEEM :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"a1b28ffa-0439-4bf4-929c-3909ed4cb030"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 11:54:03 +01:00 :: 0HL0O8O3VGEEM :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 11:54:03 +01:00 :: 0HL0O8O3VGEEM :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 11:54:03 +01:00 :: 0HL0O8O3VGEEM :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 11:54:03 +01:00 :: 0HL0O8O3VGEEM :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 11:54:03 +01:00 :: 0HL0O8O3VGEEM :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 11:54:03 +01:00 :: 0HL0O8O3VGEEM :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 11:54:03 +01:00 :: 0HL0O8O3VGEEM :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 493.0995ms
+11/29/2016 11:54:03 +01:00 :: 0HL0O8O3VGEEM :: [Information] - Request finished in 882.8257ms 200 application/json; charset=utf-8
+11/29/2016 11:54:03 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47E"" completed keep alive response.
+11/29/2016 11:56:02 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47F"" received FIN.
+11/29/2016 11:56:02 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47E"" received FIN.
+11/29/2016 11:56:02 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47E"" disconnecting.
+11/29/2016 11:56:02 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47F"" disconnecting.
+11/29/2016 11:56:02 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47E"" sending FIN.
+11/29/2016 11:56:02 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47F"" sending FIN.
+11/29/2016 11:56:02 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47F"" sent FIN with status "0".
+11/29/2016 11:56:02 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47E"" sent FIN with status "0".
+11/29/2016 11:56:02 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47E"" stopped.
+11/29/2016 11:56:02 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47F"" stopped.
+11/29/2016 12:05:09 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47G"" started.
+11/29/2016 12:05:09 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47G"" received FIN.
+11/29/2016 12:05:09 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47G"" disconnecting.
+11/29/2016 12:05:09 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47G"" sending FIN.
+11/29/2016 12:05:09 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47G"" sent FIN with status "0".
+11/29/2016 12:05:09 +01:00 ::  :: [Debug] - Connection id ""0HL0O8O3UC47G"" stopped.
+﻿11/29/2016 12:10:10 +01:00 ::  :: [Debug] - Hosting starting
+11/29/2016 12:10:10 +01:00 ::  :: [Debug] - Hosting started
+11/29/2016 12:10:11 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVB"" started.
+11/29/2016 12:10:11 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVC"" started.
+11/29/2016 12:10:11 +01:00 :: 0HL0O914KASG5 :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 12:10:11 +01:00 :: 0HL0O914KASG6 :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:4311/  0
+11/29/2016 12:10:11 +01:00 :: 0HL0O914KASG6 :: [Information] - Request finished in 78.4552ms 200 
+11/29/2016 12:10:11 +01:00 :: 0HL0O914KASG5 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 12:10:11 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVB"" completed keep alive response.
+11/29/2016 12:10:11 +01:00 :: 0HL0O914KASG5 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 12:10:11 +01:00 :: 0HL0O914KASG5 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"7f1943ee-06ef-4e0d-a0a8-cd66a44bb92b"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 12:10:11 +01:00 :: 0HL0O914KASG5 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"03067c53-554c-4ceb-a717-ab882e8f2e10"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 12:10:11 +01:00 :: 0HL0O914KASG5 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"57dfaa91-c9d6-495f-bfad-1e3d82d70aec"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 12:10:11 +01:00 :: 0HL0O914KASG5 :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 12:10:11 +01:00 :: 0HL0O914KASG5 :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 12:10:11 +01:00 :: 0HL0O914KASG5 :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 12:10:11 +01:00 :: 0HL0O914KASG5 :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 12:10:11 +01:00 :: 0HL0O914KASG5 :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 12:10:11 +01:00 :: 0HL0O914KASG5 :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 12:10:12 +01:00 :: 0HL0O914KASG5 :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 518.9909ms
+11/29/2016 12:10:12 +01:00 :: 0HL0O914KASG5 :: [Information] - Request finished in 921.0328ms 200 application/json; charset=utf-8
+11/29/2016 12:10:12 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVC"" completed keep alive response.
+11/29/2016 12:10:12 +01:00 :: 0HL0O914KASG7 :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/favicon.ico  
+11/29/2016 12:10:12 +01:00 :: 0HL0O914KASG7 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 12:10:12 +01:00 :: 0HL0O914KASG7 :: [Debug] - Request did not match any routes.
+11/29/2016 12:10:12 +01:00 :: 0HL0O914KASG7 :: [Information] - Request finished in 4.1064ms 404 
+11/29/2016 12:10:12 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVB"" completed keep alive response.
+11/29/2016 12:12:11 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVB"" received FIN.
+11/29/2016 12:12:11 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVC"" received FIN.
+11/29/2016 12:12:11 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVC"" disconnecting.
+11/29/2016 12:12:11 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVB"" disconnecting.
+11/29/2016 12:12:11 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVC"" sending FIN.
+11/29/2016 12:12:11 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVB"" sending FIN.
+11/29/2016 12:12:11 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVB"" sent FIN with status "0".
+11/29/2016 12:12:11 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVC"" sent FIN with status "0".
+11/29/2016 12:12:11 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVB"" stopped.
+11/29/2016 12:12:11 +01:00 ::  :: [Debug] - Connection id ""0HL0O914J5KVC"" stopped.
+﻿11/29/2016 12:15:20 +01:00 ::  :: [Debug] - Hosting starting
+11/29/2016 12:15:20 +01:00 ::  :: [Debug] - Hosting started
+11/29/2016 12:15:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O940S9EO5"" started.
+11/29/2016 12:15:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O940S9EO6"" started.
+11/29/2016 12:15:20 +01:00 :: 0HL0O940TFJII :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 12:15:20 +01:00 :: 0HL0O940TFJIJ :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:4311/  0
+11/29/2016 12:15:20 +01:00 :: 0HL0O940TFJIJ :: [Information] - Request finished in 73.0875ms 200 
+11/29/2016 12:15:20 +01:00 :: 0HL0O940TFJII :: [Debug] - The request path "" does not match the path filter
+11/29/2016 12:15:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O940S9EO6"" completed keep alive response.
+11/29/2016 12:15:21 +01:00 :: 0HL0O940TFJII :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 12:15:21 +01:00 :: 0HL0O940TFJII :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"02085571-9e09-4951-a1c1-011b912f90ad"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 12:15:21 +01:00 :: 0HL0O940TFJII :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"88b92a11-e684-470b-b271-0be24aeb4e73"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 12:15:21 +01:00 :: 0HL0O940TFJII :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"82c852bb-119e-4292-a39d-990d1c264629"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 12:15:21 +01:00 :: 0HL0O940TFJII :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 12:15:21 +01:00 :: 0HL0O940TFJII :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 12:15:21 +01:00 :: 0HL0O940TFJII :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 12:15:21 +01:00 :: 0HL0O940TFJII :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 12:15:21 +01:00 :: 0HL0O940TFJII :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 12:15:21 +01:00 :: 0HL0O940TFJII :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 12:15:21 +01:00 :: 0HL0O940TFJII :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 552.4717ms
+11/29/2016 12:15:21 +01:00 :: 0HL0O940TFJII :: [Information] - Request finished in 954.9119ms 200 application/json; charset=utf-8
+11/29/2016 12:15:21 +01:00 ::  :: [Debug] - Connection id ""0HL0O940S9EO5"" completed keep alive response.
+﻿11/29/2016 12:17:20 +01:00 ::  :: [Debug] - Hosting starting
+11/29/2016 12:17:20 +01:00 ::  :: [Debug] - Hosting started
+11/29/2016 12:17:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4MF"" started.
+11/29/2016 12:17:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4ME"" started.
+11/29/2016 12:17:20 +01:00 :: 0HL0O954N4C78 :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 12:17:20 +01:00 :: 0HL0O954N4C79 :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:4311/  0
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C79 :: [Information] - Request finished in 80.1791ms 200 
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C78 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 12:17:21 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4ME"" completed keep alive response.
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C78 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C78 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"cefb58f7-7e75-46ea-ba52-7c5da12e7782"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C78 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"f086a112-dc2d-4e17-988c-1db858168dff"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C78 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"9926005b-d0f8-4973-933e-c2af369950b8"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C78 :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C78 :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C78 :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C78 :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C78 :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C78 :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C78 :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 490.5078ms
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C78 :: [Information] - Request finished in 908.5285ms 200 application/json; charset=utf-8
+11/29/2016 12:17:21 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4MF"" completed keep alive response.
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C7A :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/favicon.ico  
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C7A :: [Debug] - The request path "" does not match the path filter
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C7A :: [Debug] - Request did not match any routes.
+11/29/2016 12:17:21 +01:00 :: 0HL0O954N4C7A :: [Information] - Request finished in 4.597ms 404 
+11/29/2016 12:17:21 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4ME"" completed keep alive response.
+11/29/2016 12:19:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4MF"" received FIN.
+11/29/2016 12:19:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4ME"" received FIN.
+11/29/2016 12:19:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4ME"" disconnecting.
+11/29/2016 12:19:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4MF"" disconnecting.
+11/29/2016 12:19:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4MF"" sending FIN.
+11/29/2016 12:19:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4ME"" sending FIN.
+11/29/2016 12:19:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4MF"" sent FIN with status "0".
+11/29/2016 12:19:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4ME"" sent FIN with status "0".
+11/29/2016 12:19:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4MF"" stopped.
+11/29/2016 12:19:20 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4ME"" stopped.
+11/29/2016 12:28:28 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4MG"" started.
+11/29/2016 12:28:28 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4MG"" received FIN.
+11/29/2016 12:28:28 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4MG"" disconnecting.
+11/29/2016 12:28:28 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4MG"" sending FIN.
+11/29/2016 12:28:28 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4MG"" sent FIN with status "0".
+11/29/2016 12:28:28 +01:00 ::  :: [Debug] - Connection id ""0HL0O954LV4MG"" stopped.
+﻿11/29/2016 13:48:19 +01:00 ::  :: [Debug] - Hosting starting
+11/29/2016 13:48:19 +01:00 ::  :: [Debug] - Hosting started
+11/29/2016 13:48:19 +01:00 ::  :: [Debug] - Connection id ""0HL0OANVCA8FI"" started.
+11/29/2016 13:48:19 +01:00 ::  :: [Debug] - Connection id ""0HL0OANVCA8FH"" started.
+11/29/2016 13:48:19 +01:00 :: 0HL0OANVDDLD5 :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:4311/  0
+11/29/2016 13:48:19 +01:00 :: 0HL0OANVDDLD6 :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 13:48:19 +01:00 :: 0HL0OANVDDLD5 :: [Information] - Request finished in 72.4018ms 200 
+11/29/2016 13:48:19 +01:00 :: 0HL0OANVDDLD6 :: [Debug] - The request path "" does not match the path filter
+11/29/2016 13:48:19 +01:00 ::  :: [Debug] - Connection id ""0HL0OANVCA8FH"" completed keep alive response.
+11/29/2016 13:48:19 +01:00 :: 0HL0OANVDDLD6 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 13:48:19 +01:00 :: 0HL0OANVDDLD6 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"868eddd3-e7cf-4982-9106-05e5fb5cf434"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 13:48:19 +01:00 :: 0HL0OANVDDLD6 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"fe6a4604-e1b1-455d-8a8b-44169c48e47d"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 13:48:19 +01:00 :: 0HL0OANVDDLD6 :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"18a5752c-0109-488c-9f1e-70f2a9becbe1"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 13:48:19 +01:00 :: 0HL0OANVDDLD6 :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 13:48:19 +01:00 :: 0HL0OANVDDLD6 :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 13:48:19 +01:00 :: 0HL0OANVDDLD6 :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 13:48:19 +01:00 :: 0HL0OANVDDLD6 :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 13:48:19 +01:00 :: 0HL0OANVDDLD6 :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 13:48:19 +01:00 :: 0HL0OANVDDLD6 :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 13:48:20 +01:00 :: 0HL0OANVDDLD6 :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 510.7515ms
+11/29/2016 13:48:20 +01:00 :: 0HL0OANVDDLD6 :: [Information] - Request finished in 913.7578ms 200 application/json; charset=utf-8
+11/29/2016 13:48:20 +01:00 ::  :: [Debug] - Connection id ""0HL0OANVCA8FI"" completed keep alive response.
+﻿11/29/2016 13:50:41 +01:00 ::  :: [Debug] - Hosting starting
+11/29/2016 13:50:41 +01:00 ::  :: [Debug] - Hosting started
+11/29/2016 13:50:41 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBO9"" started.
+11/29/2016 13:50:41 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBOA"" started.
+11/29/2016 13:50:41 +01:00 :: 0HL0OAP9PV54S :: [Information] - Request starting HTTP/1.1 GET http://localhost:4311/api/devices  
+11/29/2016 13:50:41 +01:00 :: 0HL0OAP9PV54R :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:4311/  0
+11/29/2016 13:50:41 +01:00 :: 0HL0OAP9PV54R :: [Information] - Request finished in 70.152ms 200 
+11/29/2016 13:50:41 +01:00 :: 0HL0OAP9PV54S :: [Debug] - The request path "" does not match the path filter
+11/29/2016 13:50:41 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBO9"" completed keep alive response.
+11/29/2016 13:50:41 +01:00 :: 0HL0OAP9PV54S :: [Debug] - Request successfully matched the route with name 'null' and template '"api/Devices"'.
+11/29/2016 13:50:41 +01:00 :: 0HL0OAP9PV54S :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Post (Javithalion.IoT.Devices.Service)"' with id '"cfafb868-38d0-4e21-801d-783e98d1a25c"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 13:50:41 +01:00 :: 0HL0OAP9PV54S :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Put (Javithalion.IoT.Devices.Service)"' with id '"71389aea-9ea6-431f-89d0-10a121120faa"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 13:50:41 +01:00 :: 0HL0OAP9PV54S :: [Debug] - Action '"Javithalion.IoT.Devices.Service.Controllers.DevicesController.Delete (Javithalion.IoT.Devices.Service)"' with id '"1cd1b4f0-1e07-4e78-9ab2-5faf1261e230"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+11/29/2016 13:50:41 +01:00 :: 0HL0OAP9PV54S :: [Debug] - Executing action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)"
+11/29/2016 13:50:41 +01:00 :: 0HL0OAP9PV54S :: [Information] - Executing action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" with arguments (null) - ModelState is Valid
+11/29/2016 13:50:42 +01:00 :: 0HL0OAP9PV54S :: [Debug] - Executed action method "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+11/29/2016 13:50:42 +01:00 :: 0HL0OAP9PV54S :: [Debug] - No information found on request to perform content negotiation.
+11/29/2016 13:50:42 +01:00 :: 0HL0OAP9PV54S :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+11/29/2016 13:50:42 +01:00 :: 0HL0OAP9PV54S :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+11/29/2016 13:50:42 +01:00 :: 0HL0OAP9PV54S :: [Information] - Executed action "Javithalion.IoT.Devices.Service.Controllers.DevicesController.Get (Javithalion.IoT.Devices.Service)" in 527.5986ms
+11/29/2016 13:50:42 +01:00 :: 0HL0OAP9PV54S :: [Information] - Request finished in 917.046ms 200 application/json; charset=utf-8
+11/29/2016 13:50:42 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBOA"" completed keep alive response.
+11/29/2016 13:52:41 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBOA"" received FIN.
+11/29/2016 13:52:41 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBO9"" received FIN.
+11/29/2016 13:52:41 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBO9"" disconnecting.
+11/29/2016 13:52:41 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBOA"" disconnecting.
+11/29/2016 13:52:41 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBO9"" sending FIN.
+11/29/2016 13:52:41 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBOA"" sending FIN.
+11/29/2016 13:52:41 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBO9"" sent FIN with status "0".
+11/29/2016 13:52:41 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBOA"" sent FIN with status "0".
+11/29/2016 13:52:41 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBO9"" stopped.
+11/29/2016 13:52:41 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBOA"" stopped.
+11/29/2016 14:01:48 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBOB"" started.
+11/29/2016 14:01:48 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBOB"" received FIN.
+11/29/2016 14:01:48 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBOB"" disconnecting.
+11/29/2016 14:01:48 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBOB"" sending FIN.
+11/29/2016 14:01:48 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBOB"" sent FIN with status "0".
+11/29/2016 14:01:48 +01:00 ::  :: [Debug] - Connection id ""0HL0OAP9OSBOB"" stopped.

@@ -17,6 +17,7 @@ using Javithalion.IoT.DeviceEvents.Business.WriteModel;
 using Javithalion.IoT.DeviceEvents.Service.Middlewares;
 using Serilog;
 using System.IO;
+using Serilog.Sinks.Elasticsearch;
 
 namespace Javithalion.IoT.DeviceEvents.Service
 {
@@ -43,10 +44,22 @@ namespace Javithalion.IoT.DeviceEvents.Service
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
                 .Enrich.FromLogContext()
-                .WriteTo.Async(m => 
-                                    m.RollingFile(Path.Combine(env.ContentRootPath, "log-{Date}.txt"),
-                                    outputTemplate: "{Timestamp} {RequestId} [{Level}] {Message}{NewLine}{Exception}"))
+                .WriteTo.Async(m =>
+                                m.RollingFile(Path.Combine(env.ContentRootPath, "./Logs/log-{Date}.txt"),
+                                outputTemplate: "{Timestamp} :: {RequestId} :: [{Level}] - {Message}{NewLine}{Exception}"))
                 .CreateLogger();
+
+            //Log.Logger = new LoggerConfiguration()
+            //   .MinimumLevel.Debug()
+            //   .Enrich.FromLogContext()
+            //   .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(@"https://119e1893f12a35c1b2a0ebb1a7243151.us-east-1.aws.found.io:9243"))
+            //   {
+            //       IndexDecider = (@event, offset) =>
+            //     {
+            //         return ".testIndex";
+            //     }
+            //   })
+            //   .CreateLogger();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -56,8 +69,8 @@ namespace Javithalion.IoT.DeviceEvents.Service
 
             // Add framework services.
             services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
-                                                                                        .AllowAnyMethod()
-                                                                                        .AllowAnyHeader()));
+                                                                            .AllowAnyMethod()
+                                                                            .AllowAnyHeader()));
             services.AddMvc();
         }
 

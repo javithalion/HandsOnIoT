@@ -9,13 +9,13 @@ using Microsoft.AspNetCore.Http.Features;
 namespace Javithalion.IoT.DeviceEvents.Service.Middlewares
 {
     public class ErrorHandlingMiddleware
-    {      
+    {
         private readonly ILogger _logger;
         private readonly RequestDelegate _next;
 
         public ErrorHandlingMiddleware(RequestDelegate next, ILoggerFactory loggerFactory)
         {
-            _next = next;            
+            _next = next;
             _logger = loggerFactory.CreateLogger<ErrorHandlingMiddleware>();
         }
 
@@ -27,7 +27,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Middlewares
             }
             catch (Exception ex)
             {
-                _logger.LogError(new EventId(), ex, $"Error when processing request from {GetRemoteIpAddress(context)} with id {context.TraceIdentifier}");
+                _logger.LogError(new EventId(), ex, "Error when processing request from {Origin} with id {MessageId}", GetRemoteIpAddress(context), context.TraceIdentifier);
                 await HandleExceptionAsync(context, ex);
             }
         }

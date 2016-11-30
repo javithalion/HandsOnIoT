@@ -45,7 +45,9 @@ namespace Javithalion.IoT.Devices.Service
 
             Log.Logger = new LoggerConfiguration()
                .MinimumLevel.Debug()
-               .WriteTo.Async(m => m.RollingFile(Path.Combine(env.ContentRootPath, "log-{Date}.txt")))
+               .WriteTo.Async(m =>
+                                    m.RollingFile(Path.Combine(env.ContentRootPath, "./Logs/log-{Date}.txt"),
+                                    outputTemplate: "{Timestamp} :: {RequestId} :: [{Level}] - {Message}{NewLine}{Exception}"))
                .CreateLogger();
         }
 
