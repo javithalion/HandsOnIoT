@@ -1,0 +1,39 @@
+﻿<h3>Choose prediction's key information</h3>
+
+<div layout="column" flex="40">    
+    <!--<md-input-container flex ng-hide="vm.selectedPrediction">
+        <md-autocomplete md-selected-item="vm.selectedDevice"
+                         md-search-text-change="vm.searchTextChange(vm.searchText)"
+                         md-search-text="vm.searchText"
+                         md-selected-item-change="vm.selectedItemChange(device)"
+                         md-items="device in vm.devices"
+                         md-item-text="device.name"
+                         md-min-length="0"
+                         placeholder="Pick a Device"
+                         md-menu-class="autocomplete-custom-template" 
+                          required>
+            <md-item-template>
+                <span class="item-title">
+                    <md-icon class="icon icon-monitor"></md-icon>
+                    <span> {{device.name}} </span>
+                </span>
+                |
+                <span class="item-metadata">
+                    <span class="item-metastat">
+                        <strong>OS:</strong> {{device.operativeSystemName}}
+                    </span>
+                </span>
+            </md-item-template>
+            <md-not-found>
+                No matches found.
+            </md-not-found>
+        </md-autocomplete>
+    </md-input-container>-->
+
+
+    <md-input-container flex>
+        <md-datepicker ng-model="vm.selectedDate" md-placeholder="Enter date" md-open-on-focus></md-datepicker>
+    </md-input-container>
+
+
+</div>

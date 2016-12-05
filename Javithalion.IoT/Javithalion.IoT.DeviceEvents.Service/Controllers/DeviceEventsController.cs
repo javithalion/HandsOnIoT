@@ -23,8 +23,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
 
         [HttpGet()]        
         public async Task<IActionResult> GetAllForDevice(Guid deviceId)
-        {
-            throw new Exception("ABCDE");
+        {           
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 

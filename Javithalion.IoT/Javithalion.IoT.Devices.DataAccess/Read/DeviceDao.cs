@@ -18,19 +18,21 @@ namespace Javithalion.IoT.Devices.DataAccess.Read
             _connectionString = connectionString;
         }
 
-        public async Task<IEnumerable<Device>> FindAllAsync()
+        public async Task<IEnumerable<Device>> FindAllAsync(string searchText)
         {
             using (SqlConnection db = new SqlConnection(_connectionString))
             {
                 await db.OpenAsync();
                 return await db.QueryAsync<Device, OperativeSystem, Device>(@"Select * From Devices dvc
                                                         left join OperativeSystems os on dvc.OperativeSystemId = os.Id    
-                                                        where dvc.Disabled = 0",
+                                                        where dvc.Disabled = 0
+                                                        and dvc.name LIKE @searchText",
                                                         (device, operativeSystem) =>
                                                         {
                                                             device.Running(operativeSystem);
                                                             return device;
                                                         },
+                                                        param: new { searchText = $"%{searchText}%" },
                                                         splitOn: "OperativeSystemId");
             }
         }

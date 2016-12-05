@@ -26,6 +26,7 @@
             // devices
             'app.devices',
 
+            //predictions
             'app.predictions'
         ]);
 })();

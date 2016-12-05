@@ -22,12 +22,12 @@ namespace Javithalion.IoT.Devices.Service.Controllers
         }
 
         [HttpGet()]        
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromQuery]string searchText)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var result = await _deviceReadService.FindAllAsync();
+            var result = await _deviceReadService.FindAllAsync(searchText);
             return Ok(result);
         }
        

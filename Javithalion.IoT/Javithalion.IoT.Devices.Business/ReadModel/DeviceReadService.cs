@@ -20,9 +20,9 @@ namespace Javithalion.IoT.Devices.Business.ReadModel
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<DeviceDto>> FindAllAsync()
+        public async Task<IEnumerable<DeviceDto>> FindAllAsync(string searchText = "")
         {
-            var results = await _deviceDao.FindAllAsync();
+            var results = await _deviceDao.FindAllAsync(searchText);
             return results.Select(x => _mapper.Map<Device, DeviceDto>(x));
         }
 

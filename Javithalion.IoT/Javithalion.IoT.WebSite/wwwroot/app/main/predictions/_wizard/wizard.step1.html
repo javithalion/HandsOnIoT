@@ -1,0 +1,12 @@
+﻿<h3>Select which kind of prediction you want to render</h3>
+
+<div layout="row">
+    <md-input-container>
+        <label>Select a prediction</label>
+        <md-select ng-model="vm.selectedPrediction" required>
+            <md-optgroup label="Predictions">
+                <md-option ng-value="prediction" ng-repeat="prediction in vm.availablePredictions">{{prediction.description}}</md-option>
+            </md-optgroup>
+        </md-select>
+    </md-input-container>
+</div>
