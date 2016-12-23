@@ -1,0 +1,16 @@
+﻿12/23/2016 11:02:35 +01:00 ::  :: [Debug] - Hosting starting
+12/23/2016 11:02:35 +01:00 ::  :: [Debug] - Hosting started
+12/23/2016 11:02:35 +01:00 :: 0HL1B3B8UFSK7 :: [Information] - Request starting HTTP/1.1 GET http://  
+12/23/2016 11:02:35 +01:00 :: 0HL1B3B8UFSK7 :: [Debug] - The request path "" does not match the path filter
+12/23/2016 11:02:35 +01:00 :: 0HL1B3B8UFSK7 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/DeviceEvents"'.
+12/23/2016 11:02:35 +01:00 :: 0HL1B3B8UFSK7 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Post (Javithalion.IoT.DeviceEvents.Service)"' with id '"d0976d05-c005-4a19-86f5-ed912f2efe6b"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 11:02:35 +01:00 :: 0HL1B3B8UFSK7 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Put (Javithalion.IoT.DeviceEvents.Service)"' with id '"25147db6-405b-438f-af07-429a62b41a55"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 11:02:35 +01:00 :: 0HL1B3B8UFSK7 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Delete (Javithalion.IoT.DeviceEvents.Service)"' with id '"36a8fb47-37fb-4260-8440-fabdac1e57d8"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 11:02:36 +01:00 :: 0HL1B3B8UFSK7 :: [Debug] - Executing action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)"
+12/23/2016 11:02:36 +01:00 :: 0HL1B3B8UFSK7 :: [Information] - Executing action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" with arguments (["00000000-0000-0000-0000-000000000000"]) - ModelState is Valid
+12/23/2016 11:02:37 +01:00 :: 0HL1B3B8UFSK7 :: [Debug] - Executed action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+12/23/2016 11:02:37 +01:00 :: 0HL1B3B8UFSK7 :: [Debug] - No information found on request to perform content negotiation.
+12/23/2016 11:02:37 +01:00 :: 0HL1B3B8UFSK7 :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+12/23/2016 11:02:37 +01:00 :: 0HL1B3B8UFSK7 :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+12/23/2016 11:02:37 +01:00 :: 0HL1B3B8UFSK7 :: [Information] - Executed action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" in 1248.2448ms
+12/23/2016 11:02:46 +01:00 :: 0HL1B3B8UFSK7 :: [Information] - Request finished in 9388.3372ms 200 application/json; charset=utf-8

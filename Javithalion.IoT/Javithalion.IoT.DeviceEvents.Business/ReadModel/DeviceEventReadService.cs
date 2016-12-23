@@ -4,10 +4,10 @@ using System.Threading.Tasks;
 using Javithalion.IoT.DeviceEvents.Domain.Entities;
 using Javithalion.IoT.DeviceEvents.DataAccess.DAOs;
 using Javithalion.IoT.DeviceEvents.DataAccess.Extensions;
-using MongoDB.Driver;
 using Javithalion.IoT.DeviceEvents.Business.ReadModel.DTOs;
 using AutoMapper;
 using System.Linq;
+using MongoDB.Driver;
 
 namespace Javithalion.IoT.DeviceEvents.Business.ReadModel
 {
@@ -24,35 +24,36 @@ namespace Javithalion.IoT.DeviceEvents.Business.ReadModel
 
         public async Task<IEnumerable<DeviceEventDto>> FindAllForDeviceAsync(Guid deviceId)
         {
-            //var events = await _deviceEventDao.AllDeviceEvents()
-            //                                         .OfDevice(parsedDeviceGuid)
-            //                                         .CurrentlyActive()
-            //                                         .ToListAsync();
+            var events = await _deviceEventDao.AllDeviceEvents()
+                                              .OfDevice(deviceId)
+                                              .CurrentlyActive()
+                                              .ToListAsync();
 
-            var events = GetDummyEvents(deviceId); //TODO :: REMOVE
+            events = GetDummyEvents(deviceId).Union(GetDummyEvents(Guid.NewGuid())).Union(GetDummyEvents(Guid.NewGuid())).ToList();
 
             return events.Select(@event => _mapper.Map<DeviceEventDto>(@event));
         }
+
+        public async Task<DeviceEventDto> GetAsync(Guid eventId)
+        {
+            var queryResult = await _deviceEventDao.AllDeviceEvents()
+                                                   .WithEventId(eventId)
+                                                   .FirstOrDefaultAsync();
+
+            return _mapper.Map<DeviceEventDto>(queryResult);
+        }
+
 
         private IEnumerable<DeviceEvent> GetDummyEvents(Guid deviceId)
         {
             var result = new List<DeviceEvent>();
             int numberOfDummyEvents = 300;
 
-            for(int i = 0;i< numberOfDummyEvents; i++)
+            for (int i = 0; i < numberOfDummyEvents; i++)
             {
                 result.Add(DeviceEvent.NewStartUpEvent(deviceId));
             }
             return result;
-        }
-
-        public async Task<DeviceEventDto> GetAsync(Guid eventId)
-        {
-            var queryResult = await _deviceEventDao.AllDeviceEvents()
-                                                          .WithEventId(eventId)
-                                                          .FirstOrDefaultAsync();
-
-            return _mapper.Map<DeviceEventDto>(queryResult);
         }
     }
 }

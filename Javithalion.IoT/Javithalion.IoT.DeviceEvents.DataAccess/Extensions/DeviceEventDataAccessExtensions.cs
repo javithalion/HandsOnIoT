@@ -17,7 +17,7 @@ namespace Javithalion.IoT.DeviceEvents.DataAccess.Extensions
 
         public static IMongoQueryable<DeviceEvent> Paged(this IMongoQueryable<DeviceEvent> collection, int page = 1, int pageSize = 50)
         {
-            return collection.Skip((page-1)*pageSize).Take(pageSize);
+            return collection.Skip((page - 1) * pageSize).Take(pageSize);
         }
 
         public static IMongoQueryable<DeviceEvent> OfDevice(this IMongoQueryable<DeviceEvent> collection, Guid deviceId)

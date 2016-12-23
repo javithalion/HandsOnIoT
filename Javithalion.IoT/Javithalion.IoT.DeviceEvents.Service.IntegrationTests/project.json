@@ -2,13 +2,11 @@
     "version": "1.0.0-*",
     "testRunner": "xunit",
     "dependencies": {
-        "NETStandard.Library": "1.6.0",
-        "xunit": "2.2.0-beta2-build3300",
-        "dotnet-test-xunit": "2.2.0-preview2-build1029",
-        "AutoMapper": "5.1.1",
-        "Javithalion.IoT.DeviceEvents.Business": "1.0.0-*",
+        "dotnet-test-xunit": "2.2.0-preview2-build1029",       
         "Javithalion.IoT.DeviceEvents.Service": "1.0.0-*",
-        "Moq": "4.6.38-alpha"
+        "Microsoft.AspNetCore.TestHost": "1.1.0",
+        "NETStandard.Library": "1.6.1",
+        "xunit": "2.2.0-beta2-build3300"
     },
 
     "frameworks": {

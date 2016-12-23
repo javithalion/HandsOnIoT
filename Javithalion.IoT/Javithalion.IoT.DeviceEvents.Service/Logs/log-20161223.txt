@@ -1,0 +1,504 @@
+﻿12/23/2016 09:47:48 +01:00 ::  :: [Debug] - Hosting starting
+12/23/2016 09:47:49 +01:00 ::  :: [Debug] - Hosting started
+12/23/2016 09:47:50 +01:00 ::  :: [Debug] - Connection id ""0HL1B21G3PNON"" started.
+12/23/2016 09:47:50 +01:00 ::  :: [Debug] - Connection id ""0HL1B21G3PNOO"" started.
+12/23/2016 09:47:50 +01:00 :: 0HL1B21G7VMS7 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/api/DeviceEvents  
+12/23/2016 09:47:50 +01:00 :: 0HL1B21G7VMS8 :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:21597/  0
+12/23/2016 09:47:50 +01:00 :: 0HL1B21G7VMS8 :: [Information] - Request finished in 533.7792ms 200 
+12/23/2016 09:47:50 +01:00 :: 0HL1B21G7VMS7 :: [Debug] - The request path "" does not match the path filter
+12/23/2016 09:47:50 +01:00 ::  :: [Debug] - Connection id ""0HL1B21G3PNON"" completed keep alive response.
+12/23/2016 09:47:51 +01:00 :: 0HL1B21G7VMS7 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/DeviceEvents"'.
+12/23/2016 09:47:51 +01:00 :: 0HL1B21G7VMS7 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Post (Javithalion.IoT.DeviceEvents.Service)"' with id '"a56fe2fe-fca9-43e9-9781-bd9ad09284db"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:47:51 +01:00 :: 0HL1B21G7VMS7 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Put (Javithalion.IoT.DeviceEvents.Service)"' with id '"a9a54f59-1236-4520-9064-31803842996b"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:47:51 +01:00 :: 0HL1B21G7VMS7 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Delete (Javithalion.IoT.DeviceEvents.Service)"' with id '"bd1c8b9a-e844-43dc-93a8-8c61e468d8ee"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:47:51 +01:00 :: 0HL1B21G7VMS7 :: [Debug] - Executing action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)"
+﻿12/23/2016 09:50:27 +01:00 ::  :: [Debug] - Hosting starting
+12/23/2016 09:50:28 +01:00 ::  :: [Debug] - Hosting started
+12/23/2016 09:50:28 +01:00 ::  :: [Debug] - Connection id ""0HL1B22V8IM07"" started.
+12/23/2016 09:50:28 +01:00 ::  :: [Debug] - Connection id ""0HL1B22V8IM08"" started.
+12/23/2016 09:50:28 +01:00 :: 0HL1B22VAEG27 :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:21597/  0
+12/23/2016 09:50:28 +01:00 :: 0HL1B22VAEG28 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/api/DeviceEvents  
+12/23/2016 09:50:28 +01:00 :: 0HL1B22VAEG27 :: [Information] - Request finished in 157.9736ms 200 
+12/23/2016 09:50:28 +01:00 :: 0HL1B22VAEG28 :: [Debug] - The request path "" does not match the path filter
+12/23/2016 09:50:28 +01:00 ::  :: [Debug] - Connection id ""0HL1B22V8IM08"" completed keep alive response.
+12/23/2016 09:50:28 +01:00 :: 0HL1B22VAEG28 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/DeviceEvents"'.
+12/23/2016 09:50:28 +01:00 :: 0HL1B22VAEG28 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Post (Javithalion.IoT.DeviceEvents.Service)"' with id '"a440f7d7-a9c3-4eeb-bfef-a5dafc01977e"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:50:28 +01:00 :: 0HL1B22VAEG28 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Put (Javithalion.IoT.DeviceEvents.Service)"' with id '"0752b631-c384-4026-afe9-30313922d85e"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:50:28 +01:00 :: 0HL1B22VAEG28 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Delete (Javithalion.IoT.DeviceEvents.Service)"' with id '"38d5be7c-b985-4eb0-9c5d-c0e44149e079"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:50:28 +01:00 :: 0HL1B22VAEG28 :: [Debug] - Executing action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)"
+﻿12/23/2016 09:52:16 +01:00 ::  :: [Debug] - Hosting starting
+12/23/2016 09:52:16 +01:00 ::  :: [Debug] - Hosting started
+12/23/2016 09:52:17 +01:00 ::  :: [Debug] - Connection id ""0HL1B23VM17GO"" started.
+12/23/2016 09:52:17 +01:00 ::  :: [Debug] - Connection id ""0HL1B23VM17GN"" started.
+12/23/2016 09:52:17 +01:00 :: 0HL1B23VNDFH8 :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:21597/  0
+12/23/2016 09:52:17 +01:00 :: 0HL1B23VNDFH7 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/api/DeviceEvents  
+12/23/2016 09:52:17 +01:00 :: 0HL1B23VNDFH8 :: [Information] - Request finished in 106.7283ms 200 
+12/23/2016 09:52:17 +01:00 :: 0HL1B23VNDFH7 :: [Debug] - The request path "" does not match the path filter
+12/23/2016 09:52:17 +01:00 ::  :: [Debug] - Connection id ""0HL1B23VM17GN"" completed keep alive response.
+12/23/2016 09:52:17 +01:00 :: 0HL1B23VNDFH7 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/DeviceEvents"'.
+12/23/2016 09:52:17 +01:00 :: 0HL1B23VNDFH7 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Post (Javithalion.IoT.DeviceEvents.Service)"' with id '"4baa3c66-f122-47ca-9f96-5547e40fe534"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:52:17 +01:00 :: 0HL1B23VNDFH7 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Put (Javithalion.IoT.DeviceEvents.Service)"' with id '"e59df126-5807-44b8-9ad8-270e4ee3ff6b"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:52:17 +01:00 :: 0HL1B23VNDFH7 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Delete (Javithalion.IoT.DeviceEvents.Service)"' with id '"1cb81e6e-ed84-4ce8-993d-906148af8123"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:52:17 +01:00 :: 0HL1B23VNDFH7 :: [Debug] - Executing action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)"
+﻿12/23/2016 09:53:27 +01:00 ::  :: [Debug] - Hosting starting
+12/23/2016 09:53:27 +01:00 ::  :: [Debug] - Hosting started
+12/23/2016 09:53:27 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H87"" started.
+12/23/2016 09:53:27 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H88"" started.
+12/23/2016 09:53:27 +01:00 :: 0HL1B24KMFFG7 :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:21597/  0
+12/23/2016 09:53:27 +01:00 :: 0HL1B24KMFFG8 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/api/DeviceEvents  
+12/23/2016 09:53:27 +01:00 :: 0HL1B24KMFFG7 :: [Information] - Request finished in 111.7575ms 200 
+12/23/2016 09:53:27 +01:00 :: 0HL1B24KMFFG8 :: [Debug] - The request path "" does not match the path filter
+12/23/2016 09:53:27 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H87"" completed keep alive response.
+12/23/2016 09:53:27 +01:00 :: 0HL1B24KMFFG8 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/DeviceEvents"'.
+12/23/2016 09:53:27 +01:00 :: 0HL1B24KMFFG8 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Post (Javithalion.IoT.DeviceEvents.Service)"' with id '"17e3153e-ce8c-4b12-8e70-c030553393f2"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:53:27 +01:00 :: 0HL1B24KMFFG8 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Put (Javithalion.IoT.DeviceEvents.Service)"' with id '"0cfcba58-c79a-42ff-87dd-824bc09b32c4"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:53:27 +01:00 :: 0HL1B24KMFFG8 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Delete (Javithalion.IoT.DeviceEvents.Service)"' with id '"a04affdd-d904-4be6-85a2-422afb365be7"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:53:27 +01:00 :: 0HL1B24KMFFG8 :: [Debug] - Executing action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)"
+12/23/2016 09:53:40 +01:00 :: 0HL1B24KMFFG8 :: [Information] - Executing action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" with arguments (["00000000-0000-0000-0000-000000000000"]) - ModelState is Valid
+12/23/2016 09:53:41 +01:00 :: 0HL1B24KMFFG8 :: [Debug] - Executed action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+12/23/2016 09:53:41 +01:00 :: 0HL1B24KMFFG8 :: [Debug] - No information found on request to perform content negotiation.
+12/23/2016 09:53:41 +01:00 :: 0HL1B24KMFFG8 :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+12/23/2016 09:53:41 +01:00 :: 0HL1B24KMFFG8 :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+12/23/2016 09:53:41 +01:00 :: 0HL1B24KMFFG8 :: [Information] - Executed action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" in 13474.2781ms
+12/23/2016 09:53:41 +01:00 :: 0HL1B24KMFFG8 :: [Information] - Request finished in 13947.7682ms 200 application/json; charset=utf-8
+12/23/2016 09:53:41 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H88"" completed keep alive response.
+12/23/2016 09:53:41 +01:00 :: 0HL1B24KMFFG9 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/favicon.ico  
+12/23/2016 09:53:41 +01:00 :: 0HL1B24KMFFG9 :: [Debug] - The request path "" does not match the path filter
+12/23/2016 09:53:41 +01:00 :: 0HL1B24KMFFG9 :: [Debug] - Request did not match any routes.
+12/23/2016 09:53:41 +01:00 :: 0HL1B24KMFFG9 :: [Information] - Request finished in 5.3197ms 404 
+12/23/2016 09:53:41 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H87"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGA :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGA :: [Information] - Request finished in 14.5072ms 302 
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H88"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGB :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/index.html?url=/swagger/v1/swagger.json  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGB :: [Information] - Request finished in 20.705ms 200 
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H87"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H8A"" started.
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H89"" started.
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H8C"" started.
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H8B"" started.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGC :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/typography.css  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGD :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/object-assign-pollyfill.js  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGE :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/reset.css  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGE :: [Information] - Sending file. Request path: '"/css/reset.css"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGD :: [Information] - Sending file. Request path: '"/lib/object-assign-pollyfill.js"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGC :: [Information] - Sending file. Request path: '"/css/typography.css"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGE :: [Information] - Request finished in 40.761ms 200 text/css
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H87"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGD :: [Information] - Request finished in 40.2799ms 200 application/javascript
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H89"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGC :: [Information] - Request finished in 43.1269ms 200 text/css
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H88"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGF :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.wiggle.min.js  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGG :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/handlebars-4.0.5.js  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGH :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.ba-bbq.min.js  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGF :: [Information] - Sending file. Request path: '"/lib/jquery.wiggle.min.js"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGG :: [Information] - Sending file. Request path: '"/lib/handlebars-4.0.5.js"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGF :: [Information] - Request finished in 73.0699ms 200 application/javascript
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H87"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGH :: [Information] - Sending file. Request path: '"/lib/jquery.ba-bbq.min.js"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGH :: [Information] - Request finished in 72.279ms 200 application/javascript
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H88"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGI :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/lodash.min.js  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGJ :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/backbone-min.js  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGI :: [Information] - Sending file. Request path: '"/lib/lodash.min.js"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGK :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/screen.css  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGJ :: [Information] - Sending file. Request path: '"/lib/backbone-min.js"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGI :: [Information] - Request finished in 43.1561ms 200 application/javascript
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H87"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGK :: [Information] - Sending file. Request path: '"/css/screen.css"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGJ :: [Information] - Request finished in 32.2928ms 200 application/javascript
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H88"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGL :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/swagger-ui.js  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGK :: [Information] - Request finished in 23.0693ms 200 text/css
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H8A"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGM :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/highlight.9.1.0.pack.js  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGN :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/highlight.9.1.0.pack_extended.js  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGL :: [Information] - Sending file. Request path: '"/swagger-ui.js"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGM :: [Information] - Sending file. Request path: '"/lib/highlight.9.1.0.pack.js"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGN :: [Information] - Sending file. Request path: '"/lib/highlight.9.1.0.pack_extended.js"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGM :: [Information] - Request finished in 84.6083ms 200 application/javascript
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H88"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGO :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.slideto.min.js  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGN :: [Information] - Request finished in 68.7152ms 200 application/javascript
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H8A"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGP :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jsoneditor.min.js  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGO :: [Information] - Sending file. Request path: '"/lib/jquery.slideto.min.js"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGP :: [Information] - Sending file. Request path: '"/lib/jsoneditor.min.js"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGQ :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/marked.js  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGO :: [Information] - Request finished in 66.1982ms 200 application/javascript
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H8C"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGQ :: [Information] - Sending file. Request path: '"/lib/marked.js"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGR :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery-1.8.0.min.js  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGS :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/swagger-oauth.js  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGQ :: [Information] - Request finished in 64.0305ms 200 application/javascript
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H8A"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGR :: [Information] - Sending file. Request path: '"/lib/jquery-1.8.0.min.js"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGS :: [Information] - Sending file. Request path: '"/lib/swagger-oauth.js"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGP :: [Information] - Request finished in 139.5263ms 200 application/javascript
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H88"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGS :: [Information] - Request finished in 54.2407ms 200 application/javascript
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H8C"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGR :: [Information] - Request finished in 55.6868ms 200 application/javascript
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H8B"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGG :: [Information] - Request finished in 426.8452ms 200 application/javascript
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H89"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGT :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/logo_small.png  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGT :: [Information] - Sending file. Request path: '"/images/logo_small.png"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGT :: [Information] - Request finished in 7.6997ms 200 image/png
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H8A"" completed keep alive response.
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGU :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/print.css  
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGU :: [Information] - Sending file. Request path: '"/css/print.css"'. Physical path: '"N/A"'
+12/23/2016 09:53:53 +01:00 :: 0HL1B24KMFFGU :: [Information] - Request finished in 26.7704ms 200 text/css
+12/23/2016 09:53:53 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H8C"" completed keep alive response.
+12/23/2016 09:53:54 +01:00 :: 0HL1B24KMFFGL :: [Information] - Request finished in 589.9371ms 200 application/javascript
+12/23/2016 09:53:54 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H87"" completed keep alive response.
+12/23/2016 09:53:54 +01:00 :: 0HL1B24KMFFGV :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/v1/swagger.json  
+12/23/2016 09:53:54 +01:00 :: 0HL1B24KMFFH0 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-16x16.png  
+12/23/2016 09:53:54 +01:00 :: 0HL1B24KMFFH0 :: [Information] - Sending file. Request path: '"/images/favicon-16x16.png"'. Physical path: '"N/A"'
+12/23/2016 09:53:54 +01:00 :: 0HL1B24KMFFH0 :: [Information] - Request finished in 6.9181ms 200 image/png
+12/23/2016 09:53:54 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H8B"" completed keep alive response.
+12/23/2016 09:53:54 +01:00 :: 0HL1B24KMFFH1 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-32x32.png  
+12/23/2016 09:53:54 +01:00 :: 0HL1B24KMFFH1 :: [Information] - Sending file. Request path: '"/images/favicon-32x32.png"'. Physical path: '"N/A"'
+12/23/2016 09:53:54 +01:00 :: 0HL1B24KMFFH1 :: [Information] - Request finished in 3.8222ms 200 image/png
+12/23/2016 09:53:54 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H89"" completed keep alive response.
+12/23/2016 09:53:55 +01:00 :: 0HL1B24KMFFGV :: [Information] - Request finished in 1340.5756ms 200 
+12/23/2016 09:53:55 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H88"" completed keep alive response.
+12/23/2016 09:53:57 +01:00 :: 0HL1B24KMFFH2 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-16x16.png  
+12/23/2016 09:53:57 +01:00 :: 0HL1B24KMFFH2 :: [Information] - The file "/images/favicon-16x16.png" was not modified
+12/23/2016 09:53:57 +01:00 :: 0HL1B24KMFFH2 :: [Debug] - Handled. Status code: 304 File: "/images/favicon-16x16.png"
+12/23/2016 09:53:57 +01:00 :: 0HL1B24KMFFH2 :: [Information] - Request finished in 13.7378ms 304 image/png
+12/23/2016 09:53:57 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H8A"" completed keep alive response.
+12/23/2016 09:53:59 +01:00 :: 0HL1B24KMFFH3 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/throbber.gif  
+12/23/2016 09:53:59 +01:00 :: 0HL1B24KMFFH3 :: [Information] - Sending file. Request path: '"/images/throbber.gif"'. Physical path: '"N/A"'
+12/23/2016 09:53:59 +01:00 :: 0HL1B24KMFFH3 :: [Information] - Request finished in 11.106ms 200 image/gif
+12/23/2016 09:53:59 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H8C"" completed keep alive response.
+12/23/2016 09:53:59 +01:00 :: 0HL1B24KMFFH4 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-16x16.png  
+12/23/2016 09:53:59 +01:00 :: 0HL1B24KMFFH4 :: [Information] - The file "/images/favicon-16x16.png" was not modified
+12/23/2016 09:53:59 +01:00 :: 0HL1B24KMFFH4 :: [Debug] - Handled. Status code: 304 File: "/images/favicon-16x16.png"
+12/23/2016 09:53:59 +01:00 :: 0HL1B24KMFFH4 :: [Information] - Request finished in 4.49ms 304 image/png
+12/23/2016 09:53:59 +01:00 ::  :: [Debug] - Connection id ""0HL1B24KL3H87"" completed keep alive response.
+﻿12/23/2016 09:55:11 +01:00 ::  :: [Debug] - Hosting starting
+12/23/2016 09:55:11 +01:00 ::  :: [Debug] - Hosting started
+12/23/2016 09:55:11 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NN"" started.
+12/23/2016 09:55:11 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NO"" started.
+12/23/2016 09:55:11 +01:00 :: 0HL1B25JQPG3N :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/api/DeviceEvents  
+12/23/2016 09:55:11 +01:00 :: 0HL1B25JQPG3O :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:21597/  0
+12/23/2016 09:55:12 +01:00 :: 0HL1B25JQPG3O :: [Information] - Request finished in 111.8168ms 200 
+12/23/2016 09:55:12 +01:00 :: 0HL1B25JQPG3N :: [Debug] - The request path "" does not match the path filter
+12/23/2016 09:55:12 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NO"" completed keep alive response.
+12/23/2016 09:55:12 +01:00 :: 0HL1B25JQPG3N :: [Debug] - Request successfully matched the route with name 'null' and template '"api/DeviceEvents"'.
+12/23/2016 09:55:12 +01:00 :: 0HL1B25JQPG3N :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Post (Javithalion.IoT.DeviceEvents.Service)"' with id '"5942b4df-d4b7-4cfd-8576-d97cb4acbb5a"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:55:12 +01:00 :: 0HL1B25JQPG3N :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Put (Javithalion.IoT.DeviceEvents.Service)"' with id '"bb3b0f7e-d5f1-4736-9b80-03f91583671e"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:55:12 +01:00 :: 0HL1B25JQPG3N :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Delete (Javithalion.IoT.DeviceEvents.Service)"' with id '"f15fac86-d5ad-46c1-bfde-09ca897fa452"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:55:12 +01:00 :: 0HL1B25JQPG3N :: [Debug] - Executing action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)"
+12/23/2016 09:55:18 +01:00 :: 0HL1B25JQPG3N :: [Information] - Executing action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" with arguments (["00000000-0000-0000-0000-000000000000"]) - ModelState is Valid
+12/23/2016 09:55:19 +01:00 :: 0HL1B25JQPG3N :: [Debug] - Executed action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+12/23/2016 09:55:19 +01:00 :: 0HL1B25JQPG3N :: [Debug] - No information found on request to perform content negotiation.
+12/23/2016 09:55:19 +01:00 :: 0HL1B25JQPG3N :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+12/23/2016 09:55:19 +01:00 :: 0HL1B25JQPG3N :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+12/23/2016 09:55:19 +01:00 :: 0HL1B25JQPG3N :: [Information] - Executed action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" in 7000.4839ms
+12/23/2016 09:55:19 +01:00 :: 0HL1B25JQPG3N :: [Information] - Request finished in 7510.8332ms 200 application/json; charset=utf-8
+12/23/2016 09:55:19 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NN"" completed keep alive response.
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3P :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger  
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3P :: [Information] - Request finished in 10.7394ms 302 
+12/23/2016 09:55:23 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NO"" completed keep alive response.
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3Q :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/index.html?url=/swagger/v1/swagger.json  
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3Q :: [Information] - Request finished in 21.6053ms 200 
+12/23/2016 09:55:23 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NN"" completed keep alive response.
+12/23/2016 09:55:23 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NP"" started.
+12/23/2016 09:55:23 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NQ"" started.
+12/23/2016 09:55:23 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NR"" started.
+12/23/2016 09:55:23 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NS"" started.
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3R :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/typography.css  
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3S :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/reset.css  
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3T :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery-1.8.0.min.js  
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3U :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/object-assign-pollyfill.js  
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3R :: [Information] - The file "/css/typography.css" was not modified
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3T :: [Information] - The file "/lib/jquery-1.8.0.min.js" was not modified
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3S :: [Information] - The file "/css/reset.css" was not modified
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3U :: [Information] - The file "/lib/object-assign-pollyfill.js" was not modified
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3U :: [Debug] - Handled. Status code: 304 File: "/lib/object-assign-pollyfill.js"
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3R :: [Debug] - Handled. Status code: 304 File: "/css/typography.css"
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3T :: [Debug] - Handled. Status code: 304 File: "/lib/jquery-1.8.0.min.js"
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3S :: [Debug] - Handled. Status code: 304 File: "/css/reset.css"
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3R :: [Information] - Request finished in 66.0379ms 304 text/css
+12/23/2016 09:55:23 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NO"" completed keep alive response.
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3T :: [Information] - Request finished in 58.8481ms 304 application/javascript
+12/23/2016 09:55:23 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NQ"" completed keep alive response.
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3S :: [Information] - Request finished in 66.1078ms 304 text/css
+12/23/2016 09:55:23 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NN"" completed keep alive response.
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3V :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.slideto.min.js  
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3U :: [Information] - Request finished in 59.4638ms 304 application/javascript
+12/23/2016 09:55:23 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NP"" completed keep alive response.
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG40 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/screen.css  
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG41 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.ba-bbq.min.js  
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3V :: [Information] - The file "/lib/jquery.slideto.min.js" was not modified
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3V :: [Debug] - Handled. Status code: 304 File: "/lib/jquery.slideto.min.js"
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG40 :: [Information] - The file "/css/screen.css" was not modified
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG42 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.wiggle.min.js  
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG40 :: [Debug] - Handled. Status code: 304 File: "/css/screen.css"
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG41 :: [Information] - The file "/lib/jquery.ba-bbq.min.js" was not modified
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG41 :: [Debug] - Handled. Status code: 304 File: "/lib/jquery.ba-bbq.min.js"
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG42 :: [Information] - The file "/lib/jquery.wiggle.min.js" was not modified
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG42 :: [Debug] - Handled. Status code: 304 File: "/lib/jquery.wiggle.min.js"
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG3V :: [Information] - Request finished in 49.0941ms 304 application/javascript
+12/23/2016 09:55:23 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NR"" completed keep alive response.
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG42 :: [Information] - Request finished in 79.701ms 304 application/javascript
+12/23/2016 09:55:23 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NQ"" completed keep alive response.
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG41 :: [Information] - Request finished in 63.8362ms 304 application/javascript
+12/23/2016 09:55:23 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NO"" completed keep alive response.
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG43 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/handlebars-4.0.5.js  
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG40 :: [Information] - Request finished in 63.3868ms 304 text/css
+12/23/2016 09:55:23 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NS"" completed keep alive response.
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG44 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/lodash.min.js  
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG45 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/backbone-min.js  
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG44 :: [Information] - The file "/lib/lodash.min.js" was not modified
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG44 :: [Debug] - Handled. Status code: 304 File: "/lib/lodash.min.js"
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG43 :: [Information] - The file "/lib/handlebars-4.0.5.js" was not modified
+12/23/2016 09:55:23 +01:00 :: 0HL1B25JQPG43 :: [Debug] - Handled. Status code: 304 File: "/lib/handlebars-4.0.5.js"
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG46 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/swagger-ui.js  
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG45 :: [Information] - The file "/lib/backbone-min.js" was not modified
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG45 :: [Debug] - Handled. Status code: 304 File: "/lib/backbone-min.js"
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG43 :: [Information] - Request finished in 42.439ms 304 application/javascript
+12/23/2016 09:55:24 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NN"" completed keep alive response.
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG44 :: [Information] - Request finished in 40.4303ms 304 application/javascript
+12/23/2016 09:55:24 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NP"" completed keep alive response.
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG46 :: [Information] - The file "/swagger-ui.js" was not modified
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG46 :: [Debug] - Handled. Status code: 304 File: "/swagger-ui.js"
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG45 :: [Information] - Request finished in 75.2459ms 304 application/javascript
+12/23/2016 09:55:24 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NR"" completed keep alive response.
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG47 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/highlight.9.1.0.pack_extended.js  
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG48 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/highlight.9.1.0.pack.js  
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG47 :: [Information] - The file "/lib/highlight.9.1.0.pack_extended.js" was not modified
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG47 :: [Debug] - Handled. Status code: 304 File: "/lib/highlight.9.1.0.pack_extended.js"
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG49 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jsoneditor.min.js  
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG46 :: [Information] - Request finished in 104.7338ms 304 application/javascript
+12/23/2016 09:55:24 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NQ"" completed keep alive response.
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG48 :: [Information] - The file "/lib/highlight.9.1.0.pack.js" was not modified
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG48 :: [Debug] - Handled. Status code: 304 File: "/lib/highlight.9.1.0.pack.js"
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG49 :: [Information] - The file "/lib/jsoneditor.min.js" was not modified
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG49 :: [Debug] - Handled. Status code: 304 File: "/lib/jsoneditor.min.js"
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG48 :: [Information] - Request finished in 35.6042ms 304 application/javascript
+12/23/2016 09:55:24 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NO"" completed keep alive response.
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG47 :: [Information] - Request finished in 20.9661ms 304 application/javascript
+12/23/2016 09:55:24 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NS"" completed keep alive response.
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4A :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/marked.js  
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG49 :: [Information] - Request finished in 29.4788ms 304 application/javascript
+12/23/2016 09:55:24 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NN"" completed keep alive response.
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4B :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/swagger-oauth.js  
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4A :: [Information] - The file "/lib/marked.js" was not modified
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4A :: [Debug] - Handled. Status code: 304 File: "/lib/marked.js"
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4B :: [Information] - The file "/lib/swagger-oauth.js" was not modified
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4B :: [Debug] - Handled. Status code: 304 File: "/lib/swagger-oauth.js"
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4A :: [Information] - Request finished in 59.8737ms 304 application/javascript
+12/23/2016 09:55:24 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NP"" completed keep alive response.
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4B :: [Information] - Request finished in 54.4947ms 304 application/javascript
+12/23/2016 09:55:24 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NR"" completed keep alive response.
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4C :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/logo_small.png  
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4C :: [Information] - The file "/images/logo_small.png" was not modified
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4C :: [Debug] - Handled. Status code: 304 File: "/images/logo_small.png"
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4C :: [Information] - Request finished in 4.7379ms 304 image/png
+12/23/2016 09:55:24 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NQ"" completed keep alive response.
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4D :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/print.css  
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4D :: [Information] - The file "/css/print.css" was not modified
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4D :: [Debug] - Handled. Status code: 304 File: "/css/print.css"
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4D :: [Information] - Request finished in 3.5698ms 304 text/css
+12/23/2016 09:55:24 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NO"" completed keep alive response.
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4E :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/v1/swagger.json  
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4F :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-16x16.png  
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4F :: [Information] - The file "/images/favicon-16x16.png" was not modified
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4F :: [Debug] - Handled. Status code: 304 File: "/images/favicon-16x16.png"
+12/23/2016 09:55:24 +01:00 :: 0HL1B25JQPG4F :: [Information] - Request finished in 5.353ms 304 image/png
+12/23/2016 09:55:24 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NN"" completed keep alive response.
+12/23/2016 09:55:25 +01:00 :: 0HL1B25JQPG4E :: [Information] - Request finished in 876.2226ms 200 
+12/23/2016 09:55:25 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NS"" completed keep alive response.
+12/23/2016 09:55:26 +01:00 :: 0HL1B25JQPG4G :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-16x16.png  
+12/23/2016 09:55:26 +01:00 :: 0HL1B25JQPG4G :: [Information] - The file "/images/favicon-16x16.png" was not modified
+12/23/2016 09:55:26 +01:00 :: 0HL1B25JQPG4G :: [Debug] - Handled. Status code: 304 File: "/images/favicon-16x16.png"
+12/23/2016 09:55:26 +01:00 :: 0HL1B25JQPG4G :: [Information] - Request finished in 4.3097ms 304 image/png
+12/23/2016 09:55:26 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NP"" completed keep alive response.
+12/23/2016 09:55:27 +01:00 :: 0HL1B25JQPG4H :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/throbber.gif  
+12/23/2016 09:55:27 +01:00 :: 0HL1B25JQPG4H :: [Information] - The file "/images/throbber.gif" was not modified
+12/23/2016 09:55:27 +01:00 :: 0HL1B25JQPG4H :: [Debug] - Handled. Status code: 304 File: "/images/throbber.gif"
+12/23/2016 09:55:27 +01:00 :: 0HL1B25JQPG4H :: [Information] - Request finished in 5.624ms 304 image/gif
+12/23/2016 09:55:27 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NR"" completed keep alive response.
+12/23/2016 09:55:27 +01:00 :: 0HL1B25JQPG4I :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-16x16.png  
+12/23/2016 09:55:27 +01:00 :: 0HL1B25JQPG4I :: [Information] - The file "/images/favicon-16x16.png" was not modified
+12/23/2016 09:55:27 +01:00 :: 0HL1B25JQPG4I :: [Debug] - Handled. Status code: 304 File: "/images/favicon-16x16.png"
+12/23/2016 09:55:27 +01:00 :: 0HL1B25JQPG4I :: [Information] - Request finished in 3.6923ms 304 image/png
+12/23/2016 09:55:27 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NQ"" completed keep alive response.
+12/23/2016 09:55:32 +01:00 :: 0HL1B25JQPG4J :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-16x16.png  
+12/23/2016 09:55:32 +01:00 :: 0HL1B25JQPG4J :: [Information] - The file "/images/favicon-16x16.png" was not modified
+12/23/2016 09:55:32 +01:00 :: 0HL1B25JQPG4J :: [Debug] - Handled. Status code: 304 File: "/images/favicon-16x16.png"
+12/23/2016 09:55:32 +01:00 :: 0HL1B25JQPG4J :: [Information] - Request finished in 7.2571ms 304 image/png
+12/23/2016 09:55:32 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NO"" completed keep alive response.
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4K :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/index.html?url=/swagger/v1/swagger.json  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4K :: [Information] - Request finished in 3.5156ms 200 
+12/23/2016 09:55:46 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NN"" completed keep alive response.
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4L :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/screen.css  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4M :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/reset.css  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4N :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery-1.8.0.min.js  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4O :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/object-assign-pollyfill.js  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4L :: [Information] - The file "/css/screen.css" was not modified
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4L :: [Debug] - Handled. Status code: 304 File: "/css/screen.css"
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4M :: [Information] - The file "/css/reset.css" was not modified
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4M :: [Debug] - Handled. Status code: 304 File: "/css/reset.css"
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4N :: [Information] - The file "/lib/jquery-1.8.0.min.js" was not modified
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4N :: [Debug] - Handled. Status code: 304 File: "/lib/jquery-1.8.0.min.js"
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4M :: [Information] - Request finished in 58.0488ms 304 text/css
+12/23/2016 09:55:46 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NS"" completed keep alive response.
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4O :: [Information] - The file "/lib/object-assign-pollyfill.js" was not modified
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4O :: [Debug] - Handled. Status code: 304 File: "/lib/object-assign-pollyfill.js"
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4L :: [Information] - Request finished in 35.8313ms 304 text/css
+12/23/2016 09:55:46 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NR"" completed keep alive response.
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4P :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/typography.css  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4O :: [Information] - Request finished in 83.2148ms 304 application/javascript
+12/23/2016 09:55:46 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NQ"" completed keep alive response.
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4P :: [Information] - The file "/css/typography.css" was not modified
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4P :: [Debug] - Handled. Status code: 304 File: "/css/typography.css"
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4N :: [Information] - Request finished in 63.2056ms 304 application/javascript
+12/23/2016 09:55:46 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NN"" completed keep alive response.
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4Q :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.wiggle.min.js  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4R :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.slideto.min.js  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4S :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.ba-bbq.min.js  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4P :: [Information] - Request finished in 18.2269ms 304 text/css
+12/23/2016 09:55:46 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NP"" completed keep alive response.
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4Q :: [Information] - The file "/lib/jquery.wiggle.min.js" was not modified
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4Q :: [Debug] - Handled. Status code: 304 File: "/lib/jquery.wiggle.min.js"
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4T :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/handlebars-4.0.5.js  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4S :: [Information] - The file "/lib/jquery.ba-bbq.min.js" was not modified
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4S :: [Debug] - Handled. Status code: 304 File: "/lib/jquery.ba-bbq.min.js"
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4R :: [Information] - The file "/lib/jquery.slideto.min.js" was not modified
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4R :: [Debug] - Handled. Status code: 304 File: "/lib/jquery.slideto.min.js"
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4U :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/lodash.min.js  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4T :: [Information] - The file "/lib/handlebars-4.0.5.js" was not modified
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4T :: [Debug] - Handled. Status code: 304 File: "/lib/handlebars-4.0.5.js"
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4S :: [Information] - Request finished in 65.2678ms 304 application/javascript
+12/23/2016 09:55:46 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NR"" completed keep alive response.
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4R :: [Information] - Request finished in 94.5306ms 304 application/javascript
+12/23/2016 09:55:46 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NO"" completed keep alive response.
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4Q :: [Information] - Request finished in 69.3098ms 304 application/javascript
+12/23/2016 09:55:46 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NS"" completed keep alive response.
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4U :: [Information] - The file "/lib/lodash.min.js" was not modified
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4U :: [Debug] - Handled. Status code: 304 File: "/lib/lodash.min.js"
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4T :: [Information] - Request finished in 86.6022ms 304 application/javascript
+12/23/2016 09:55:46 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NQ"" completed keep alive response.
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4V :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/backbone-min.js  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4U :: [Information] - Request finished in 69.0484ms 304 application/javascript
+12/23/2016 09:55:46 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NN"" completed keep alive response.
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG50 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/highlight.9.1.0.pack.js  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG51 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/highlight.9.1.0.pack_extended.js  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG52 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/swagger-ui.js  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4V :: [Information] - The file "/lib/backbone-min.js" was not modified
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG4V :: [Debug] - Handled. Status code: 304 File: "/lib/backbone-min.js"
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG53 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jsoneditor.min.js  
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG51 :: [Information] - The file "/lib/highlight.9.1.0.pack_extended.js" was not modified
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG51 :: [Debug] - Handled. Status code: 304 File: "/lib/highlight.9.1.0.pack_extended.js"
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG53 :: [Information] - The file "/lib/jsoneditor.min.js" was not modified
+12/23/2016 09:55:46 +01:00 :: 0HL1B25JQPG53 :: [Debug] - Handled. Status code: 304 File: "/lib/jsoneditor.min.js"
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG50 :: [Information] - The file "/lib/highlight.9.1.0.pack.js" was not modified
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG50 :: [Debug] - Handled. Status code: 304 File: "/lib/highlight.9.1.0.pack.js"
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG52 :: [Information] - The file "/swagger-ui.js" was not modified
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG52 :: [Debug] - Handled. Status code: 304 File: "/swagger-ui.js"
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG53 :: [Information] - Request finished in 42.2417ms 304 application/javascript
+12/23/2016 09:55:47 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NQ"" completed keep alive response.
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG51 :: [Information] - Request finished in 52.8837ms 304 application/javascript
+12/23/2016 09:55:47 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NS"" completed keep alive response.
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG52 :: [Information] - Request finished in 86.5204ms 304 application/javascript
+12/23/2016 09:55:47 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NR"" completed keep alive response.
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG50 :: [Information] - Request finished in 78.9079ms 304 application/javascript
+12/23/2016 09:55:47 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NO"" completed keep alive response.
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG4V :: [Information] - Request finished in 35.0497ms 304 application/javascript
+12/23/2016 09:55:47 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NP"" completed keep alive response.
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG54 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/marked.js  
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG55 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/swagger-oauth.js  
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG54 :: [Information] - The file "/lib/marked.js" was not modified
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG54 :: [Debug] - Handled. Status code: 304 File: "/lib/marked.js"
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG55 :: [Information] - The file "/lib/swagger-oauth.js" was not modified
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG55 :: [Debug] - Handled. Status code: 304 File: "/lib/swagger-oauth.js"
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG54 :: [Information] - Request finished in 21.781ms 304 application/javascript
+12/23/2016 09:55:47 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NN"" completed keep alive response.
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG55 :: [Information] - Request finished in 21.8843ms 304 application/javascript
+12/23/2016 09:55:47 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NQ"" completed keep alive response.
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG56 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/logo_small.png  
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG56 :: [Information] - The file "/images/logo_small.png" was not modified
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG56 :: [Debug] - Handled. Status code: 304 File: "/images/logo_small.png"
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG56 :: [Information] - Request finished in 3.4547ms 304 image/png
+12/23/2016 09:55:47 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NS"" completed keep alive response.
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG57 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/print.css  
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG57 :: [Information] - The file "/css/print.css" was not modified
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG57 :: [Debug] - Handled. Status code: 304 File: "/css/print.css"
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG57 :: [Information] - Request finished in 3.9127ms 304 text/css
+12/23/2016 09:55:47 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NR"" completed keep alive response.
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG58 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/v1/swagger.json  
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG58 :: [Information] - Request finished in 3.3396ms 200 
+12/23/2016 09:55:47 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NO"" completed keep alive response.
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG59 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/throbber.gif  
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG59 :: [Information] - The file "/images/throbber.gif" was not modified
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG59 :: [Debug] - Handled. Status code: 304 File: "/images/throbber.gif"
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG59 :: [Information] - Request finished in 5.564ms 304 image/gif
+12/23/2016 09:55:47 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NP"" completed keep alive response.
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG5A :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-16x16.png  
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG5A :: [Information] - The file "/images/favicon-16x16.png" was not modified
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG5A :: [Debug] - Handled. Status code: 304 File: "/images/favicon-16x16.png"
+12/23/2016 09:55:47 +01:00 :: 0HL1B25JQPG5A :: [Information] - Request finished in 4.6433ms 304 image/png
+12/23/2016 09:55:47 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NN"" completed keep alive response.
+12/23/2016 09:55:51 +01:00 :: 0HL1B25JQPG5B :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/api/DeviceEvents?deviceId=sdfsdf  
+12/23/2016 09:55:51 +01:00 :: 0HL1B25JQPG5B :: [Debug] - The request path "" does not match the path filter
+12/23/2016 09:55:51 +01:00 :: 0HL1B25JQPG5B :: [Debug] - Request successfully matched the route with name 'null' and template '"api/DeviceEvents"'.
+12/23/2016 09:55:51 +01:00 :: 0HL1B25JQPG5B :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Post (Javithalion.IoT.DeviceEvents.Service)"' with id '"5942b4df-d4b7-4cfd-8576-d97cb4acbb5a"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:55:51 +01:00 :: 0HL1B25JQPG5B :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Put (Javithalion.IoT.DeviceEvents.Service)"' with id '"bb3b0f7e-d5f1-4736-9b80-03f91583671e"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:55:51 +01:00 :: 0HL1B25JQPG5B :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Delete (Javithalion.IoT.DeviceEvents.Service)"' with id '"f15fac86-d5ad-46c1-bfde-09ca897fa452"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 09:55:51 +01:00 :: 0HL1B25JQPG5B :: [Debug] - Executing action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)"
+12/23/2016 09:55:51 +01:00 :: 0HL1B25JQPG5B :: [Information] - Executing action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" with arguments (["00000000-0000-0000-0000-000000000000"]) - ModelState is Invalid
+12/23/2016 09:55:51 +01:00 :: 0HL1B25JQPG5B :: [Debug] - Executed action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)", returned result "Microsoft.AspNetCore.Mvc.BadRequestObjectResult".
+12/23/2016 09:55:51 +01:00 :: 0HL1B25JQPG5B :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+12/23/2016 09:55:51 +01:00 :: 0HL1B25JQPG5B :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+12/23/2016 09:55:51 +01:00 :: 0HL1B25JQPG5B :: [Information] - Executed action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" in 47.8915ms
+12/23/2016 09:55:51 +01:00 :: 0HL1B25JQPG5B :: [Information] - Request finished in 55.8584ms 400 application/json; charset=utf-8
+12/23/2016 09:55:51 +01:00 ::  :: [Debug] - Connection id ""0HL1B25JPB3NQ"" completed keep alive response.
+﻿12/23/2016 11:02:02 +01:00 ::  :: [Debug] - Hosting starting
+12/23/2016 11:02:03 +01:00 ::  :: [Debug] - Hosting started
+12/23/2016 11:02:03 +01:00 ::  :: [Debug] - Connection id ""0HL1B3AV8O2SO"" started.
+12/23/2016 11:02:03 +01:00 ::  :: [Debug] - Connection id ""0HL1B3AV8O2SN"" started.
+12/23/2016 11:02:03 +01:00 :: 0HL1B3AVAI2BN :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:21597/  0
+12/23/2016 11:02:03 +01:00 :: 0HL1B3AVAI2BO :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/api/DeviceEvents  
+12/23/2016 11:02:03 +01:00 :: 0HL1B3AVAI2BN :: [Information] - Request finished in 153.6115ms 200 
+12/23/2016 11:02:03 +01:00 :: 0HL1B3AVAI2BO :: [Debug] - The request path "" does not match the path filter
+12/23/2016 11:02:03 +01:00 ::  :: [Debug] - Connection id ""0HL1B3AV8O2SN"" completed keep alive response.
+12/23/2016 11:02:03 +01:00 :: 0HL1B3AVAI2BO :: [Debug] - Request successfully matched the route with name 'null' and template '"api/DeviceEvents"'.
+12/23/2016 11:02:03 +01:00 :: 0HL1B3AVAI2BO :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Post (Javithalion.IoT.DeviceEvents.Service)"' with id '"b0ff58e4-eabb-4869-8443-d8ea5ef2887a"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 11:02:03 +01:00 :: 0HL1B3AVAI2BO :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Put (Javithalion.IoT.DeviceEvents.Service)"' with id '"aa3e1c8c-456a-494b-9926-004df987d68f"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 11:02:03 +01:00 :: 0HL1B3AVAI2BO :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Delete (Javithalion.IoT.DeviceEvents.Service)"' with id '"c9240dd9-26d1-484f-bb41-b6ca44442da9"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 11:02:03 +01:00 :: 0HL1B3AVAI2BO :: [Debug] - Executing action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)"
+12/23/2016 11:02:04 +01:00 :: 0HL1B3AVAI2BO :: [Information] - Executing action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" with arguments (["00000000-0000-0000-0000-000000000000"]) - ModelState is Valid
+12/23/2016 11:02:05 +01:00 :: 0HL1B3AVAI2BO :: [Debug] - Executed action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+12/23/2016 11:02:05 +01:00 :: 0HL1B3AVAI2BO :: [Debug] - No information found on request to perform content negotiation.
+12/23/2016 11:02:05 +01:00 :: 0HL1B3AVAI2BO :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+12/23/2016 11:02:05 +01:00 :: 0HL1B3AVAI2BO :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+12/23/2016 11:02:05 +01:00 :: 0HL1B3AVAI2BO :: [Information] - Executed action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" in 1548.1543ms
+12/23/2016 11:02:05 +01:00 :: 0HL1B3AVAI2BO :: [Information] - Request finished in 2130.9064ms 200 application/json; charset=utf-8
+12/23/2016 11:02:05 +01:00 ::  :: [Debug] - Connection id ""0HL1B3AV8O2SO"" completed keep alive response.
+﻿12/23/2016 12:00:12 +01:00 ::  :: [Debug] - Hosting starting
+12/23/2016 12:00:12 +01:00 ::  :: [Debug] - Hosting started
+12/23/2016 12:00:12 +01:00 ::  :: [Debug] - Connection id ""0HL1B4BF8UR37"" started.
+12/23/2016 12:00:12 +01:00 ::  :: [Debug] - Connection id ""0HL1B4BF8UR38"" started.
+12/23/2016 12:00:13 +01:00 :: 0HL1B4BFA66VO :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:21597/  0
+12/23/2016 12:00:13 +01:00 :: 0HL1B4BFA66VP :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/api/DeviceEvents  
+12/23/2016 12:00:13 +01:00 :: 0HL1B4BFA66VO :: [Information] - Request finished in 90.495ms 200 
+12/23/2016 12:00:13 +01:00 :: 0HL1B4BFA66VP :: [Debug] - The request path "" does not match the path filter
+12/23/2016 12:00:13 +01:00 ::  :: [Debug] - Connection id ""0HL1B4BF8UR38"" completed keep alive response.
+12/23/2016 12:00:13 +01:00 :: 0HL1B4BFA66VP :: [Debug] - Request successfully matched the route with name 'null' and template '"api/DeviceEvents"'.
+12/23/2016 12:00:13 +01:00 :: 0HL1B4BFA66VP :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Post (Javithalion.IoT.DeviceEvents.Service)"' with id '"d336b3eb-0996-4a11-bd82-f6de87150e98"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 12:00:13 +01:00 :: 0HL1B4BFA66VP :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Put (Javithalion.IoT.DeviceEvents.Service)"' with id '"19b918dc-ff29-46b3-80f2-6c9c330cf313"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 12:00:13 +01:00 :: 0HL1B4BFA66VP :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Delete (Javithalion.IoT.DeviceEvents.Service)"' with id '"8da34cb2-fe72-4bcc-81b8-0238f4f454ef"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+12/23/2016 12:00:13 +01:00 :: 0HL1B4BFA66VP :: [Debug] - Executing action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)"
+12/23/2016 12:00:14 +01:00 :: 0HL1B4BFA66VP :: [Information] - Executing action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" with arguments (["00000000-0000-0000-0000-000000000000"]) - ModelState is Valid
+12/23/2016 12:00:15 +01:00 :: 0HL1B4BFA66VP :: [Debug] - Executed action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+12/23/2016 12:00:15 +01:00 :: 0HL1B4BFA66VP :: [Debug] - No information found on request to perform content negotiation.
+12/23/2016 12:00:15 +01:00 :: 0HL1B4BFA66VP :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+12/23/2016 12:00:15 +01:00 :: 0HL1B4BFA66VP :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+12/23/2016 12:00:15 +01:00 :: 0HL1B4BFA66VP :: [Information] - Executed action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" in 2198.2282ms
+12/23/2016 12:00:15 +01:00 :: 0HL1B4BFA66VP :: [Information] - Request finished in 2645.0569ms 200 application/json; charset=utf-8
+12/23/2016 12:00:15 +01:00 ::  :: [Debug] - Connection id ""0HL1B4BF8UR37"" completed keep alive response.

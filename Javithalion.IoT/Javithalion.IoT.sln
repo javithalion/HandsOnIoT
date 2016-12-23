@@ -45,6 +45,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Javithalion.IoT.DeviceEvent
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Javithalion.IoT.DeviceEvents.Business.Tests", "Javithalion.IoT.DeviceEvents.Business.Tests\Javithalion.IoT.DeviceEvents.Business.Tests.xproj", "{F523C1BA-15D7-4ACF-8C24-BCD84C90CE10}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Javithalion.IoT.DeviceEvents.Service.IntegrationTests", "Javithalion.IoT.DeviceEvents.Service.IntegrationTests\Javithalion.IoT.DeviceEvents.Service.IntegrationTests.xproj", "{C13EAC4A-2511-4602-ABEC-DF928B39C2F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +109,10 @@ Global
 		{F523C1BA-15D7-4ACF-8C24-BCD84C90CE10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F523C1BA-15D7-4ACF-8C24-BCD84C90CE10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F523C1BA-15D7-4ACF-8C24-BCD84C90CE10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C13EAC4A-2511-4602-ABEC-DF928B39C2F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C13EAC4A-2511-4602-ABEC-DF928B39C2F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C13EAC4A-2511-4602-ABEC-DF928B39C2F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C13EAC4A-2511-4602-ABEC-DF928B39C2F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,5 +136,6 @@ Global
 		{8F0A2F89-9684-4DB7-A83C-6D9068B48F21} = {23CE9A23-E2D6-472A-A12B-5B92441A2CB2}
 		{5BD81A7A-467C-49A4-8123-FB254E27AA8E} = {23CE9A23-E2D6-472A-A12B-5B92441A2CB2}
 		{F523C1BA-15D7-4ACF-8C24-BCD84C90CE10} = {23CE9A23-E2D6-472A-A12B-5B92441A2CB2}
+		{C13EAC4A-2511-4602-ABEC-DF928B39C2F4} = {23CE9A23-E2D6-472A-A12B-5B92441A2CB2}
 	EndGlobalSection
 EndGlobal

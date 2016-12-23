@@ -6,8 +6,8 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>f523c1ba-15d7-4acf-8c24-bcd84c90ce10</ProjectGuid>
-    <RootNamespace>Javithalion.IoT.DeviceEvents.Business.Tests</RootNamespace>
+    <ProjectGuid>c13eac4a-2511-4602-abec-df928b39c2f4</ProjectGuid>
+    <RootNamespace>Javithalion.IoT.DeviceEvents.Service.IntegrationTests</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>

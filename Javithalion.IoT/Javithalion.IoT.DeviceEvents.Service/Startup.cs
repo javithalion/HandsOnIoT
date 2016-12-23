@@ -17,14 +17,17 @@ using Javithalion.IoT.DeviceEvents.Business.WriteModel;
 using Javithalion.IoT.DeviceEvents.Service.Middlewares;
 using Serilog;
 using System.IO;
-using Serilog.Sinks.Elasticsearch;
+using Mongo2Go;
+using Javithalion.IoT.DeviceEvents.Service.Extensions;
 
 namespace Javithalion.IoT.DeviceEvents.Service
 {
     public class Startup
     {
         public IConfigurationRoot Configuration { get; }
+
         private MapperConfiguration _mapperConfiguration;
+        private readonly IHostingEnvironment _environment; //a bit ugly https://github.com/aspnet/Hosting/issues/429       
 
         public Startup(IHostingEnvironment env)
         {
@@ -41,6 +44,8 @@ namespace Javithalion.IoT.DeviceEvents.Service
                 cfg.AddProfile(new AutoMapperProfileConfiguration());
             });
 
+            _environment = env;
+
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
                 .Enrich.FromLogContext()
@@ -48,18 +53,6 @@ namespace Javithalion.IoT.DeviceEvents.Service
                                 m.RollingFile(Path.Combine(env.ContentRootPath, "./Logs/log-{Date}.txt"),
                                 outputTemplate: "{Timestamp} :: {RequestId} :: [{Level}] - {Message}{NewLine}{Exception}"))
                 .CreateLogger();
-
-            //Log.Logger = new LoggerConfiguration()
-            //   .MinimumLevel.Debug()
-            //   .Enrich.FromLogContext()
-            //   .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(@"https://119e1893f12a35c1b2a0ebb1a7243151.us-east-1.aws.found.io:9243"))
-            //   {
-            //       IndexDecider = (@event, offset) =>
-            //     {
-            //         return ".testIndex";
-            //     }
-            //   })
-            //   .CreateLogger();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -87,9 +80,18 @@ namespace Javithalion.IoT.DeviceEvents.Service
 
         private IMongoDatabase MongoDatabaseFactory(IServiceProvider serviceProvider)
         {
-            return null; //TODO :: REMOVE
-            MongoClient client = new MongoClient(Configuration.GetConnectionString("DefaultConnection"));
-            return client.GetDatabase(Configuration["DeviceEventDatabase:Name"]);
+            if (_environment.IsDevelopment())
+            {
+                var runner = MongoDbRunner.Start();
+
+                var client = new MongoClient(runner.ConnectionString);
+                return client.GetDatabase(Configuration["DeviceEventDatabase:Name"]);
+            }
+            else
+            {
+                var client = new MongoClient(Configuration.GetConnectionString("DefaultConnection"));
+                return client.GetDatabase(Configuration["DeviceEventDatabase:Name"]);
+            }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -108,6 +110,7 @@ namespace Javithalion.IoT.DeviceEvents.Service
                     DefaultPropertyNameHandling = PropertyNameHandling.CamelCase
                 });
                 app.UseCors("AllowAll");
+                app.SeedData();
             }
 
             app.UseMiddleware(typeof(ErrorHandlingMiddleware));
