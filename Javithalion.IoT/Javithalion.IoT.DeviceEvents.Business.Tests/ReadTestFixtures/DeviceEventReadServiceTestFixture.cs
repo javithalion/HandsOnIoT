@@ -5,6 +5,7 @@ using Javithalion.IoT.DeviceEvents.DataAccess.DAOs;
 using Moq;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -14,7 +15,8 @@ namespace Javithalion.IoT.DeviceEvents.Business.Tests.ReadTestFixtures
 
     public class DeviceEventReadServiceTestFixture
     {
-        [Fact]
+        [Fact(DisplayName = "GetAllDeviceEvents_Ok")]
+        [Trait("Category", "DeviceEvents.Business.Read")]
         public async void GetAllDeviceEvents_Ok()
         {
             Assert.True(false, "Not implemented");
@@ -44,7 +46,8 @@ namespace Javithalion.IoT.DeviceEvents.Business.Tests.ReadTestFixtures
                                                                                    de.TypeName == r.Type) != null));
         }
 
-        [Fact]
+        [Fact(DisplayName = "GetDeviceEvent_Ok")]
+        [Trait("Category", "DeviceEvents.Business.Read")]        
         public void GetDeviceEvent_Ok()
         {
 

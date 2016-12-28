@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -18,7 +19,8 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
     public class DeviceEventsControllerReadTestfixture
     {
 
-        [Fact]
+        [Fact(DisplayName = "FindAll_Ok")]
+        [Trait("Category", "DeviceEvents.Application.Controller")]
         public async void FindAll_Ok()
         {
             // Arrange
@@ -45,7 +47,8 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
             Assert.All(listOfDeviceEvents, deviceEvent => deviceEventsInformation.Contains(deviceEvent));
         }
 
-        [Fact]
+        [Fact(DisplayName = "FindAll_EmptyResult")]
+        [Trait("Category", "DeviceEvents.Application.Controller")]
         public async void FindAll_EmptyResult()
         {
             // Arrange
@@ -71,7 +74,8 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
             Assert.True(deviceEventsInformation.Count() == numberOfEvents);
         }
 
-        [Fact]
+        [Fact(DisplayName = "GetOne_Ok")]
+        [Trait("Category", "DeviceEvents.Application.Controller")]
         public async void GetOne_Ok()
         {
             // Arrange
@@ -98,7 +102,8 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
             Assert.True(theEvent == deviceEvent);
         }
 
-        [Fact]
+        [Fact(DisplayName = "GetOne_NonExistingEvent")]
+        [Trait("Category", "DeviceEvents.Application.Controller")]
         public async void GetOne_NonExistingEvent()
         {
             // Arrange            

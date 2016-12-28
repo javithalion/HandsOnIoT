@@ -1,12 +1,14 @@
 ﻿using Javithalion.IoT.DeviceEvents.Domain.Entities;
 using System;
 using Xunit;
+using System.ComponentModel;
 
 namespace Javithalion.IoT.DeviceEvents.Domain.Tests.EntitiesTestFixture
 {
     public class DeviceEventTestFixture
     {
-        [Fact]
+        [Fact(DisplayName = "GetDeviceEvent_Ok")]
+        [Trait("Category", "DeviceEvents.Domain.DeviceEvent")]
         public void CreateNewStartUpEvent_Ok()
         {
             var deviceId = Guid.NewGuid();
@@ -22,7 +24,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Tests.EntitiesTestFixture
             Assert.False(startUpEvent.Deleted);
         }
 
-        [Fact]
+        [Fact(DisplayName = "CreateNewTearDownEvent_Ok")]
+        [Trait("Category", "DeviceEvents.Domain.DeviceEvent")]
         public void CreateNewTearDownEvent_Ok()
         {
             var deviceId = Guid.NewGuid();
@@ -38,7 +41,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Tests.EntitiesTestFixture
             Assert.False(startUpEvent.Deleted);
         }
 
-        [Fact]
+        [Fact(DisplayName = "CreateNewResourcesOverviewEvent_Ok")]
+        [Trait("Category", "DeviceEvents.Domain.DeviceEvent")]
         public void CreateNewResourcesOverviewEvent_Ok()
         {
             var deviceId = Guid.NewGuid();
@@ -55,7 +59,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Tests.EntitiesTestFixture
             Assert.False(startUpEvent.Deleted);
         }
 
-        [Fact]
+        [Fact(DisplayName = "CreateNewResourcesDetailsEvent_Ok")]
+        [Trait("Category", "DeviceEvents.Domain.DeviceEvent")]
         public void CreateNewResourcesDetailsEvent_Ok()
         {
             var deviceId = Guid.NewGuid();
@@ -72,7 +77,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Tests.EntitiesTestFixture
             Assert.False(startUpEvent.Deleted);
         }
 
-        [Fact]
+        [Fact(DisplayName = "CreateNewCustomEvent_Ok")]
+        [Trait("Category", "DeviceEvents.Domain.DeviceEvent")]
         public void CreateNewCustomEvent_Ok()
         {
             var deviceId = Guid.NewGuid();
@@ -90,7 +96,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Tests.EntitiesTestFixture
             Assert.False(startUpEvent.Deleted);
         }
 
-        [Fact]
+        [Fact(DisplayName = "CreateNewCustomEventWithoutDetails_Ok")]
+        [Trait("Category", "DeviceEvents.Domain.DeviceEvent")]
         public void CreateNewCustomEventWithoutDetails_Ok()
         {
             var deviceId = Guid.NewGuid();
@@ -107,7 +114,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Tests.EntitiesTestFixture
             Assert.False(startUpEvent.Deleted);
         }
 
-        [Fact]
+        [Fact(DisplayName = "CreateNewCustomEventWithEmptyType_Ok")]
+        [Trait("Category", "DeviceEvents.Domain.DeviceEvent")]
         public void CreateNewCustomEventWithEmptyType_Ok()
         {
             var deviceId = Guid.NewGuid();
@@ -117,7 +125,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Tests.EntitiesTestFixture
             Assert.Contains("Provided type cannot be null or empty on a custom event", ex.Message);
         }
 
-        [Fact]
+        [Fact(DisplayName = "CreateNewCustomEventWithNullType_Ok")]
+        [Trait("Category", "DeviceEvents.Domain.DeviceEvent")]
         public void CreateNewCustomEventWithNullType_Ok()
         {
             var deviceId = Guid.NewGuid();
@@ -127,7 +136,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Tests.EntitiesTestFixture
             Assert.Contains("Provided type cannot be null or empty on a custom event", ex.Message);
         }
 
-        [Fact]
+        [Fact(DisplayName = "CanDisableEvent_Ok")]
+        [Trait("Category", "DeviceEvents.Domain.DeviceEvent")]
         public void CanDisableEvent_Ok()
         {
             var deviceId = Guid.NewGuid();
@@ -144,7 +154,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Tests.EntitiesTestFixture
             Assert.True(startUpEvent.Deleted);
         }
 
-        [Fact]
+        [Fact(DisplayName = "CanStablishDetails_Ok")]
+        [Trait("Category", "DeviceEvents.Domain.DeviceEvent")]
         public void CanStablishDetails_Ok()
         {
             var deviceId = Guid.NewGuid();
@@ -162,10 +173,11 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Tests.EntitiesTestFixture
             Assert.False(startUpEvent.Deleted);
         }
 
-        [Fact]
+        [Fact(DisplayName = "CanStablishNullDetails_Ok")]
+        [Trait("Category", "DeviceEvents.Domain.DeviceEvent")]
         public void CanStablishNullDetails_Ok()
         {
-            var deviceId = Guid.NewGuid();            
+            var deviceId = Guid.NewGuid();
 
             var startUpEvent = DeviceEvent.NewStartUpEvent(deviceId);
             startUpEvent.WithDetails(null);

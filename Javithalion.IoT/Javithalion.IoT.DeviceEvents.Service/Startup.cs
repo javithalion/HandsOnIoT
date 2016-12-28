@@ -82,16 +82,33 @@ namespace Javithalion.IoT.DeviceEvents.Service
         {
             if (_environment.IsDevelopment())
             {
-                var runner = MongoDbRunner.Start();
-
-                var client = new MongoClient(runner.ConnectionString);
-                return client.GetDatabase(Configuration["DeviceEventDatabase:Name"]);
+                return GetDevelopmentDatabase();
             }
             else
             {
                 var client = new MongoClient(Configuration.GetConnectionString("DefaultConnection"));
                 return client.GetDatabase(Configuration["DeviceEventDatabase:Name"]);
             }
+        }
+
+        private IMongoDatabase GetDevelopmentDatabase()
+        {
+            var runner = MongoDbRunner.StartForDebugging();
+
+            var seedingFilePath = Path.Combine(Directory.GetCurrentDirectory(), Configuration["DeviceEventDatabase:SeedingFile"]);
+            if (File.Exists(seedingFilePath))
+                runner.Import(Configuration["DeviceEventDatabase:Name"],
+                             Configuration["DeviceEventDatabase:CollectionName"],
+                             seedingFilePath,
+                             true);
+
+            var client = new MongoClient(new MongoClientSettings
+            {
+                MaxConnectionPoolSize = 800,
+                Server = new MongoServerAddress("localhost", 27017)
+            });
+
+            return client.GetDatabase(Configuration["DeviceEventDatabase:Name"]);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

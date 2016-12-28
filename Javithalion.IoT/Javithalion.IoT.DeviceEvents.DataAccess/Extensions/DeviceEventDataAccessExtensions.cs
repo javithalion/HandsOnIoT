@@ -20,13 +20,16 @@ namespace Javithalion.IoT.DeviceEvents.DataAccess.Extensions
             return collection.Skip((page - 1) * pageSize).Take(pageSize);
         }
 
-        public static IMongoQueryable<DeviceEvent> OfDevice(this IMongoQueryable<DeviceEvent> collection, Guid deviceId)
+        public static IMongoQueryable<DeviceEvent> ForDevice(this IMongoQueryable<DeviceEvent> collection, Guid deviceId)
         {
             return collection.Where(x => x.DeviceId == deviceId);
         }
 
         public static IMongoQueryable<DeviceEvent> WithEventId(this IMongoQueryable<DeviceEvent> collection, Guid eventId)
         {
+            var y = collection.ToList();
+            var z = collection.FirstOrDefault(x => x.Id == eventId);
+
             return collection.Where(x => x.Id == eventId);
         }
     }

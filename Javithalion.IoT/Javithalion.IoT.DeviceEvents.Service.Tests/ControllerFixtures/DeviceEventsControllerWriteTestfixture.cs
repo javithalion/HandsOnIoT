@@ -16,7 +16,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
 {
     public class DeviceEventsControllerWriteTestfixture
     {
-        [Fact]
+        [Fact(DisplayName = "CreateOne_InformationOk")]
         public async void CreateOne_InformationOk()
         {
             // Arrange            
@@ -60,7 +60,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
             Assert.EndsWith(createdObject.Id.ToString(), result.Location);
         }
 
-        [Fact]
+        [Fact(DisplayName = "CreateOne_InformationNOk")]
         public async void CreateOne_InformationNOk()
         {
             // Arrange            
@@ -85,7 +85,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
             Assert.True(result.StatusCode == (int)HttpStatusCode.BadRequest);
         }
 
-        [Fact]
+        [Fact(DisplayName = "CreateOne_CreateServiceFailed")]
         public async void CreateOne_CreateServiceFailed()
         {
             // Arrange            
@@ -113,7 +113,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
             Assert.Equal(errorMessage, ex.Message);
         }
 
-        [Fact]
+        [Fact(DisplayName = "UpdateOne_InformationOk")]
         public async void UpdateOne_InformationOk()
         {
             // Arrange
@@ -147,7 +147,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
             Assert.True(result.StatusCode == (int)HttpStatusCode.OK);
         }
 
-        [Fact]
+        [Fact(DisplayName = "UpdateOne_NonExisitingDeviceEvent")]
         public async void UpdateOne_NonExisitingDeviceEvent()
         {
             // Arrange                
@@ -172,7 +172,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
             Assert.True(result.StatusCode == (int)HttpStatusCode.NotFound);
         }
 
-        [Fact]
+        [Fact(DisplayName = "UpdateOne_UpdateServiceFailed")]
         public async void UpdateOne_UpdateServiceFailed()
         {
             // Arrange     
@@ -197,7 +197,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
             Assert.Equal(errorMessage, ex.Message);
         }
 
-        [Fact]
+        [Fact(DisplayName = "RemoveOne_InformationOk")]
         public async void RemoveOne_InformationOk()
         {
             // Arrange            
@@ -228,9 +228,9 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
             // Assert
             var result = Assert.IsType<OkResult>(response);
             Assert.True(result.StatusCode == (int)HttpStatusCode.OK);            
-        }       
+        }
 
-        [Fact]
+        [Fact(DisplayName = "RemoveOne_NonExisitingDeviceEvent")]
         public async void RemoveOne_NonExisitingDeviceEvent()
         {
             // Arrange            
@@ -254,7 +254,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
             Assert.True(result.StatusCode == (int)HttpStatusCode.NotFound);
         }
 
-        [Fact]
+        [Fact(DisplayName = "RemoveOne_RemoveServiceFailed")]
         public async void RemoveOne_RemoveServiceFailed()
         {
             // Arrange            

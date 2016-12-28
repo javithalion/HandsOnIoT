@@ -25,35 +25,20 @@ namespace Javithalion.IoT.DeviceEvents.Business.ReadModel
         public async Task<IEnumerable<DeviceEventDto>> FindAllForDeviceAsync(Guid deviceId)
         {
             var events = await _deviceEventDao.AllDeviceEvents()
-                                              .OfDevice(deviceId)
+                                              .ForDevice(deviceId)
                                               .CurrentlyActive()
-                                              .ToListAsync();
-
-            events = GetDummyEvents(deviceId).Union(GetDummyEvents(Guid.NewGuid())).Union(GetDummyEvents(Guid.NewGuid())).ToList();
+                                              .ToListAsync();            
 
             return events.Select(@event => _mapper.Map<DeviceEventDto>(@event));
         }
 
         public async Task<DeviceEventDto> GetAsync(Guid eventId)
         {
-            var queryResult = await _deviceEventDao.AllDeviceEvents()
+            var @event = await _deviceEventDao.AllDeviceEvents()
                                                    .WithEventId(eventId)
                                                    .FirstOrDefaultAsync();
 
-            return _mapper.Map<DeviceEventDto>(queryResult);
-        }
-
-
-        private IEnumerable<DeviceEvent> GetDummyEvents(Guid deviceId)
-        {
-            var result = new List<DeviceEvent>();
-            int numberOfDummyEvents = 300;
-
-            for (int i = 0; i < numberOfDummyEvents; i++)
-            {
-                result.Add(DeviceEvent.NewStartUpEvent(deviceId));
-            }
-            return result;
-        }
+            return _mapper.Map<DeviceEventDto>(@event);
+        }       
     }
 }

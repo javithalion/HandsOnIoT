@@ -5,7 +5,8 @@
         "xunit": "2.2.0-beta2-build3300",
         "Javithalion.IoT.DeviceEvents.Domain": "1.0.0-*",
         "dotnet-test-xunit": "2.2.0-preview2-build1029",
-        "Microsoft.CodeCoverage": "1.0.2"
+        "Microsoft.CodeCoverage": "1.0.2",
+        "System.ComponentModel.Primitives": "4.1.0"
     },
     "frameworks": {
         "netcoreapp1.0": {
