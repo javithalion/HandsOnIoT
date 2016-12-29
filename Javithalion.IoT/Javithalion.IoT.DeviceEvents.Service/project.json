@@ -32,7 +32,7 @@
         "Serilog.Sinks.ElasticSearch": "4.1.1",
         "Mongo2Go": "2.0.0-alpha1",
         
-        //TODO :: This is for Mongo2Go, vrify if it can affect to other pieces of the application
+        //TODO :: This is for Mongo2Go, verify if it can affect to other pieces of the application
         "System.Runtime.InteropServices.RuntimeInformation": "4.3.0",
         "System.Net.NetworkInformation": "4.1.0"
     },

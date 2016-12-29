@@ -92,5 +92,36 @@ namespace Javithalion.IoT.DeviceEvents.Service.IntegrationTests.ReadRequests
             Assert.True(originalDateWithoutMilliseconds == parsedDateWithoutMilliseconds);
             Assert.NotNull(parsedResponse.Details);
         }
+
+        [Fact(DisplayName = "GetOne_NonExisting")]
+        [Trait("Category", "DeviceEvents.Integration.Read")]
+        public async Task GetOne_NonExisting()
+        {
+            var eventId = Guid.Empty;
+            
+            var response = await _client.GetAsync(@"/api/DeviceEvents/" + eventId);
+            var responseStatusCode = response.StatusCode;
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+           
+            Assert.True(responseStatusCode == System.Net.HttpStatusCode.NotFound);
+            Assert.Contains("not found", responseContent);
+        }
+
+
+        [Fact(DisplayName = "GetOne_BadIdentifier")]
+        [Trait("Category", "DeviceEvents.Integration.Read")]
+        public async Task GetOne_BadIdentifier()
+        {
+            var eventId = "XXXXXXXXXXXX";
+
+            var response = await _client.GetAsync(@"/api/DeviceEvents/" + eventId);
+            var responseStatusCode = response.StatusCode;
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+
+            Assert.True(responseStatusCode == System.Net.HttpStatusCode.BadRequest);
+            Assert.Contains($"value '{eventId}' is not valid for Guid", responseContent);
+        }
     }
 }

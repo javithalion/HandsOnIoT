@@ -21,9 +21,9 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
             _deviceEventReadService = deviceEventReadService;
         }
 
-        [HttpGet()]        
+        [HttpGet()]
         public async Task<IActionResult> GetAllForDevice(Guid deviceId)
-        {           
+        {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
