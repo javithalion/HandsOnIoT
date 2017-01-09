@@ -23,7 +23,7 @@ namespace Javithalion.IoT.DeviceEvents.DataAccess.Tests.DaoTestFixtures
 
         [Fact(DisplayName = "FindAll_CallsGetCollection")]
         [Trait("Category", "DeviceEvents.DataAccess.DeviceEventDao")]
-        public async Task FindAll_CallsGetCollection()
+        public void FindAll_CallsGetCollection()
         {
             var mockedMongoDbCollection = new Mock<IMongoCollection<DeviceEvent>>();
             var mongoDatabaseMock = new Mock<IMongoDatabase>(MockBehavior.Strict);

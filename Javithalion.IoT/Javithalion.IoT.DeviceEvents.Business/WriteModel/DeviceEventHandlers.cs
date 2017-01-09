@@ -31,7 +31,7 @@ namespace Javithalion.IoT.DeviceEvents.Business.WriteModel
             _serviceBus = serviceBus;
         }
 
-        public async Task Handle(CreateDeviceEventCommand message)
+        public Task Handle(CreateDeviceEventCommand message)
         {
             //var newEvent = DeviceEvent.CreateNewForDevice(message.DeviceId)
             //                          .OfType(message.EventType.ToString());
@@ -39,6 +39,7 @@ namespace Javithalion.IoT.DeviceEvents.Business.WriteModel
             //_deviceEventServiceDao.Insert(newEvent);
 
             //_serviceBus.Publish(NewDeviceEventAddedEvent.CreateFor(newEvent));
+            throw new NotImplementedException();
         }
 
         public Task Handle(ExisitingDeviceEventModifiedEvent message)

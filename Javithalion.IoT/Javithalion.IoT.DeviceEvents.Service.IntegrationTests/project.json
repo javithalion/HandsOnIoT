@@ -2,7 +2,8 @@
     "version": "1.0.0-*",
     "testRunner": "xunit",
     "dependencies": {
-        "dotnet-test-xunit": "2.2.0-preview2-build1029",       
+        "dotnet-test-xunit": "2.2.0-preview2-build1029",
+        "Microsoft.CodeCoverage": "1.0.2",
         "Javithalion.IoT.DeviceEvents.Service": "1.0.0-*",
         "Microsoft.AspNetCore.TestHost": "1.1.0",
         "NETStandard.Library": "1.6.1",

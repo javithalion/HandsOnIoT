@@ -5,6 +5,7 @@
         "NETStandard.Library": "1.6.1",
         "xunit": "2.2.0-beta2-build3300",
         "dotnet-test-xunit": "2.2.0-preview2-build1029",
+        "Microsoft.CodeCoverage": "1.0.2",
         "Moq": "4.6.38-alpha",
         "Javithalion.IoT.DeviceEvents.Domain": "1.0.0-*",
         "Mongo2Go": "2.0.0-alpha1",
