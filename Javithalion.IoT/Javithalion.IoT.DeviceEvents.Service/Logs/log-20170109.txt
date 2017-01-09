@@ -1,0 +1,155 @@
+﻿01/09/2017 13:36:32 +01:00 ::  :: [Debug] - Hosting starting
+01/09/2017 13:36:33 +01:00 ::  :: [Debug] - Hosting started
+01/09/2017 13:36:33 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9F"" started.
+01/09/2017 13:36:33 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9E"" started.
+01/09/2017 13:36:34 +01:00 :: 0HL1OHGINHL2C :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/api/DeviceEvents  
+01/09/2017 13:36:34 +01:00 :: 0HL1OHGINHL2D :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:21597/  0
+01/09/2017 13:36:34 +01:00 :: 0HL1OHGINHL2D :: [Information] - Request finished in 238.0865ms 200 
+01/09/2017 13:36:34 +01:00 :: 0HL1OHGINHL2C :: [Debug] - The request path "" does not match the path filter
+01/09/2017 13:36:34 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9E"" completed keep alive response.
+01/09/2017 13:36:34 +01:00 :: 0HL1OHGINHL2C :: [Debug] - Request successfully matched the route with name 'null' and template '"api/DeviceEvents"'.
+01/09/2017 13:36:34 +01:00 :: 0HL1OHGINHL2C :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Post (Javithalion.IoT.DeviceEvents.Service)"' with id '"380209f4-922e-4d20-bc62-347155540a0e"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+01/09/2017 13:36:34 +01:00 :: 0HL1OHGINHL2C :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Put (Javithalion.IoT.DeviceEvents.Service)"' with id '"ac14df44-02b6-49bf-99f2-343db465e958"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+01/09/2017 13:36:34 +01:00 :: 0HL1OHGINHL2C :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Delete (Javithalion.IoT.DeviceEvents.Service)"' with id '"a70c7afe-beda-4c2b-b477-2ad7036d9507"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+01/09/2017 13:36:34 +01:00 :: 0HL1OHGINHL2C :: [Debug] - Executing action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)"
+01/09/2017 13:36:36 +01:00 :: 0HL1OHGINHL2C :: [Information] - Executing action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" with arguments (["00000000-0000-0000-0000-000000000000"]) - ModelState is Valid
+01/09/2017 13:36:36 +01:00 :: 0HL1OHGINHL2C :: [Debug] - Executed action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+01/09/2017 13:36:36 +01:00 :: 0HL1OHGINHL2C :: [Debug] - No information found on request to perform content negotiation.
+01/09/2017 13:36:36 +01:00 :: 0HL1OHGINHL2C :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+01/09/2017 13:36:36 +01:00 :: 0HL1OHGINHL2C :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+01/09/2017 13:36:36 +01:00 :: 0HL1OHGINHL2C :: [Information] - Executed action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" in 1869.5277ms
+01/09/2017 13:36:36 +01:00 :: 0HL1OHGINHL2C :: [Information] - Request finished in 2810.3382ms 200 application/json; charset=utf-8
+01/09/2017 13:36:36 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9F"" completed keep alive response.
+01/09/2017 13:36:36 +01:00 :: 0HL1OHGINHL2E :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/favicon.ico  
+01/09/2017 13:36:36 +01:00 :: 0HL1OHGINHL2E :: [Debug] - The request path "" does not match the path filter
+01/09/2017 13:36:36 +01:00 :: 0HL1OHGINHL2E :: [Debug] - Request did not match any routes.
+01/09/2017 13:36:36 +01:00 :: 0HL1OHGINHL2E :: [Information] - Request finished in 9.2094ms 404 
+01/09/2017 13:36:36 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9E"" completed keep alive response.
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2F :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger  
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2F :: [Information] - Request finished in 14.4888ms 302 
+01/09/2017 13:36:37 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9F"" completed keep alive response.
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2G :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/index.html?url=/swagger/v1/swagger.json  
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2G :: [Information] - Request finished in 23.5555ms 200 
+01/09/2017 13:36:37 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9E"" completed keep alive response.
+01/09/2017 13:36:37 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9G"" started.
+01/09/2017 13:36:37 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9H"" started.
+01/09/2017 13:36:37 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9I"" started.
+01/09/2017 13:36:37 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9J"" started.
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2H :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/typography.css  
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2I :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/reset.css  
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2J :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/object-assign-pollyfill.js  
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2K :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery-1.8.0.min.js  
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2L :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.slideto.min.js  
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2L :: [Information] - The file "/lib/jquery.slideto.min.js" was not modified
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2I :: [Information] - The file "/css/reset.css" was not modified
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2K :: [Information] - The file "/lib/jquery-1.8.0.min.js" was not modified
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2J :: [Information] - The file "/lib/object-assign-pollyfill.js" was not modified
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2H :: [Information] - The file "/css/typography.css" was not modified
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2H :: [Debug] - Handled. Status code: 304 File: "/css/typography.css"
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2K :: [Debug] - Handled. Status code: 304 File: "/lib/jquery-1.8.0.min.js"
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2I :: [Debug] - Handled. Status code: 304 File: "/css/reset.css"
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2L :: [Debug] - Handled. Status code: 304 File: "/lib/jquery.slideto.min.js"
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2J :: [Debug] - Handled. Status code: 304 File: "/lib/object-assign-pollyfill.js"
+01/09/2017 13:36:37 +01:00 :: 0HL1OHGINHL2K :: [Information] - Request finished in 76.8986ms 304 application/javascript
+01/09/2017 13:36:37 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9I"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2I :: [Information] - Request finished in 85.2559ms 304 text/css
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9E"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2M :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/screen.css  
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2J :: [Information] - Request finished in 81.4178ms 304 application/javascript
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9G"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2N :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.wiggle.min.js  
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2L :: [Information] - Request finished in 81.0913ms 304 application/javascript
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9H"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2H :: [Information] - Request finished in 86.0214ms 304 text/css
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9F"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2N :: [Information] - The file "/lib/jquery.wiggle.min.js" was not modified
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2N :: [Debug] - Handled. Status code: 304 File: "/lib/jquery.wiggle.min.js"
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2M :: [Information] - The file "/css/screen.css" was not modified
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2M :: [Debug] - Handled. Status code: 304 File: "/css/screen.css"
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2N :: [Information] - Request finished in 16.543ms 304 application/javascript
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9I"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2M :: [Information] - Request finished in 24.3586ms 304 text/css
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9J"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2O :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.ba-bbq.min.js  
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2P :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/handlebars-4.0.5.js  
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2Q :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/swagger-ui.js  
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2R :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/backbone-min.js  
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2S :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/lodash.min.js  
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2O :: [Information] - The file "/lib/jquery.ba-bbq.min.js" was not modified
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2O :: [Debug] - Handled. Status code: 304 File: "/lib/jquery.ba-bbq.min.js"
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2P :: [Information] - The file "/lib/handlebars-4.0.5.js" was not modified
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2P :: [Debug] - Handled. Status code: 304 File: "/lib/handlebars-4.0.5.js"
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2R :: [Information] - The file "/lib/backbone-min.js" was not modified
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2R :: [Debug] - Handled. Status code: 304 File: "/lib/backbone-min.js"
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2Q :: [Information] - The file "/swagger-ui.js" was not modified
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2Q :: [Debug] - Handled. Status code: 304 File: "/swagger-ui.js"
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2R :: [Information] - Request finished in 85.1728ms 304 application/javascript
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9F"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2P :: [Information] - Request finished in 84.228ms 304 application/javascript
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9G"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2S :: [Information] - The file "/lib/lodash.min.js" was not modified
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2S :: [Debug] - Handled. Status code: 304 File: "/lib/lodash.min.js"
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2O :: [Information] - Request finished in 85.4499ms 304 application/javascript
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9E"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2T :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/highlight.9.1.0.pack.js  
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2Q :: [Information] - Request finished in 87.2341ms 304 application/javascript
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9I"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2S :: [Information] - Request finished in 138.8963ms 304 application/javascript
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9H"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2U :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/highlight.9.1.0.pack_extended.js  
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2V :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jsoneditor.min.js  
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2U :: [Information] - The file "/lib/highlight.9.1.0.pack_extended.js" was not modified
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2T :: [Information] - The file "/lib/highlight.9.1.0.pack.js" was not modified
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2U :: [Debug] - Handled. Status code: 304 File: "/lib/highlight.9.1.0.pack_extended.js"
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2T :: [Debug] - Handled. Status code: 304 File: "/lib/highlight.9.1.0.pack.js"
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2V :: [Information] - The file "/lib/jsoneditor.min.js" was not modified
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2V :: [Debug] - Handled. Status code: 304 File: "/lib/jsoneditor.min.js"
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2U :: [Information] - Request finished in 71.3472ms 304 application/javascript
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9F"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2V :: [Information] - Request finished in 69.547ms 304 application/javascript
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9G"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL2T :: [Information] - Request finished in 95.5885ms 304 application/javascript
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9J"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL30 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/marked.js  
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL31 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/swagger-oauth.js  
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL30 :: [Information] - The file "/lib/marked.js" was not modified
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL30 :: [Debug] - Handled. Status code: 304 File: "/lib/marked.js"
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL31 :: [Information] - The file "/lib/swagger-oauth.js" was not modified
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL31 :: [Debug] - Handled. Status code: 304 File: "/lib/swagger-oauth.js"
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL30 :: [Information] - Request finished in 34.146ms 304 application/javascript
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9E"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL31 :: [Information] - Request finished in 56.3805ms 304 application/javascript
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9I"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL32 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/logo_small.png  
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL32 :: [Information] - The file "/images/logo_small.png" was not modified
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL32 :: [Debug] - Handled. Status code: 304 File: "/images/logo_small.png"
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL32 :: [Information] - Request finished in 7.2261ms 304 image/png
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9H"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL33 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/print.css  
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL33 :: [Information] - The file "/css/print.css" was not modified
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL33 :: [Debug] - Handled. Status code: 304 File: "/css/print.css"
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL33 :: [Information] - Request finished in 4.0741ms 304 text/css
+01/09/2017 13:36:38 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9F"" completed keep alive response.
+01/09/2017 13:36:38 +01:00 :: 0HL1OHGINHL34 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/v1/swagger.json  
+01/09/2017 13:36:39 +01:00 :: 0HL1OHGINHL35 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-16x16.png  
+01/09/2017 13:36:39 +01:00 :: 0HL1OHGINHL35 :: [Information] - The file "/images/favicon-16x16.png" was not modified
+01/09/2017 13:36:39 +01:00 :: 0HL1OHGINHL35 :: [Debug] - Handled. Status code: 304 File: "/images/favicon-16x16.png"
+01/09/2017 13:36:39 +01:00 :: 0HL1OHGINHL35 :: [Information] - Request finished in 4.3829ms 304 image/png
+01/09/2017 13:36:39 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9J"" completed keep alive response.
+01/09/2017 13:36:40 +01:00 :: 0HL1OHGINHL34 :: [Information] - Request finished in 1503.1998ms 200 
+01/09/2017 13:36:40 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9G"" completed keep alive response.
+01/09/2017 13:36:44 +01:00 :: 0HL1OHGINHL36 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-16x16.png  
+01/09/2017 13:36:44 +01:00 :: 0HL1OHGINHL36 :: [Information] - The file "/images/favicon-16x16.png" was not modified
+01/09/2017 13:36:44 +01:00 :: 0HL1OHGINHL36 :: [Debug] - Handled. Status code: 304 File: "/images/favicon-16x16.png"
+01/09/2017 13:36:44 +01:00 :: 0HL1OHGINHL36 :: [Information] - Request finished in 9.0272ms 304 image/png
+01/09/2017 13:36:44 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9E"" completed keep alive response.
+01/09/2017 13:36:46 +01:00 :: 0HL1OHGINHL37 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/throbber.gif  
+01/09/2017 13:36:46 +01:00 :: 0HL1OHGINHL37 :: [Information] - The file "/images/throbber.gif" was not modified
+01/09/2017 13:36:46 +01:00 :: 0HL1OHGINHL37 :: [Debug] - Handled. Status code: 304 File: "/images/throbber.gif"
+01/09/2017 13:36:46 +01:00 :: 0HL1OHGINHL37 :: [Information] - Request finished in 6.5786ms 304 image/gif
+01/09/2017 13:36:46 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9I"" completed keep alive response.
+01/09/2017 13:36:46 +01:00 :: 0HL1OHGINHL38 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-16x16.png  
+01/09/2017 13:36:46 +01:00 :: 0HL1OHGINHL38 :: [Information] - The file "/images/favicon-16x16.png" was not modified
+01/09/2017 13:36:46 +01:00 :: 0HL1OHGINHL38 :: [Debug] - Handled. Status code: 304 File: "/images/favicon-16x16.png"
+01/09/2017 13:36:46 +01:00 :: 0HL1OHGINHL38 :: [Information] - Request finished in 4.0708ms 304 image/png
+01/09/2017 13:36:46 +01:00 ::  :: [Debug] - Connection id ""0HL1OHGIKGJ9H"" completed keep alive response.

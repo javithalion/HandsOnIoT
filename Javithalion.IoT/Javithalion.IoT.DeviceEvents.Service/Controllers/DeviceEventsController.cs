@@ -73,19 +73,21 @@ namespace Javithalion.IoT.DeviceEvents.Service.Controllers
             }
         }
 
-        [HttpDelete]
-        public async Task<IActionResult> Delete([FromBody]DeleteDeviceEventCommand deleteCommand)
+        [HttpDelete("{eventId}")]
+        public async Task<IActionResult> Delete(Guid eventId)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             try
             {
+                var deleteCommand = new DeleteDeviceEventCommand() { EventId = eventId };
+
                 await _deviceEventWriteService.DeleteAsync(deleteCommand);
                 return Ok();
             }
             catch (KeyNotFoundException)
             {
-                return NotFound($"Device event with id = {deleteCommand.EventId} not found");
+                return NotFound($"Device event with id = {eventId} not found");
             }
         }
     }

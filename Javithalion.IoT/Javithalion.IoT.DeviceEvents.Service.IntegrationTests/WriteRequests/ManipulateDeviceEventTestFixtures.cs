@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -42,7 +43,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.IntegrationTests.WriteRequests
                                                       'typeName': '{typeName}'
                                                      }}",
                                                      Encoding.UTF8,
-                                                     @"application/json");           
+                                                     @"application/json");
 
             var response = await _client.PostAsync(@"/api/DeviceEvents", requestContent);
 
@@ -56,56 +57,133 @@ namespace Javithalion.IoT.DeviceEvents.Service.IntegrationTests.WriteRequests
             Assert.True(parsedResponse.Date != DateTime.MinValue);
             Assert.True(parsedResponse.Details.ToString() == string.Empty);
             Assert.True(parsedResponse.DeviceId == deviceId);
-            Assert.True(parsedResponse.Type == "StartUp");           
-        }       
+            Assert.True(parsedResponse.Type == "StartUp");
+        }
 
         [Fact(DisplayName = "CreateOne_WrongData")]
         [Trait("Category", "DeviceEvents.Integration.Write")]
         public async Task CreateOne_WrongData()
         {
-            Assert.True(false, "Not implemented");
+            //TODO :: Try the "multiple test values" on this test to create multiple wrong data.
+            var deviceId = "adadasd";
+            var eventType = 9;
+            var typeName = "adasdsad";
+
+            var requestContent = new StringContent($@"{{
+                                                      'deviceId': '{deviceId}',
+                                                      'eventType': {eventType},
+                                                      'typeName': '{typeName}'
+                                                     }}",
+                                                     Encoding.UTF8,
+                                                     @"application/json");
+
+            var response = await _client.PostAsync(@"/api/DeviceEvents", requestContent);
+
+            Assert.True(response.StatusCode == System.Net.HttpStatusCode.BadRequest);
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+            Assert.Contains($"The input was not valid", responseContent);
         }
 
         [Fact(DisplayName = "UpdateOne_Ok")]
         [Trait("Category", "DeviceEvents.Integration.Write")]
         public async Task UpdateOne_Ok()
         {
-            Assert.True(false, "Not implemented");
+            //TODO :: Try the "multiple test values" on this test to modify with different details values
+            var eventId = new Guid("0989b655-b0ae-413c-8503-a6e900f04e3a");
+            dynamic details = new { Data = "Hou Hou Hou" };
+
+            var requestContent = new StringContent($@"{{
+                                                      'EventId': '{eventId}',                                                      
+                                                      'details': {JsonConvert.SerializeObject(details)}
+                                                     }}",
+                                                     Encoding.UTF8,
+                                                     @"application/json");
+
+            var response = await _client.PutAsync(@"/api/DeviceEvents", requestContent);
+            Assert.True(response.StatusCode == System.Net.HttpStatusCode.OK);
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+            Assert.True(responseContent == string.Empty);
         }
 
         [Fact(DisplayName = "UpdateOne_WrongData")]
         [Trait("Category", "DeviceEvents.Integration.Write")]
         public async Task UpdateOne_WrongData()
         {
-            Assert.True(false, "Not implemented");
+            var eventId = "adasdasd";
+            var requestContent = new StringContent($@"{{
+                                                        'EventId': '{eventId}',
+                                                        'Details': {{}}
+                                                      }}",
+                                                    Encoding.UTF8,
+                                                    @"application/json");
+
+            var response = await _client.PutAsync(@"/api/DeviceEvents", requestContent);
+
+            Assert.True(response.StatusCode == System.Net.HttpStatusCode.BadRequest);
+            var responseContent = await response.Content.ReadAsStringAsync();
+
+            Assert.Contains($"The input was not valid", responseContent);
         }
 
         [Fact(DisplayName = "UpdateOne_NonExistingDeviceEvent")]
         [Trait("Category", "DeviceEvents.Integration.Write")]
         public async Task UpdateOne_NonExistingDeviceEvent()
         {
-            Assert.True(false, "Not implemented");
+            var eventId = Guid.NewGuid();
+            var requestContent = new StringContent($@"{{
+                                                        'EventId': '{eventId}',
+                                                        'Details': {{}}
+                                                      }}",
+                                                    Encoding.UTF8,
+                                                    @"application/json");
+
+            var response = await _client.PutAsync(@"/api/DeviceEvents", requestContent);
+
+            Assert.True(response.StatusCode == System.Net.HttpStatusCode.NotFound);
+            var responseContent = await response.Content.ReadAsStringAsync();
+
+            Assert.Contains($"{eventId} not found", responseContent);
         }
 
         [Fact(DisplayName = "DeleteOne_Ok")]
         [Trait("Category", "DeviceEvents.Integration.Write")]
         public async Task DeleteOne_Ok()
         {
-            Assert.True(false, "Not implemented");
+            var eventId = new Guid("0989b655-b0ae-413c-8503-a6e900f04e3a");
+
+            var response = await _client.DeleteAsync(@"/api/DeviceEvents/" + eventId);
+            Assert.True(response.StatusCode == System.Net.HttpStatusCode.OK);
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+            Assert.True(responseContent == string.Empty);
         }
 
         [Fact(DisplayName = "DeleteOne_WrongData")]
         [Trait("Category", "DeviceEvents.Integration.Write")]
         public async Task DeleteOne_WrongData()
         {
-            Assert.True(false, "Not implemented");
+            var eventId = "sadsadsad";
+            var response = await _client.DeleteAsync(@"/api/DeviceEvents/" + eventId);
+
+            Assert.True(response.StatusCode == System.Net.HttpStatusCode.BadRequest);
+            var responseContent = await response.Content.ReadAsStringAsync();
+
+            Assert.Contains($"The value '{eventId}' is not valid for Guid", responseContent);
         }
 
         [Fact(DisplayName = "DeleteOne_NonExistingDeviceEvent")]
         [Trait("Category", "DeviceEvents.Integration.Write")]
         public async Task DeleteOne_NonExistingDeviceEvent()
         {
-            Assert.True(false, "Not implemented");
+            var eventId = Guid.NewGuid();
+            var response = await _client.DeleteAsync(@"/api/DeviceEvents/" + eventId);
+
+            Assert.True(response.StatusCode == System.Net.HttpStatusCode.NotFound);
+            var responseContent = await response.Content.ReadAsStringAsync();
+
+            Assert.Contains($"{eventId} not found", responseContent);
         }
     }
 }

@@ -193,12 +193,12 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
             var readerServiceMock = new Mock<IDeviceEventReadService>(MockBehavior.Strict);
             var writerServiceMock = new Mock<IDeviceEventWriteService>(MockBehavior.Strict);
 
-            writerServiceMock.Setup(f => f.DeleteAsync(deleteCommand)).ReturnsAsync(deletedEvent);
+            writerServiceMock.Setup(f => f.DeleteAsync(It.IsAny<DeleteDeviceEventCommand>())).ReturnsAsync(deletedEvent);
 
             var controller = new DeviceEventsController(writerServiceMock.Object, readerServiceMock.Object);
 
             // Act
-            var response = await controller.Delete(deleteCommand);
+            var response = await controller.Delete(deleteCommand.EventId);
 
             // Assert
             var result = Assert.IsType<OkResult>(response);
@@ -217,12 +217,12 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
             var readerServiceMock = new Mock<IDeviceEventReadService>(MockBehavior.Strict);
             var writerServiceMock = new Mock<IDeviceEventWriteService>(MockBehavior.Strict);
 
-            writerServiceMock.Setup(f => f.DeleteAsync(deleteCommand)).ThrowsAsync(new KeyNotFoundException());
+            writerServiceMock.Setup(f => f.DeleteAsync(It.IsAny<DeleteDeviceEventCommand>())).ThrowsAsync(new KeyNotFoundException());
 
             var controller = new DeviceEventsController(writerServiceMock.Object, readerServiceMock.Object);
 
             // Act
-            var response = await controller.Delete(deleteCommand);
+            var response = await controller.Delete(deleteCommand.EventId);
 
             // Assert
             var result = Assert.IsType<NotFoundObjectResult>(response);
@@ -243,12 +243,12 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
             var readerServiceMock = new Mock<IDeviceEventReadService>(MockBehavior.Strict);
             var writerServiceMock = new Mock<IDeviceEventWriteService>(MockBehavior.Strict);
 
-            writerServiceMock.Setup(f => f.DeleteAsync(deleteCommand)).ThrowsAsync(new Exception(errorMessage));
+            writerServiceMock.Setup(f => f.DeleteAsync(It.IsAny<DeleteDeviceEventCommand>())).ThrowsAsync(new Exception(errorMessage));
 
             var controller = new DeviceEventsController(writerServiceMock.Object, readerServiceMock.Object);
 
             // Act
-            Exception ex = await Assert.ThrowsAsync<Exception>(() => controller.Delete(deleteCommand));
+            Exception ex = await Assert.ThrowsAsync<Exception>(() => controller.Delete(deleteCommand.EventId));
 
             // Assert
             Assert.Equal(errorMessage, ex.Message);
