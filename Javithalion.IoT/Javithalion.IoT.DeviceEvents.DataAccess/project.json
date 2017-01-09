@@ -4,7 +4,8 @@
     "dependencies": {
         "Javithalion.IoT.DeviceEvents.Domain": "1.0.0-*",
         "MongoDB.Driver": "2.3.0",
-        "NETStandard.Library": "1.6.0"
+        "NETStandard.Library": "1.6.0",
+        "Newtonsoft.Json": "9.0.1"
     },
 
   "frameworks": {

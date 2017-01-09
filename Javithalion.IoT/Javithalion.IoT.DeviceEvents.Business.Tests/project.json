@@ -9,7 +9,12 @@
         "Javithalion.IoT.DeviceEvents.DataAccess": "1.0.0-*",
         "Moq": "4.6.38-alpha",
         "Javithalion.IoT.DeviceEvents.Business": "1.0.0-*",
-        "AutoMapper": "5.1.1"
+        "AutoMapper": "5.1.1",
+        "Mongo2Go": "2.0.0-alpha1",
+
+        //TODO :: This is for Mongo2Go, verify if it can affect to other pieces of the application
+        "System.Runtime.InteropServices.RuntimeInformation": "4.3.0",
+        "System.Net.NetworkInformation": "4.1.0"
     },
     "frameworks": {
         "netcoreapp1.0": {

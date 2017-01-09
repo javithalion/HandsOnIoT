@@ -58,32 +58,7 @@ namespace Javithalion.IoT.DeviceEvents.Service.Tests.ControllerFixtures
                         createdObject.DeviceId == brandNewEvent.DeviceId &&
                         createdObject.Type == brandNewEvent.Type);
             Assert.EndsWith(createdObject.Id.ToString(), result.Location);
-        }
-
-        [Fact(DisplayName = "CreateOne_InformationNOk")]
-        public async void CreateOne_InformationNOk()
-        {
-            // Arrange            
-            var createCommand = new CreateDeviceEventCommand()
-            {
-                DeviceId = Guid.Empty,
-                Details = null,
-                EventType = EventType.Others,
-                TypeName = null
-            };
-
-            var readerServiceMock = new Mock<IDeviceEventReadService>(MockBehavior.Strict);
-            var writerServiceMock = new Mock<IDeviceEventWriteService>(MockBehavior.Strict);
-
-            var controller = new DeviceEventsController(writerServiceMock.Object, readerServiceMock.Object);
-
-            // Act
-            var response = await controller.Post(createCommand);
-
-            // Assert
-            var result = Assert.IsType<BadRequestObjectResult>(response);
-            Assert.True(result.StatusCode == (int)HttpStatusCode.BadRequest);
-        }
+        }       
 
         [Fact(DisplayName = "CreateOne_CreateServiceFailed")]
         public async void CreateOne_CreateServiceFailed()

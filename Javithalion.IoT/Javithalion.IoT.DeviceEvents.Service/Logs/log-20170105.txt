@@ -1,0 +1,176 @@
+﻿01/05/2017 16:18:56 +01:00 ::  :: [Debug] - Hosting starting
+01/05/2017 16:18:56 +01:00 ::  :: [Debug] - Hosting started
+01/05/2017 16:18:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OK"" started.
+01/05/2017 16:18:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OJ"" started.
+01/05/2017 16:18:57 +01:00 :: 0HL1LFOLGDQ84 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/api/DeviceEvents  
+01/05/2017 16:18:57 +01:00 :: 0HL1LFOLGDQ85 :: [Information] - Request starting HTTP/1.1 DEBUG http://localhost:21597/  0
+01/05/2017 16:18:57 +01:00 :: 0HL1LFOLGDQ85 :: [Information] - Request finished in 114.7762ms 200 
+01/05/2017 16:18:57 +01:00 :: 0HL1LFOLGDQ84 :: [Debug] - The request path "" does not match the path filter
+01/05/2017 16:18:57 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OJ"" completed keep alive response.
+01/05/2017 16:18:57 +01:00 :: 0HL1LFOLGDQ84 :: [Debug] - Request successfully matched the route with name 'null' and template '"api/DeviceEvents"'.
+01/05/2017 16:18:57 +01:00 :: 0HL1LFOLGDQ84 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Post (Javithalion.IoT.DeviceEvents.Service)"' with id '"3ae7bf9c-f779-46a7-818b-933ffdab92a9"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+01/05/2017 16:18:57 +01:00 :: 0HL1LFOLGDQ84 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Put (Javithalion.IoT.DeviceEvents.Service)"' with id '"22e2c199-78ac-46b3-b8f0-49b786a135ee"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+01/05/2017 16:18:57 +01:00 :: 0HL1LFOLGDQ84 :: [Debug] - Action '"Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.Delete (Javithalion.IoT.DeviceEvents.Service)"' with id '"c6f38cb3-c669-4b98-997d-14b1361cc6a7"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+01/05/2017 16:18:57 +01:00 :: 0HL1LFOLGDQ84 :: [Debug] - Executing action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)"
+01/05/2017 16:18:58 +01:00 :: 0HL1LFOLGDQ84 :: [Information] - Executing action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" with arguments (["00000000-0000-0000-0000-000000000000"]) - ModelState is Valid
+01/05/2017 16:18:58 +01:00 :: 0HL1LFOLGDQ84 :: [Debug] - Executed action method "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult".
+01/05/2017 16:18:58 +01:00 :: 0HL1LFOLGDQ84 :: [Debug] - No information found on request to perform content negotiation.
+01/05/2017 16:18:58 +01:00 :: 0HL1LFOLGDQ84 :: [Debug] - Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+01/05/2017 16:18:58 +01:00 :: 0HL1LFOLGDQ84 :: [Information] - Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+01/05/2017 16:18:58 +01:00 :: 0HL1LFOLGDQ84 :: [Information] - Executed action "Javithalion.IoT.DeviceEvents.Service.Controllers.DeviceEventsController.GetAllForDevice (Javithalion.IoT.DeviceEvents.Service)" in 1044.7197ms
+01/05/2017 16:18:58 +01:00 :: 0HL1LFOLGDQ84 :: [Information] - Request finished in 1692.9891ms 200 application/json; charset=utf-8
+01/05/2017 16:18:58 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OK"" completed keep alive response.
+01/05/2017 16:18:58 +01:00 :: 0HL1LFOLGDQ86 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/favicon.ico  
+01/05/2017 16:18:58 +01:00 :: 0HL1LFOLGDQ86 :: [Debug] - The request path "" does not match the path filter
+01/05/2017 16:18:58 +01:00 :: 0HL1LFOLGDQ86 :: [Debug] - Request did not match any routes.
+01/05/2017 16:18:58 +01:00 :: 0HL1LFOLGDQ86 :: [Information] - Request finished in 6.2695ms 404 
+01/05/2017 16:18:58 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OJ"" completed keep alive response.
+01/05/2017 16:19:12 +01:00 :: 0HL1LFOLGDQ87 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/api/swagger  
+01/05/2017 16:19:12 +01:00 :: 0HL1LFOLGDQ87 :: [Debug] - The request path "" does not match the path filter
+01/05/2017 16:19:12 +01:00 :: 0HL1LFOLGDQ87 :: [Debug] - Request did not match any routes.
+01/05/2017 16:19:12 +01:00 :: 0HL1LFOLGDQ87 :: [Information] - Request finished in 4.5403ms 404 
+01/05/2017 16:19:12 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OK"" completed keep alive response.
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ88 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger  
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ88 :: [Information] - Request finished in 12.3262ms 302 
+01/05/2017 16:19:16 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OJ"" completed keep alive response.
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ89 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/index.html?url=/swagger/v1/swagger.json  
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ89 :: [Information] - Request finished in 20.1025ms 200 
+01/05/2017 16:19:16 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OK"" completed keep alive response.
+01/05/2017 16:19:16 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OM"" started.
+01/05/2017 16:19:16 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OL"" started.
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8A :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/typography.css  
+01/05/2017 16:19:16 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94ON"" started.
+01/05/2017 16:19:16 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OO"" started.
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8B :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/object-assign-pollyfill.js  
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8C :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/screen.css  
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8D :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/reset.css  
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8E :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.slideto.min.js  
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8E :: [Information] - Sending file. Request path: '"/lib/jquery.slideto.min.js"'. Physical path: '"N/A"'
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8D :: [Information] - Sending file. Request path: '"/css/reset.css"'. Physical path: '"N/A"'
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8B :: [Information] - Sending file. Request path: '"/lib/object-assign-pollyfill.js"'. Physical path: '"N/A"'
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8C :: [Information] - Sending file. Request path: '"/css/screen.css"'. Physical path: '"N/A"'
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8A :: [Information] - Sending file. Request path: '"/css/typography.css"'. Physical path: '"N/A"'
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8E :: [Information] - Request finished in 80.4232ms 200 application/javascript
+01/05/2017 16:19:16 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94ON"" completed keep alive response.
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8A :: [Information] - Request finished in 89.0462ms 200 text/css
+01/05/2017 16:19:16 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OJ"" completed keep alive response.
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8C :: [Information] - Request finished in 83.4908ms 200 text/css
+01/05/2017 16:19:16 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OM"" completed keep alive response.
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8D :: [Information] - Request finished in 82.4796ms 200 text/css
+01/05/2017 16:19:16 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OK"" completed keep alive response.
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8B :: [Information] - Request finished in 85.5584ms 200 application/javascript
+01/05/2017 16:19:16 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OL"" completed keep alive response.
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8F :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.wiggle.min.js  
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8G :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery-1.8.0.min.js  
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8H :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jquery.ba-bbq.min.js  
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8G :: [Information] - Sending file. Request path: '"/lib/jquery-1.8.0.min.js"'. Physical path: '"N/A"'
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8F :: [Information] - Sending file. Request path: '"/lib/jquery.wiggle.min.js"'. Physical path: '"N/A"'
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8I :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/backbone-min.js  
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8J :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/handlebars-4.0.5.js  
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8F :: [Information] - Request finished in 86.2839ms 200 application/javascript
+01/05/2017 16:19:16 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94ON"" completed keep alive response.
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8K :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/lodash.min.js  
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8L :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/swagger-ui.js  
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8H :: [Information] - Sending file. Request path: '"/lib/jquery.ba-bbq.min.js"'. Physical path: '"N/A"'
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8J :: [Information] - Sending file. Request path: '"/lib/handlebars-4.0.5.js"'. Physical path: '"N/A"'
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8L :: [Information] - Sending file. Request path: '"/swagger-ui.js"'. Physical path: '"N/A"'
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8K :: [Information] - Sending file. Request path: '"/lib/lodash.min.js"'. Physical path: '"N/A"'
+01/05/2017 16:19:16 +01:00 :: 0HL1LFOLGDQ8I :: [Information] - Sending file. Request path: '"/lib/backbone-min.js"'. Physical path: '"N/A"'
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8H :: [Information] - Request finished in 111.9341ms 200 application/javascript
+01/05/2017 16:19:17 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OK"" completed keep alive response.
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8J :: [Information] - Request finished in 78.7792ms 200 application/javascript
+01/05/2017 16:19:17 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OJ"" completed keep alive response.
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8K :: [Information] - Request finished in 37.629ms 200 application/javascript
+01/05/2017 16:19:17 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OL"" completed keep alive response.
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8I :: [Information] - Request finished in 107.3094ms 200 application/javascript
+01/05/2017 16:19:17 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OM"" completed keep alive response.
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8G :: [Information] - Request finished in 122.7366ms 200 application/javascript
+01/05/2017 16:19:17 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OO"" completed keep alive response.
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8M :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/highlight.9.1.0.pack.js  
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8M :: [Information] - Sending file. Request path: '"/lib/highlight.9.1.0.pack.js"'. Physical path: '"N/A"'
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8M :: [Information] - Request finished in 13.1921ms 200 application/javascript
+01/05/2017 16:19:17 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OK"" completed keep alive response.
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8N :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/highlight.9.1.0.pack_extended.js  
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8N :: [Information] - Sending file. Request path: '"/lib/highlight.9.1.0.pack_extended.js"'. Physical path: '"N/A"'
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8N :: [Information] - Request finished in 7.2907ms 200 application/javascript
+01/05/2017 16:19:17 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OO"" completed keep alive response.
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8O :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/jsoneditor.min.js  
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8P :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/swagger-oauth.js  
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8Q :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/lib/marked.js  
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8O :: [Information] - Sending file. Request path: '"/lib/jsoneditor.min.js"'. Physical path: '"N/A"'
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8Q :: [Information] - Sending file. Request path: '"/lib/marked.js"'. Physical path: '"N/A"'
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8P :: [Information] - Sending file. Request path: '"/lib/swagger-oauth.js"'. Physical path: '"N/A"'
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8O :: [Information] - Request finished in 40.3567ms 200 application/javascript
+01/05/2017 16:19:17 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OL"" completed keep alive response.
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8P :: [Information] - Request finished in 45.1895ms 200 application/javascript
+01/05/2017 16:19:17 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OM"" completed keep alive response.
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8Q :: [Information] - Request finished in 38.6662ms 200 application/javascript
+01/05/2017 16:19:17 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OJ"" completed keep alive response.
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8R :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/logo_small.png  
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8R :: [Information] - Sending file. Request path: '"/images/logo_small.png"'. Physical path: '"N/A"'
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8R :: [Information] - Request finished in 7.2259ms 200 image/png
+01/05/2017 16:19:17 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OK"" completed keep alive response.
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8S :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/css/print.css  
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8S :: [Information] - Sending file. Request path: '"/css/print.css"'. Physical path: '"N/A"'
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8S :: [Information] - Request finished in 9.823ms 200 text/css
+01/05/2017 16:19:17 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OO"" completed keep alive response.
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8L :: [Information] - Request finished in 423.2678ms 200 application/javascript
+01/05/2017 16:19:17 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94ON"" completed keep alive response.
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8T :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/v1/swagger.json  
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8U :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-16x16.png  
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8U :: [Information] - Sending file. Request path: '"/images/favicon-16x16.png"'. Physical path: '"N/A"'
+01/05/2017 16:19:17 +01:00 :: 0HL1LFOLGDQ8U :: [Information] - Request finished in 15.294ms 200 image/png
+01/05/2017 16:19:17 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OM"" completed keep alive response.
+01/05/2017 16:19:18 +01:00 :: 0HL1LFOLGDQ8T :: [Information] - Request finished in 1026.8102ms 200 
+01/05/2017 16:19:18 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OJ"" completed keep alive response.
+01/05/2017 16:19:19 +01:00 :: 0HL1LFOLGDQ8V :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-32x32.png  
+01/05/2017 16:19:19 +01:00 :: 0HL1LFOLGDQ8V :: [Information] - Sending file. Request path: '"/images/favicon-32x32.png"'. Physical path: '"N/A"'
+01/05/2017 16:19:19 +01:00 :: 0HL1LFOLGDQ8V :: [Information] - Request finished in 11.5196ms 200 image/png
+01/05/2017 16:19:19 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OL"" completed keep alive response.
+01/05/2017 16:19:19 +01:00 :: 0HL1LFOLGDQ90 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/v1/swagger.json  
+01/05/2017 16:19:19 +01:00 :: 0HL1LFOLGDQ90 :: [Information] - Request finished in 55.8705ms 200 
+01/05/2017 16:19:19 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OK"" completed keep alive response.
+01/05/2017 16:19:21 +01:00 :: 0HL1LFOLGDQ91 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-16x16.png  
+01/05/2017 16:19:21 +01:00 :: 0HL1LFOLGDQ91 :: [Information] - The file "/images/favicon-16x16.png" was not modified
+01/05/2017 16:19:21 +01:00 :: 0HL1LFOLGDQ91 :: [Debug] - Handled. Status code: 304 File: "/images/favicon-16x16.png"
+01/05/2017 16:19:21 +01:00 :: 0HL1LFOLGDQ91 :: [Information] - Request finished in 11.8288ms 304 image/png
+01/05/2017 16:19:21 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OO"" completed keep alive response.
+01/05/2017 16:19:23 +01:00 :: 0HL1LFOLGDQ92 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/throbber.gif  
+01/05/2017 16:19:23 +01:00 :: 0HL1LFOLGDQ92 :: [Information] - Sending file. Request path: '"/images/throbber.gif"'. Physical path: '"N/A"'
+01/05/2017 16:19:23 +01:00 :: 0HL1LFOLGDQ92 :: [Information] - Request finished in 11.5828ms 200 image/gif
+01/05/2017 16:19:23 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94ON"" completed keep alive response.
+01/05/2017 16:19:23 +01:00 :: 0HL1LFOLGDQ93 :: [Information] - Request starting HTTP/1.1 GET http://localhost:21597/swagger/images/favicon-16x16.png  
+01/05/2017 16:19:23 +01:00 :: 0HL1LFOLGDQ93 :: [Information] - The file "/images/favicon-16x16.png" was not modified
+01/05/2017 16:19:23 +01:00 :: 0HL1LFOLGDQ93 :: [Debug] - Handled. Status code: 304 File: "/images/favicon-16x16.png"
+01/05/2017 16:19:23 +01:00 :: 0HL1LFOLGDQ93 :: [Information] - Request finished in 8.1236ms 304 image/png
+01/05/2017 16:19:23 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OM"" completed keep alive response.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OK"" received FIN.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OJ"" received FIN.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OL"" received FIN.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94ON"" received FIN.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OJ"" disconnecting.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OL"" disconnecting.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94ON"" disconnecting.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OJ"" sending FIN.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OO"" received FIN.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OM"" received FIN.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OO"" disconnecting.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OO"" sending FIN.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OM"" disconnecting.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OM"" sending FIN.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OL"" sending FIN.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94ON"" sending FIN.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OK"" disconnecting.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OM"" sent FIN with status "0".
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94ON"" sent FIN with status "0".
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OM"" stopped.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94ON"" stopped.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OL"" sent FIN with status "0".
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OO"" sent FIN with status "0".
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OO"" stopped.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OL"" stopped.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OJ"" sent FIN with status "0".
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OK"" sending FIN.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OK"" sent FIN with status "0".
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OJ"" stopped.
+01/05/2017 16:20:56 +01:00 ::  :: [Debug] - Connection id ""0HL1LFOLE94OK"" stopped.

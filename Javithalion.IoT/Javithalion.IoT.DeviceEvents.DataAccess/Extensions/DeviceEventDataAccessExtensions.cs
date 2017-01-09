@@ -25,9 +25,6 @@ namespace Javithalion.IoT.DeviceEvents.DataAccess.Extensions
 
         public static IMongoQueryable<DeviceEvent> WithEventId(this IMongoQueryable<DeviceEvent> collection, Guid eventId)
         {
-            var y = collection.ToList();
-            var z = collection.FirstOrDefault(x => x.Id == eventId);
-
             return collection.Where(x => x.Id == eventId);
         }
     }

@@ -30,17 +30,20 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Entities
         [BsonElement("Deleted")]
         public bool Deleted { get; private set; }
 
-        private DeviceEvent()
+        private DeviceEvent(Guid deviceId)
         {
+            if (deviceId == Guid.Empty)
+                throw new ArgumentException($"Device event should be related with a valid device. Provided Device ID was {deviceId}", nameof(deviceId));
+
+            DeviceId = deviceId;
+            Date = DateTime.Now;
+            Deleted = false;
         }
 
         public static DeviceEvent NewStartUpEvent(Guid deviceId)
         {
-            return new DeviceEvent()
+            return new DeviceEvent(deviceId)
             {
-                DeviceId = deviceId,
-                Date = DateTime.Now,
-                Deleted = false,
                 Type = EventType.StartUp,
                 TypeName = EventType.StartUp.ToString(),
                 Details = string.Empty
@@ -49,11 +52,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Entities
 
         public static DeviceEvent NewTearDownEvent(Guid deviceId)
         {
-            return new DeviceEvent()
-            {
-                DeviceId = deviceId,
-                Date = DateTime.Now,
-                Deleted = false,
+            return new DeviceEvent(deviceId)
+            {                
                 Type = EventType.TearDown,
                 TypeName = EventType.TearDown.ToString(),
                 Details = string.Empty
@@ -62,11 +62,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Entities
 
         public static DeviceEvent NewResourcesOverviewEvent(Guid deviceId, dynamic details)
         {
-            return new DeviceEvent()
-            {
-                DeviceId = deviceId,
-                Date = DateTime.Now,
-                Deleted = false,
+            return new DeviceEvent(deviceId)
+            {                
                 Type = EventType.ResourcesOverview,
                 TypeName = EventType.ResourcesOverview.ToString(),
                 Details = details
@@ -75,11 +72,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Entities
 
         public static DeviceEvent NewResourcesDetailedEvent(Guid deviceId, dynamic details)
         {
-            return new DeviceEvent()
+            return new DeviceEvent(deviceId)
             {
-                DeviceId = deviceId,
-                Date = DateTime.Now,
-                Deleted = false,
                 Type = EventType.ResourcesDetailed,
                 TypeName = EventType.ResourcesDetailed.ToString(),
                 Details = details
@@ -91,11 +85,8 @@ namespace Javithalion.IoT.DeviceEvents.Domain.Entities
             if (string.IsNullOrEmpty(type))
                 throw new ArgumentException("Provided type cannot be null or empty on a custom event", nameof(type));
 
-            return new DeviceEvent()
-            {
-                DeviceId = deviceId,
-                Date = DateTime.Now,
-                Deleted = false,
+            return new DeviceEvent(deviceId)
+            {               
                 Type = EventType.Others,
                 TypeName = type,
                 Details = details ?? string.Empty
