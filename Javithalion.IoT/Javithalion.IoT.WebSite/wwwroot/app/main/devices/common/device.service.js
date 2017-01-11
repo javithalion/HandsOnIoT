@@ -32,10 +32,7 @@
         };
 
         svc.deleteDevice = function (idToDelete) {
-            return $http.delete(svc.devicesApiUrl, {
-                data: { "id": idToDelete },
-                headers: { 'Content-Type': 'application / json' }
-            })
+            return $http.delete(svc.devicesApiUrl + '/' + idToDelete);
         };
 
         svc.getAllDeviceEvents = function (device) {

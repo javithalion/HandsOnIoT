@@ -67,7 +67,8 @@ namespace Javithalion.IoT.Devices.Service
         private void DependencyInjectionConfiguration(IServiceCollection services)
         {
             services.AddTransient<IDeviceWriteService, DeviceWriteService>();
-            services.AddTransient<IDeviceReadService, DeviceReadService>();            
+            services.AddTransient<IDeviceReadService, DeviceReadService>();
+            services.AddTransient<IPredictionsService, PredictionsService>();
 
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<DevicesContext>(options => options.UseSqlServer(connectionString));

@@ -13,12 +13,14 @@ namespace Javithalion.IoT.Devices.Service.Controllers
     {
         private readonly IDeviceWriteService _deviceWriteService;
         private readonly IDeviceReadService _deviceReadService;
+        private readonly IPredictionsService _predictionService;
 
 
-        public DevicesController(IDeviceWriteService deviceEventWriteService, IDeviceReadService deviceEventReadService)
+        public DevicesController(IDeviceWriteService deviceWriteService, IDeviceReadService deviceReadService, IPredictionsService predictionService)
         {
-            _deviceWriteService = deviceEventWriteService;
-            _deviceReadService = deviceEventReadService;
+            _deviceWriteService = deviceWriteService;
+            _deviceReadService = deviceReadService;
+            _predictionService = predictionService;
         }
 
         [HttpGet()]        
@@ -72,21 +74,35 @@ namespace Javithalion.IoT.Devices.Service.Controllers
                 return NotFound($"Device with id = {updateCommand.Id} not found");
             }
         }
-      
-        [HttpDelete]
-        public async Task<IActionResult> Delete([FromBody]DeleteDeviceCommand deleteCommand)
+
+        [HttpDelete("{deviceId}")]
+        public async Task<IActionResult> Delete(Guid deviceId)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             try
             {
+                var deleteCommand = new DeleteDeviceCommand() { Id = deviceId };
+
                 await _deviceWriteService.DeleteAsync(deleteCommand);
                 return Ok();
             }
             catch (KeyNotFoundException)
             {
-                return NotFound($"Device event with id = {deleteCommand.Id} not found");
+                return NotFound($"Device event with id = {deviceId} not found");
             }
+        }
+
+        [HttpGet("SwitchedOnForecast/{date?}")]
+        public async Task<IActionResult> SwitchedOnHourlyPrediction(DateTime? date)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var requestedDate = date ?? DateTime.Now;
+            var result = await _predictionService.HourlySwitchedOnAsync(requestedDate);
+
+            return Ok(result);
         }
     }
 }
