@@ -6,9 +6,10 @@
         .controller('DevicesOnDuringDayController', DevicesOnDuringDayController);
 
     /** @ngInject */
-    function DevicesOnDuringDayController($stateParams, DevicesOnDuringDayService) {
+    function DevicesOnDuringDayController($stateParams, $scope, $state, DevicesOnDuringDayService) {
         var vm = this;
         vm.predictionChart = null;
+        vm.loadingPredictions = false;
 
 
         // Data		
@@ -21,6 +22,9 @@
 
         // Methods
         vm.loadHourlyPredictionByDate = function () {
+
+            vm.loadingPredictions = true;
+
             DevicesOnDuringDayService.getHourlyPredictionByDate(vm.requestedDate)
                                  .then(function (forecast) {
 
@@ -29,6 +33,14 @@
                                      });
 
                                      vm.requestedDate = forecast.date.toDateString();
+                                     vm.loadingPredictions = false;
+
+                                 }, function (rejection) {
+
+                                     vm.loadingPredictions = false;                                    
+                                     $scope.$emit('$generalErrorNotification', rejection);
+                                     $state.go('app.predictions');
+
                                  });
         };
 

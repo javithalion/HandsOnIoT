@@ -36,10 +36,9 @@
             });
         }
 
-
         vm.submitStepper = function () {
             if (vm.selectedPrediction) {
-                $state.go('app.predictions.devicesOnDuringDay', { "date": vm.selectedDate.toISOString() });
+                $state.go('app.predictions.devicesOnDuringDay', { "date": vm.selectedDate.toISOString().substring(0, 10) }); //YYYY-MM-DD
             }
             else {
                 return false;

@@ -6,6 +6,7 @@
         "Javithalion.IoT.Devices.DataAccess": "1.0.0-*",
         "Javithalion.IoT.Devices.Domain": "1.0.0-*",
         "Javithalion.IoT.Infraestructure": "1.0.0-*",
+        "Microsoft.Extensions.Configuration.Abstractions": "1.1.0",
         "NETStandard.Library": "1.6.0"
     },
 

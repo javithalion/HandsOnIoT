@@ -1,7 +1,11 @@
 ﻿<div class="simple-table-container md-whiteframe-4dp">
 
-    <h3>Predicted devices on by hour for {{vm.requestedDate}}</h3>
-   
-    <c3chart bindto-id="chart1" chart-data="vm.predictionHourlyValues" chart-columns="vm.datacolumns" chart-x="vm.xAxis">         
+    <h2>{{vm.requestedDate}}</h2>
+
+    <div class="ms-search-bar-loader" layout="row" layout-align="center center" ng-if="vm.loadingPredictions">
+        <md-progress-circular class="md-accent" md-diameter="70" md-mode="indeterminate"></md-progress-circular>
+    </div>
+
+    <c3chart bindto-id="chart1" ng-if="!vm.loadingPredictions" chart-data="vm.predictionHourlyValues" chart-columns="vm.datacolumns" chart-x="vm.xAxis">
     </c3chart>
 </div>

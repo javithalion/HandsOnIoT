@@ -17,6 +17,7 @@ using Javithalion.IoT.Devices.DataAccess.Read;
 using Javithalion.IoT.Devices.DataAccess.Write.Extensions;
 using Serilog;
 using System.IO;
+using Javithalion.IoT.Devices.Business.PredictionsModel.Options;
 
 namespace Javithalion.IoT.Devices.Service
 {
@@ -24,6 +25,7 @@ namespace Javithalion.IoT.Devices.Service
     {
         public IConfigurationRoot Configuration { get; }
         private MapperConfiguration _mapperConfiguration;
+        private IHostingEnvironment _environment;
 
         public Startup(IHostingEnvironment env)
         {
@@ -33,8 +35,8 @@ namespace Javithalion.IoT.Devices.Service
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
 
-            if (env.IsDevelopment())                            
-                builder.AddUserSecrets();            
+            if (env.IsDevelopment())
+                builder.AddUserSecrets();
 
             Configuration = builder.Build();
 
@@ -42,6 +44,8 @@ namespace Javithalion.IoT.Devices.Service
             {
                 cfg.AddProfile(new DeviceMapsInstaller());
             });
+            _environment = env;
+
 
             Log.Logger = new LoggerConfiguration()
                .MinimumLevel.Debug()
@@ -57,11 +61,22 @@ namespace Javithalion.IoT.Devices.Service
             DependencyInjectionConfiguration(services);
 
             // Add framework services.
-            services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
-                                                                            .AllowAnyMethod()
-                                                                            .AllowAnyHeader()));            
 
-            services.AddMvc();     
+            if (_environment.IsDevelopment())
+            {
+                services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+                                                                                .AllowAnyMethod()
+                                                                            .AllowAnyHeader()));
+            }
+
+            services.Configure<PredictionsApiOptions>(options =>
+            {
+                options.WithApiUrl(Configuration["PredictionsConfiguration:WebServiceUrl"].ToString())
+                       .WithApiKey(Configuration["PredictionsConfiguration:PrimaryApiKey"].ToString());
+            });
+
+            services.AddMemoryCache();
+            services.AddMvc();
         }
 
         private void DependencyInjectionConfiguration(IServiceCollection services)
@@ -69,20 +84,19 @@ namespace Javithalion.IoT.Devices.Service
             services.AddTransient<IDeviceWriteService, DeviceWriteService>();
             services.AddTransient<IDeviceReadService, DeviceReadService>();
             services.AddTransient<IPredictionsService, PredictionsService>();
+            services.AddTransient<IDeviceDao>(DeviceDaoFactory);
+            services.AddSingleton<IMapper>(factory => _mapperConfiguration.CreateMapper());
 
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<DevicesContext>(options => options.UseSqlServer(connectionString));
-            //services.AddDbContext<DevicesContext>(options => options.UseInMemoryDatabase());
-            services.AddTransient<IDeviceDao>(DeviceDaoFactory);
-
-            services.AddSingleton<IMapper>(factory => _mapperConfiguration.CreateMapper());
+            //services.AddDbContext<DevicesContext>(options => options.UseInMemoryDatabase());            
         }
 
         private IDeviceDao DeviceDaoFactory(IServiceProvider arg)
         {
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             return new DeviceDao(connectionString);
-        }       
+        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -90,7 +104,7 @@ namespace Javithalion.IoT.Devices.Service
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            if (env.IsDevelopment())
+            if (_environment.IsDevelopment())
             {
                 SeedDatabase(app);
                 app.UseDeveloperExceptionPage();
@@ -109,7 +123,7 @@ namespace Javithalion.IoT.Devices.Service
         {
             using (var context = app.ApplicationServices.GetRequiredService<DevicesContext>())
             {
-               context.EnsureSeeding();
+                context.EnsureSeeding();
             }
         }
     }

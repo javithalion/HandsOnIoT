@@ -30,10 +30,9 @@
                 }
 
             },
-
-            function (rejection) {
-                var message = 'Error on action: ' + JSON.stringify(rejection.data);
-                console.log(message);               
+            function (httpError) {
+                
+                throw httpError.statusText;
             });          
         };
     }
