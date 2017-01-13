@@ -12,6 +12,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
+[assembly: CollectionBehavior(DisableTestParallelization = true)] //Due to hangfire jobs being initialized behind the scenes. running these test serially rather than in parallel
+
 namespace Javithalion.IoT.DeviceEvents.Service.IntegrationTests.WriteRequests
 {
     public class ManipulateDeviceEventTestFixtures

@@ -23,6 +23,19 @@ namespace Javithalion.IoT.DeviceEvents.DataAccess.Extensions
             return collection.Where(x => x.DeviceId == deviceId);
         }
 
+        public static IMongoQueryable<DeviceEvent> FromYesterday(this IMongoQueryable<DeviceEvent> collection)
+        {
+            var fromDate = DateTime.Now.Date.AddDays(-1);
+            var toDate = DateTime.Now.Date;
+
+            return collection.BetweenDates(fromDate, toDate);
+        }
+
+        public static IMongoQueryable<DeviceEvent> BetweenDates(this IMongoQueryable<DeviceEvent> collection, DateTime from, DateTime to)
+        {
+            return collection.Where(x => x.Date >= from && x.Date <= to);
+        }
+
         public static IMongoQueryable<DeviceEvent> WithEventId(this IMongoQueryable<DeviceEvent> collection, Guid eventId)
         {
             return collection.Where(x => x.Id == eventId);

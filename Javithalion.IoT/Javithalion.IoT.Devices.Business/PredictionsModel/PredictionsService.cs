@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Javithalion.IoT.Devices.Business.PredictionsModel.Options;
+using Microsoft.Extensions.Logging;
 
 namespace Javithalion.IoT.Devices.Business.ReadModel
 {
@@ -21,11 +22,13 @@ namespace Javithalion.IoT.Devices.Business.ReadModel
 
         private readonly IMemoryCache _predictionCache;
         private readonly PredictionsApiOptions _options;
+        private readonly ILogger _logger;
 
-        public PredictionsService(IMemoryCache predictionCache, IOptions<PredictionsApiOptions> options)
+        public PredictionsService(IMemoryCache predictionCache, IOptions<PredictionsApiOptions> options, ILogger<PredictionsService> logger)
         {
             _predictionCache = predictionCache;
             _options = options.Value;
+            _logger = logger;
         }
 
         public async Task<HourlySwitchedOnPredictionDto> HourlySwitchedOnAsync(DateTime date)
@@ -72,7 +75,7 @@ namespace Javithalion.IoT.Devices.Business.ReadModel
             }
         }
 
-        private static async Task<IDictionary<int, int>> GetPredictionFromResponse(HttpResponseMessage httpResponse)
+        private async Task<IDictionary<int, int>> GetPredictionFromResponse(HttpResponseMessage httpResponse)
         {
             var result = new Dictionary<int, int>();
 
@@ -98,7 +101,7 @@ namespace Javithalion.IoT.Devices.Business.ReadModel
             }
             catch (Exception ex)
             {
-                //TODO :: Log
+                _logger.LogError($"Error when obtaining hourly forecast. {ex.ToString()}");
             }
 
             return result;

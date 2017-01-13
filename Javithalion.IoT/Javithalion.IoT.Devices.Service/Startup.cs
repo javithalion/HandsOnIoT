@@ -29,6 +29,8 @@ namespace Javithalion.IoT.Devices.Service
 
         public Startup(IHostingEnvironment env)
         {
+            _environment = env;
+
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -44,8 +46,6 @@ namespace Javithalion.IoT.Devices.Service
             {
                 cfg.AddProfile(new DeviceMapsInstaller());
             });
-            _environment = env;
-
 
             Log.Logger = new LoggerConfiguration()
                .MinimumLevel.Debug()
@@ -58,9 +58,7 @@ namespace Javithalion.IoT.Devices.Service
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            DependencyInjectionConfiguration(services);
-
-            // Add framework services.
+            DependencyInjectionConfiguration(services);            
 
             if (_environment.IsDevelopment())
             {
@@ -89,7 +87,6 @@ namespace Javithalion.IoT.Devices.Service
 
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<DevicesContext>(options => options.UseSqlServer(connectionString));
-            //services.AddDbContext<DevicesContext>(options => options.UseInMemoryDatabase());            
         }
 
         private IDeviceDao DeviceDaoFactory(IServiceProvider arg)
@@ -103,7 +100,7 @@ namespace Javithalion.IoT.Devices.Service
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
+            
             if (_environment.IsDevelopment())
             {
                 SeedDatabase(app);
@@ -114,7 +111,7 @@ namespace Javithalion.IoT.Devices.Service
                 });
                 app.UseCors("AllowAll");
             }
-
+            
             loggerFactory.AddSerilog();
             app.UseMvc();
         }

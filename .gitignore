@@ -252,3 +252,4 @@ paket-files/
 *.sln.iml
 /Javithalion.IoT/Javithalion.IoT.DeviceEvents.Service.IntegrationTests/Logs
 /Javithalion.IoT/Javithalion.IoT.DeviceEvents.Service/Logs
+/Javithalion.IoT/Javithalion.IoT.Devices.Service/Logs
