@@ -80,7 +80,7 @@ namespace Javithalion.IoT.DeviceEvents.Service
         {
             services.AddTransient<IDeviceEventWriteService, DeviceEventWriteService>();
             services.AddTransient<IDeviceEventReadService, DeviceEventReadService>();
-            services.AddTransient<IDeviceEventsFeederService, DeviceEventsMachineLearningFeederService>();
+            services.AddTransient<IDeviceEventsFeederService, DeviceEventsFeederService>();
             services.AddTransient<IDeviceEventDao, DeviceEventDao>();
 
             services.AddSingleton(MongoDatabaseFactory);

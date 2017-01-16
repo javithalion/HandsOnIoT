@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Javithalion.IoT.DeviceEvents.Business.PredictionsModel
 {
-    public class DeviceEventsMachineLearningFeederService : IDeviceEventsFeederService
+    public class DeviceEventsFeederService : IDeviceEventsFeederService
     {
         private readonly ILogger _logger;
         private readonly IDeviceEventDao _deviceEventsDao;
 
-        public DeviceEventsMachineLearningFeederService(ILogger<DeviceEventsMachineLearningFeederService> logger, IDeviceEventDao deviceEventsDao)
+        public DeviceEventsFeederService(ILogger<DeviceEventsFeederService> logger, IDeviceEventDao deviceEventsDao)
         {
             _logger = logger;
             _deviceEventsDao = deviceEventsDao;
@@ -36,6 +36,7 @@ namespace Javithalion.IoT.DeviceEvents.Business.PredictionsModel
             catch (Exception ex)
             {
                 _logger.LogError($"Daily ML sincronization and re-train failed. {ex.ToString()}");
+                throw;
             }
         }
     }
